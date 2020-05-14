@@ -1,0 +1,9 @@
+{
+  "name": "anime",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.9.2"
+  }
+}
