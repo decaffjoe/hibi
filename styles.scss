@@ -11,9 +11,21 @@ section {
     padding-left: 15vw;
 }
 
+@keyframes slide-in {
+    from {
+        margin-left: -15vw;
+        opacity: 0;
+    }
+    to {
+        margin-left: 0;
+        opacity: 1;
+    }
+}
+
 h2 {
     font-size: 1.5rem;
     color: orange;
+    animation: slide-in 300ms ease-out forwards;
 }
 
 input {
@@ -23,6 +35,12 @@ input {
     border: none;
     border-radius: 80px;
     padding: 1rem 2rem;
+    transition: background-color 400ms ease-in;
+}
+
+input:focus + h1 {
+    left: 75%;
+    opacity: 1;
 }
 
 ul {
@@ -37,6 +55,9 @@ li {
 h1 {
     position: absolute;
     top: 60vh;
-    left: 50vw;
+    left: 85%;
     font-size: 5rem;
+    margin-left: -15vw;
+    opacity: 0;
+    transition: left 400ms ease-out;
 }

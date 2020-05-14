@@ -30,9 +30,15 @@ const app = new Vue({
                 })
             })
                 .then(res => res.json())
-                .then(data => { console.log(data); return data.data.Page.media; })
+                .then(data => data.data.Page.media)
                 .then(data => this.shows = data)
                 .catch(err => console.log(err));
+        },
+        colorFader(field) {
+            let rand = [1, 1, 1];
+            rand = rand.map(x => Math.random() * 255);
+            let bgRand = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
+            this.$el.children[0].children[1].style = `${field}: ${bgRand};`;
         }
     }
 });
