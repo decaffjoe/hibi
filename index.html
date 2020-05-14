@@ -7,10 +7,17 @@
     <title>Anime</title>
   </head>
   <body>
-    <div id="app" :title="tooltip">anime
+    <div id="app">
+      <section>
+        <h2>find a show</h2>
+        <input type="text" v-model="search" @keyup="getShowNames" />
         <ul>
-            <li v-for="show in shows" :key="show.id">{{ show.title.romaji }}</li>
+          <li v-for="show in shows" :key="show.id" :title="show.id">
+            {{ show.title.romaji }}
+          </li>
         </ul>
+      </section>
+      <h1 :title="tooltip">anime</h1>
     </div>
     <script type="module" src="app.js"></script>
   </body>

@@ -2,3 +2,41 @@ html, body {
     color: rgb(216, 216, 216);
     background-color:rgb(33, 33, 126);
 }
+
+div#app {
+    padding-top: 20vh;
+}
+
+section {
+    padding-left: 15vw;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: orange;
+}
+
+input {
+    color: white;
+    background-color: blue;
+    font-size: 2rem;
+    border: none;
+    border-radius: 80px;
+    padding: 1rem 2rem;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: orange;
+    margin: 0.7rem 0;
+}
+
+h1 {
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    font-size: 5rem;
+}
