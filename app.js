@@ -8,14 +8,15 @@ const app = new Vue({
     },
     methods: {
         getShowNames() {
-            fetch("https://graphql.anilist.co", {
-                method: "POST",
-                headers: {
-                    "Content-Type": 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    query: `
+            if (this.search.length > 0) {
+                fetch("https://graphql.anilist.co", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        query: `
                 query getShowNames { 
                     Page (page: 1, perPage: 6) {
                         media (search: "${this.search}") {
@@ -27,18 +28,22 @@ const app = new Vue({
                     }
                 }
                 `,
+                    })
                 })
-            })
-                .then(res => res.json())
-                .then(data => data.data.Page.media)
-                .then(data => this.shows = data)
-                .catch(err => console.log(err));
+                    .then(res => res.json())
+                    .then(data => data.data.Page.media)
+                    .then(data => this.shows = data)
+                    .catch(err => console.log(err));
+            }
+            else {
+                return this.shows = [];
+            }
         },
-        colorFader(field) {
+        colorFader(e, field) {
             let rand = [1, 1, 1];
             rand = rand.map(x => Math.random() * 255);
             let bgRand = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
-            this.$el.children[0].children[1].style = `${field}: ${bgRand};`;
+            e.target.style = `${field}: ${bgRand};`;
         }
     }
 });

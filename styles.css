@@ -44,11 +44,12 @@ input {
   color: white;
   background-color: blue;
   font-size: 2rem;
+  outline: none;
   border: none;
   border-radius: 80px;
   padding: 1rem 2rem;
-  -webkit-transition: background-color 400ms ease-in;
-  transition: background-color 400ms ease-in;
+  -webkit-transition: background-color 400ms linear;
+  transition: background-color 400ms linear;
 }
 
 input:focus + h1 {
