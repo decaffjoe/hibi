@@ -3,13 +3,15 @@ const app = new Vue({
     el: '#app',
     data: {
         tooltip: "UwwwuuUu it's " + new Date().toLocaleTimeString(),
+        char: {},
+        url: "https://graphql.anilist.co",
         search: '',
         shows: [],
     },
     methods: {
         getShowNames() {
             if (this.search.length > 0) {
-                fetch("https://graphql.anilist.co", {
+                fetch(this.url, {
                     method: "POST",
                     headers: {
                         "Content-Type": 'application/json',
@@ -45,5 +47,5 @@ const app = new Vue({
             let bgRand = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
             e.target.style = `${field}: ${bgRand};`;
         }
-    }
+    },
 });

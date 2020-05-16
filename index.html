@@ -8,10 +8,14 @@
   </head>
   <body>
     <div id="app">
-      <section>
+      <section id="charDay">
+        <h1>Character of the Day</h1>
+        <h2>{{ char.name }}</h2>
+      </section>
+      <section id="shows">
         <h2>find a show</h2>
         <input type="text" v-model="search" @keyup="getShowNames" @keydown="colorFader($event, 'background-color')"/>
-        <h1 :title="tooltip">anime</h1>
+        <h1 id="anime" :title="tooltip">anime</h1>
         <ul>
           <li v-for="show in shows" :key="show.id" :title="show.id">
             {{ show.title.romaji }}

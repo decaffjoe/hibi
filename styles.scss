@@ -4,11 +4,16 @@ html, body {
 }
 
 div#app {
-    padding-top: 20vh;
+    padding-top: 10vh;
+}
+
+section#charDay {
+    text-align: center;
+    margin-bottom: 10vh;
 }
 
 section {
-    padding-left: 15vw;
+    padding: 0 15vw;
 }
 
 @keyframes slide-in {
@@ -39,7 +44,7 @@ input {
     transition: background-color 400ms linear;
 }
 
-input:focus + h1 {
+input:focus + h1#anime {
     left: 75%;
     opacity: 1;
 }
@@ -53,7 +58,7 @@ li {
     margin: 0.7rem 0;
 }
 
-h1 {
+h1#anime {
     position: absolute;
     top: 60vh;
     left: 85%;
