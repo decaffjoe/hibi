@@ -13,12 +13,13 @@ section#charDay {
 }
 
 section {
-  padding: 0 15vw;
+  --pad-width: 20vw;
+  padding: 0 var(--pad-width);
 }
 
 @-webkit-keyframes slide-in {
   from {
-    margin-left: -15vw;
+    margin-left: var(--pad-width);
     opacity: 0;
   }
   to {
@@ -29,7 +30,7 @@ section {
 
 @keyframes slide-in {
   from {
-    margin-left: -15vw;
+    margin-left: var(--pad-width);
     opacity: 0;
   }
   to {

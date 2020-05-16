@@ -1,28 +1,30 @@
-import Vue from "https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.esm.browser.js";
+const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(),
+    char = {},
+    url = "https://graphql.anilist.co",
+    body = document.body,
+    titleAnime = document.querySelector('h1#anime'),
+    inputSearch = document.querySelector('input'),
+    showResults = document.querySelector('#show-results');
 
-const app = new Vue({
-    el: '#app',
-    data: {
-        tooltip: "UwwwuuUu it's " + new Date().toLocaleTimeString(),
-        char: {},
-        url: "https://graphql.anilist.co",
-        search: '',
-        shows: [],
-    },
-    methods: {
-        getShowNames() {
-            if (this.search.length > 0) {
-                fetch(this.url, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        query: `
+titleAnime.title = tooltip;
+inputSearch?.addEventListener('keyup', getShowNames);
+
+async function getShowNames(e: Event) {
+    let search: String = e.target.value,
+        shows: any[] = [];
+
+    if (search.length > 0) {
+        await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                query: `
                 query getShowNames { 
                     Page (page: 1, perPage: 6) {
-                        media (search: "${this.search}") {
+                        media (search: "${search}") {
                             id 
                             title {
                                 romaji 
@@ -31,37 +33,35 @@ const app = new Vue({
                     }
                 }
                 `,
-                    })
-                })
-                    .then(res => res.json())
-                    .then(data => data.data.Page.media)
-                    .then(data => this.shows = data)
-                    .catch(err => console.log(err));
-            } else {
-                return this.shows = [];
-            }
-        },
-        colorFader(e, field: String) {
-            let rand: Number[] = [1, 1, 1];
-            rand = rand.map(x => Math.random() * 255);
-            let bgRand: String = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
-            e.target.style = `${field}: ${bgRand};`;
-        }
-    },
-    // computed: {
-    //     queries: {
-    //         shows: ` 
-    //             query getShowNames { 
-    //                 Page (page: 1, perPage: 6) {
-    //                     media (search: "${this.search}") {
-    //                         id 
-    //                         title {
-    //                             romaji 
-    //                         } 
-    //                     } 
-    //                 }
-    //             }
-    //             `,
-    //     },
-    // }
-});
+            })
+        })
+            .then(res => res.json())
+            .then(data => data.data.Page.media)
+            .then(data => shows = data)
+            .catch(err => console.log(err));
+    } else {
+        shows = [];
+    }
+    await showShowNames(shows);
+    colorFader(e, 'background-color');
+};
+
+async function showShowNames(shows: any[]) {
+    while (showResults?.firstChild) {
+        showResults.removeChild(showResults.lastChild)
+    };
+    if (shows.length > 0) {
+        await shows.forEach(show => {
+            let el = document.createElement('li');
+            el.textContent = show.title.romaji;
+            showResults?.appendChild(el);
+        });
+    }
+};
+
+function colorFader(e, field: String) {
+    let rand: Number[] = [1, 1, 1];
+    rand = rand.map(x => Math.random() * 255);
+    let bgRand: String = `rgb(${rand[0]}, ${rand[1]}, ${rand[2]})`;
+    e.target.style = `${field}: ${bgRand};`;
+};
