@@ -7,7 +7,7 @@ main();
 async function main() {
     try {
         const popShows = await getPopularShows();
-        const targetShowId = await pickRandomId(popShows);
+        const targetShowId = await selectDateId(popShows);
         const targetShow = await getShowCharacters(targetShowId);
         const targetShowNames = [];
         for (let key in targetShow.title) {
@@ -18,7 +18,7 @@ async function main() {
             charTitles.children[i].textContent = targetShowNames[i];
         }
         const targetShowChars = targetShow.characters.nodes;
-        const targetCharId = await pickRandomId(targetShowChars);
+        const targetCharId = await selectDateId(targetShowChars);
         const dailyChar = await getDailyCharacter(targetCharId);
         charImage.style.backgroundImage = `url("${dailyChar.image.large}")`;
         charH2.textContent = dailyChar.name.full;
@@ -105,11 +105,24 @@ async function getShowCharacters(id) {
         return err;
     }
 }
-// Pick random value from array of objects w/ id
-function pickRandomId(arr) {
+// Pick date-dependent value from array of objects w/ id
+function selectDateId(arr) {
     const len = arr.length;
-    const index = Math.floor(Math.random() * len);
+    // const index = Math.floor(Math.random() * len);
+    let d = new Date();
+    d = d.toLocaleDateString();
+    d = parseInt(d.split('/').join(''));
+    const index = dateAlgo(d, len);
     return arr[index].id;
+}
+// Try to get random index within length of array from the current date MMDDYYYY
+function dateAlgo(date, arrLen) {
+    if (date.toString().length === 7) {
+        return (((date % arrLen) + parseInt(date.toString().slice(0, 3))) % arrLen);
+    }
+    else {
+        return (((date % arrLen) + parseInt(date.toString().slice(1, 4))) % arrLen);
+    }
 }
 // Get most popular shows
 async function getPopularShows() {
@@ -124,9 +137,14 @@ async function getPopularShows() {
                 // match ShowData type
                 query: `
         query getPopularShows {
-            first50: Page(page: 1, perPage: 50) {
+            firstSet: Page(page: 1, perPage: 50) {
               media(sort: POPULARITY_DESC) {
                 id
+              }
+            }
+            secondSet: Page(page: 2, perPage: 3) {
+              media(sort: POPULARITY_DESC) {
+                  id
               }
             }
           }
@@ -134,7 +152,8 @@ async function getPopularShows() {
             })
         });
         res = await res.json();
-        res = res.data.first50.media;
+        // join the first and second query alias results
+        res = [...res.data.firstSet.media, ...res.data.secondSet.media];
         return res;
     }
     catch (err) {

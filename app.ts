@@ -19,7 +19,7 @@ main();
 async function main() {
     try {
         const popShows = await getPopularShows();
-        const targetShowId = await pickRandomId(popShows);
+        const targetShowId = await selectDateId(popShows);
 
         const targetShow = await getShowCharacters(targetShowId);
 
@@ -33,7 +33,7 @@ async function main() {
         }
 
         const targetShowChars = targetShow.characters.nodes;
-        const targetCharId = await pickRandomId(targetShowChars);
+        const targetCharId = await selectDateId(targetShowChars);
 
         const dailyChar = await getDailyCharacter(targetCharId);
         charImage.style.backgroundImage = `url("${dailyChar.image.large}")`;
@@ -83,20 +83,6 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
     }
 }
 
-interface dailyCharacter {
-    name: {
-        first: string,
-        last: string,
-        full: string,
-        native: string
-    },
-    description: string,
-    image: {
-        large: string,
-        medium: string
-    }
-}
-
 // Get target show information
 async function getShowCharacters(id: number): Promise<showCharacters> {
     try {
@@ -135,11 +121,27 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
     }
 }
 
-// Pick random value from array of objects w/ id
-function pickRandomId(arr: []): number {
+// Pick date-dependent value from array of objects w/ id
+function selectDateId(arr: []): number {
     const len = arr.length;
-    const index = Math.floor(Math.random() * len);
+    // const index = Math.floor(Math.random() * len);
+
+    let d: any = new Date();
+    d = d.toLocaleDateString();
+    d = parseInt(d.split('/').join(''));
+
+    const index = dateAlgo(d, len);
+
     return arr[index].id;
+}
+
+// Try to get random index within length of array from the current date MMDDYYYY
+function dateAlgo(date: number, arrLen: number): number {
+    if (date.toString().length === 7) {
+        return (((date % arrLen) + parseInt(date.toString().slice(0, 3))) % arrLen)
+    } else {
+        return (((date % arrLen) + parseInt(date.toString().slice(1, 4))) % arrLen)
+    }
 }
 
 // Get most popular shows
@@ -155,9 +157,14 @@ async function getPopularShows(): Promise<popularShows[]> {
                 // match ShowData type
                 query: `
         query getPopularShows {
-            first50: Page(page: 1, perPage: 50) {
+            firstSet: Page(page: 1, perPage: 50) {
               media(sort: POPULARITY_DESC) {
                 id
+              }
+            }
+            secondSet: Page(page: 2, perPage: 3) {
+              media(sort: POPULARITY_DESC) {
+                  id
               }
             }
           }
@@ -165,7 +172,8 @@ async function getPopularShows(): Promise<popularShows[]> {
             })
         });
         res = await res.json();
-        res = res.data.first50.media;
+        // join the first and second query alias results
+        res = [ ...res.data.firstSet.media, ...res.data.secondSet.media ];
         return res;
     } catch (err) {
         console.log(err);
@@ -188,6 +196,20 @@ interface showCharacters {
         nodes: {
             [key: string]: number
         }
+    }
+}
+
+interface dailyCharacter {
+    name: {
+        first: string,
+        last: string,
+        full: string,
+        native: string
+    },
+    description: string,
+    image: {
+        large: string,
+        medium: string
     }
 }
 
