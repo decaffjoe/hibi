@@ -23,12 +23,9 @@ async function main() {
 
         const targetShow = await getShowCharacters(targetShowId);
 
-        const targetShowNames: string[] = [];
-        for (let key in targetShow.title) {
-            targetShowNames.push(targetShow.title[key]);
-        }
-        let childLen = charTitles.children.length;
-        for (let i = 0; i < childLen; ++i) {
+        const targetShowNames = showNameValidator(targetShow.title);
+        // Populate show titles on page (up to 3 unique titles from { romaji, english, native })
+        for (let i = 0; i < 3; ++i) {
             charTitles.children[i].textContent = targetShowNames[i];
         }
 
@@ -81,6 +78,31 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
         console.log(err);
         return err;
     }
+}
+
+// Avoid printing duplicate show names from { romaji, english, native }
+function showNameValidator(titles: {}) {
+    const results: string[] = Object.values(titles);
+
+    // get rid of identical titles
+    const deDuped: string[] = [];
+    results.forEach(x => {
+        if (!deDuped.includes(x)) {
+            deDuped.push(x)
+        }
+    });
+
+    // get rid of lowercase titles (if non-lowercase title exists)
+    const deLowered = deDuped.filter(x => x !== x.toLowerCase());
+    if (deLowered.length > 0) {
+        // get rid of uppercase titles (if non-uppercase title exists)
+        const deCased = deLowered.filter(x => x !== x.toUpperCase());
+        if (deCased.length > 0) {
+            return deCased;
+        }
+        return deLowered;
+    }
+    return deDuped;
 }
 
 // Get target show information
@@ -173,7 +195,7 @@ async function getPopularShows(): Promise<popularShows[]> {
         });
         res = await res.json();
         // join the first and second query alias results
-        res = [ ...res.data.firstSet.media, ...res.data.secondSet.media ];
+        res = [...res.data.firstSet.media, ...res.data.secondSet.media];
         return res;
     } catch (err) {
         console.log(err);

@@ -9,12 +9,9 @@ async function main() {
         const popShows = await getPopularShows();
         const targetShowId = await selectDateId(popShows);
         const targetShow = await getShowCharacters(targetShowId);
-        const targetShowNames = [];
-        for (let key in targetShow.title) {
-            targetShowNames.push(targetShow.title[key]);
-        }
-        let childLen = charTitles.children.length;
-        for (let i = 0; i < childLen; ++i) {
+        const targetShowNames = showNameValidator(targetShow.title);
+        // Populate show titles on page (up to 3 unique titles from { romaji, english, native })
+        for (let i = 0; i < 3; ++i) {
             charTitles.children[i].textContent = targetShowNames[i];
         }
         const targetShowChars = targetShow.characters.nodes;
@@ -66,6 +63,28 @@ async function getDailyCharacter(id) {
         console.log(err);
         return err;
     }
+}
+// Avoid printing duplicate show names from { romaji, english, native }
+function showNameValidator(titles) {
+    const results = Object.values(titles);
+    // get rid of identical titles
+    const deDuped = [];
+    results.forEach(x => {
+        if (!deDuped.includes(x)) {
+            deDuped.push(x);
+        }
+    });
+    // get rid of lowercase titles (if non-lowercase title exists)
+    const deLowered = deDuped.filter(x => x !== x.toLowerCase());
+    if (deLowered.length > 0) {
+        // get rid of uppercase titles (if non-uppercase title exists)
+        const deCased = deLowered.filter(x => x !== x.toUpperCase());
+        if (deCased.length > 0) {
+            return deCased;
+        }
+        return deLowered;
+    }
+    return deDuped;
 }
 // Get target show information
 async function getShowCharacters(id) {
