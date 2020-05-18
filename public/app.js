@@ -36,7 +36,6 @@ async function getDailyCharacter(id) {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                // match ShowData type
                 query: `
                 query getDailyCharacter {
                     Character(id: ${id}) {
@@ -56,6 +55,7 @@ async function getDailyCharacter(id) {
                 `,
             })
         });
+        // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         res = res.data.Character;
         return res;
@@ -75,7 +75,6 @@ async function getShowCharacters(id) {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                // match ShowData type
                 query: `
                 query getShowCharacters {
                     Media(id: ${id}) {
@@ -113,7 +112,6 @@ async function getPopularShows() {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                // match ShowData type
                 query: `
         query getPopularShows {
             firstSet: Page(page: 1, perPage: 50) {
@@ -130,6 +128,7 @@ async function getPopularShows() {
         `,
             })
         });
+        // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         // join the first and second query alias results
         res = [...res.data.firstSet.media, ...res.data.secondSet.media];
