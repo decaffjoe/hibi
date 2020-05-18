@@ -2,6 +2,7 @@
   --white: rgb(228, 228, 228);
   --header: rgb(79, 48, 121);
   --charDay: rgb(33, 33, 126);
+  --accent: orange;
   --info: rgb(0, 0, 0);
 }
 
@@ -85,32 +86,53 @@ section#charDay {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-      grid-template-areas: "picture charName description" "picture titles description" ". . description";
+      grid-template-areas: "photoGroup description" "photoGroup description" ". description";
 }
 
-#charDay div#photo {
+#charDay div#photoGroup {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: photoGroup;
+  padding: 2.5vh 1.5vw;
+  border-radius: 40px;
+  background-color: rgba(60, 255, 135, 0.205);
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: 2rem;
+          column-gap: 2rem;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "picture charName" "picture titles";
+}
+
+div#photoGroup div#photo {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: picture;
   margin: 0 auto;
   min-height: 320px;
-  width: 220px;
+  width: 218px;
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0 0 8px black;
+          box-shadow: 0 0 8px black;
   border-radius: 25px;
 }
 
-#charDay h2 {
+div#photoGroup h2 {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: charName;
   text-transform: uppercase;
-  color: orange;
+  color: var(--accent);
 }
 
-#charDay ul {
+div#photoGroup ul {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: titles;
@@ -118,14 +140,14 @@ section#charDay {
   padding: 0;
 }
 
-#charDay ul li {
-  color: orange;
+div#photoGroup ul li {
+  color: white;
 }
 
 #charDay p {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
   grid-area: description;
 }
 
