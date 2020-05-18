@@ -86,9 +86,7 @@ section#charDay {
 
 #charDay div#photoGroup {
     grid-area: photoGroup;
-    padding: 2.5vh 1.5vw;
-    // border: 5px solid black;
-    // box-shadow: 0 0 20px black;
+    padding: 1.5rem;
     border-radius: 40px;
     background-color: rgba(60, 255, 135, 0.205);
     display: grid;
@@ -106,8 +104,7 @@ div#photoGroup div#photo {
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
-    // border: 3px solid rgb(0, 65, 73);
-    box-shadow: 0 0 8px black;
+    box-shadow: 2px 3px 10px black;
     border-radius: 25px;
 }
 

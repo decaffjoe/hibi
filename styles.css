@@ -94,7 +94,7 @@ section#charDay {
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: photoGroup;
-  padding: 2.5vh 1.5vw;
+  padding: 1.5rem;
   border-radius: 40px;
   background-color: rgba(60, 255, 135, 0.205);
   display: -ms-grid;
@@ -119,8 +119,8 @@ div#photoGroup div#photo {
   background-position: center;
   background-size: auto;
   background-repeat: no-repeat;
-  -webkit-box-shadow: 0 0 8px black;
-          box-shadow: 0 0 8px black;
+  -webkit-box-shadow: 2px 3px 10px black;
+          box-shadow: 2px 3px 10px black;
   border-radius: 25px;
 }
 
