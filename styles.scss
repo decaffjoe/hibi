@@ -2,6 +2,7 @@
     --white: rgb(228, 228, 228);
     --header: rgb(79, 48, 121);
     --charDay: rgb(33, 33, 126);
+    --photoGroup: rgba(60, 255, 135, 0.205);
     --accent: orange;
     --info: rgb(0, 0, 0);
 }
@@ -88,7 +89,7 @@ section#charDay {
     grid-area: photoGroup;
     padding: 1.5rem;
     border-radius: 40px;
-    background-color: rgba(60, 255, 135, 0.205);
+    background-color: var(--photoGroup);
     display: grid;
     column-gap: 2rem;
     justify-items: center;
@@ -121,16 +122,15 @@ div#photoGroup ul {
 }
 
 div#photoGroup ul li {
-    color: white;
+    color: var(--white);
 }
 
-#charDay p {
+#charDay div#description {
     grid-area: description;
 }
 
-#charDay h1 {
-    margin-top: 0;
-    padding-top: 5vh;
+#description p {
+    margin: 0.5rem 0;
 }
 
 section#info { 

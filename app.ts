@@ -5,8 +5,9 @@ const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(),
     charH3 = document.querySelector('#header h3'),
     charImage = document.querySelector('#charDay div#photo'),
     charH2 = document.querySelector('#charDay h2'),
-    charP = document.querySelector('#charDay p'),
-    charTitles = document.querySelector('#charDay ul');
+    charDesc = document.querySelector('#charDay div#description'),
+    charTitles = document.querySelector('#charDay ul'),
+    md = window.markdownit();
 
 // Fluff for the headers
 charH1.title = tooltip;
@@ -34,7 +35,7 @@ async function main() {
         const dailyChar = await getDailyCharacter(targetCharId);
         charImage.style.backgroundImage = `url("${dailyChar.image.large}")`;
         charH2.textContent = dailyChar.name.full;
-        charP.innerHTML = dailyChar.description;
+        charDesc.innerHTML = md.render(dailyChar.description);
     } catch (err) {
         console.log(err);
     }
@@ -135,7 +136,7 @@ async function getPopularShows(): Promise<popularShows[]> {
                 id
               }
             }
-            secondSet: Page(page: 2, perPage: 1) {
+            secondSet: Page(page: 2, perPage: 50) {
               media(sort: POPULARITY_DESC) {
                   id
               }
