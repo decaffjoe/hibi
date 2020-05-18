@@ -1,27 +1,92 @@
+:root {
+    --white: rgb(228, 228, 228);
+    --header: rgb(79, 48, 121);
+    --charDay: rgb(33, 33, 126);
+    --info: rgb(0, 0, 0);
+}
+
 html, body { 
-    color: rgb(216, 216, 216);
-    background-color:rgb(33, 33, 126);
+    color: var(--white);
+    background-color: var(--charDay);
     min-height: 100vh;
     margin: 0;
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.15rem;
+    overflow-x: hidden;
 }
 
 section {
-    --pad-width: 20vw;
+    --pad-width: 22vw;
     padding: 0 var(--pad-width);
 }
 
+section#header {
+    background-color: var(--header);
+}
+
+#header h1 {
+    margin: 0;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+#header h3 {
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    height: 20vh;
+}
+  
+.wave {
+position: absolute;
+height: 76px;
+width: 100%;
+left: 0;
+background: var(--header);
+bottom: 0;
+}
+
+.wave::before, .wave::after {
+content: "";
+display: block;
+position: absolute;
+border-radius: 100% 50%;
+}
+
+.wave::before {
+width: 55%;
+height: 109%;
+background-color: var(--charDay);
+right: -1.5%;
+top: 60%;
+}
+.wave::after {
+width: 55%;
+height: 100%;
+background-color: var(--header);
+left: -1.5%;
+top: 40%;
+}
+
 section#charDay {
+    padding-top: 8vh;
+    padding-bottom: 5vh;
+    background-color:var(--charDay);
     text-align: center;
+    display: grid;
+    column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "picture charName description" "picture titles description" ". . description";
 }
 
-#charDay h1 {
-    margin-top: 0;
-    padding-top: 5vh;
-}
-
-#charDay div {
+#charDay div#photo {
+    grid-area: picture;
     margin: 0 auto;
-    height: 350px;
+    min-height: 320px;
     width: 220px;
     background-position: center;
     background-size: auto;
@@ -30,10 +95,13 @@ section#charDay {
 }
 
 #charDay h2 {
-    color: white;
+    grid-area: charName;
+    text-transform: uppercase;
+    color: orange;
 }
 
 #charDay ul {
+    grid-area: titles;
     list-style: none;
     padding: 0;
 }
@@ -43,5 +111,20 @@ section#charDay {
 }
 
 #charDay p {
-    margin-bottom: 10vh;
+    grid-area: description;
+}
+
+#charDay h1 {
+    margin-top: 0;
+    padding-top: 5vh;
+}
+
+section#info { 
+    background-color: var(--info);
+    padding: 2vh 0;
+    position: relative;
+}
+
+#info h1 {
+    margin: 0;
 }

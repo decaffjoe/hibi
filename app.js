@@ -1,5 +1,5 @@
 "use strict";
-const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), char = {}, url = "https://graphql.anilist.co", charImage = document.querySelector('#charDay div'), charH1 = document.querySelector('#charDay h1'), charH2 = document.querySelector('#charDay h2'), charH3 = document.querySelector('#charDay h3'), charP = document.querySelector('#charDay p'), charTitles = document.querySelector('#charDay ul'), inputSearch = document.querySelector('input'), showResults = document.querySelector('#show-results');
+const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), char = {}, url = "https://graphql.anilist.co", charH1 = document.querySelector('#header h1'), charH3 = document.querySelector('#header h3'), charImage = document.querySelector('#charDay div#photo'), charH2 = document.querySelector('#charDay h2'), charP = document.querySelector('#charDay p'), charTitles = document.querySelector('#charDay ul');
 // Fluff for the headers
 charH1.title = tooltip;
 charH3.textContent = new Date().toDateString();
@@ -143,11 +143,11 @@ async function getPopularShows() {
 // Pick date-dependent value from array of objects w/ id
 function selectDateId(arr) {
     const len = arr.length;
-    // const index = Math.floor(Math.random() * len);
     let d = new Date();
     d = d.toLocaleDateString();
     d = d.split('/').join('');
-    const index = dateAlgo(d, len);
+    const index = Math.floor(Math.random() * len);
+    // const index = dateAlgo(d, len);
     return arr[index].id;
 }
 // Try to get random index within length of array from the current date MMDDYYYY
