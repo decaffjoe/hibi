@@ -1,5 +1,5 @@
 "use strict";
-const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), char = {}, url = "https://graphql.anilist.co", charH1 = document.querySelector('#header h1'), charH3 = document.querySelector('#header h3'), charImage = document.querySelector('#charDay div#photo'), charH2 = document.querySelector('#charDay h2'), charDesc = document.querySelector('#charDay div#description'), charTitles = document.querySelector('#charDay ul'), md = window.markdownit();
+const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), char = {}, url = "https://graphql.anilist.co", charH1 = document.querySelector('#header h1'), charH3 = document.querySelector('#header h3'), charImage = document.querySelector('#charDay div#photo'), charH2 = document.querySelector('#charDay h2'), charDesc = document.querySelector('#charDay div#description'), charTitles = document.querySelector('#charDay ul'), md = window.markdownit({ html: true, linkify: true });
 // Fluff for the headers
 charH1.title = tooltip;
 charH3.textContent = new Date().toDateString();

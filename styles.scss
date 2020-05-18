@@ -2,8 +2,9 @@
     --white: rgb(228, 228, 228);
     --header: rgb(79, 48, 121);
     --charDay: rgb(33, 33, 126);
-    --photoGroup: rgba(60, 255, 135, 0.205);
+    --photoGroup: #264e7f;
     --accent: orange;
+    --link: rgb(216, 117, 255);
     --info: rgb(0, 0, 0);
 }
 
@@ -131,6 +132,15 @@ div#photoGroup ul li {
 
 #description p {
     margin: 0.5rem 0;
+}
+
+#description a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+#description a:hover {
+    text-decoration: underline;
 }
 
 section#info { 

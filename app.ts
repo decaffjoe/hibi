@@ -7,7 +7,8 @@ const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(),
     charH2 = document.querySelector('#charDay h2'),
     charDesc = document.querySelector('#charDay div#description'),
     charTitles = document.querySelector('#charDay ul'),
-    md = window.markdownit();
+    md = window.markdownit({ html: true, linkify: true });
+
 
 // Fluff for the headers
 charH1.title = tooltip;
