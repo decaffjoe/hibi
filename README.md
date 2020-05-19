@@ -1,11 +1,15 @@
-git clone
+### Once, ever
 
-cd hibi
+`git clone`
 
-''' Once per day '''
+`cd hibi`
 
-* `node character.js`
+### Once per day
 
-* `py update_static.py`
+`node character.js`
+
+`py update_static.py`
+
+## For an eternity
 
 Profit
