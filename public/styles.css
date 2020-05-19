@@ -187,7 +187,13 @@ div#photoGroup ul#titles li {
 
 @media (max-width: 900px) {
   section {
-    --pad-width: 1vw;
+    --pad-width: 9vw;
+  }
+}
+
+@media (max-width: 600px) {
+  section {
+    --pad-width: 2vw;
   }
 }
 /*# sourceMappingURL=styles.css.map */
