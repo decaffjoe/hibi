@@ -8,13 +8,14 @@
     --info: rgb(0, 0, 0);
 }
 
-html, body { 
+html,
+body {
     color: var(--white);
     background-color: var(--charDay);
     min-height: 100vh;
     margin: 0;
     text-align: center;
-    font-family: 'Patrick Hand', cursive;
+    font-family: "Patrick Hand", cursive;
     font-size: 1.15rem;
     overflow-x: hidden;
 }
@@ -42,42 +43,43 @@ section#header {
     position: relative;
     height: 20vh;
 }
-  
+
 .wave {
-position: absolute;
-height: 76px;
-width: 100%;
-left: 0;
-background: var(--header);
-bottom: 0;
+    position: absolute;
+    height: 76px;
+    width: 100%;
+    left: 0;
+    background: var(--header);
+    bottom: 0;
 }
 
-.wave::before, .wave::after {
-content: "";
-display: block;
-position: absolute;
-border-radius: 100% 50%;
+.wave::before,
+.wave::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
 }
 
 .wave::before {
-width: 55%;
-height: 109%;
-background-color: var(--charDay);
-right: -1.5%;
-top: 60%;
+    width: 55%;
+    height: 109%;
+    background-color: var(--charDay);
+    right: -1.5%;
+    top: 60%;
 }
 .wave::after {
-width: 55%;
-height: 100%;
-background-color: var(--header);
-left: -1.5%;
-top: 40%;
+    width: 55%;
+    height: 100%;
+    background-color: var(--header);
+    left: -1.5%;
+    top: 40%;
 }
 
 section#charDay {
     padding-top: 8vh;
     padding-bottom: 5vh;
-    background-color:var(--charDay);
+    background-color: var(--charDay);
     text-align: center;
     display: grid;
     column-gap: 2rem;
@@ -153,12 +155,15 @@ div#photoGroup ul#titles li {
     text-decoration: underline;
 }
 
-section#info { 
-    background-color: var(--info);
-    padding: 2vh 0;
-    position: relative;
+@media (max-width: 1400px) {
+    section#charDay {
+        grid-template-areas: "photoGroup" "description";
+        row-gap: 2vh;
+    }
 }
 
-#info h1 {
-    margin: 0;
+@media (max-width: 900px) {
+    section {
+        --pad-width: 1vw;
+    }
 }

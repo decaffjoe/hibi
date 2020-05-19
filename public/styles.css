@@ -8,13 +8,14 @@
   --info: rgb(0, 0, 0);
 }
 
-html, body {
+html,
+body {
   color: var(--white);
   background-color: var(--charDay);
   min-height: 100vh;
   margin: 0;
   text-align: center;
-  font-family: 'Patrick Hand', cursive;
+  font-family: "Patrick Hand", cursive;
   font-size: 1.15rem;
   overflow-x: hidden;
 }
@@ -52,7 +53,8 @@ section#header {
   bottom: 0;
 }
 
-.wave::before, .wave::after {
+.wave::before,
+.wave::after {
   content: "";
   display: block;
   position: absolute;
@@ -176,13 +178,16 @@ div#photoGroup ul#titles li {
   text-decoration: underline;
 }
 
-section#info {
-  background-color: var(--info);
-  padding: 2vh 0;
-  position: relative;
+@media (max-width: 1400px) {
+  section#charDay {
+        grid-template-areas: "photoGroup" "description";
+    row-gap: 2vh;
+  }
 }
 
-#info h1 {
-  margin: 0;
+@media (max-width: 900px) {
+  section {
+    --pad-width: 1vw;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
