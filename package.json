@@ -1,9 +1,26 @@
 {
-  "name": "anime",
+  "name": "hibi",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "character.js",
   "license": "MIT",
   "dependencies": {
+    "@types/node": "^14.0.1",
+    "markdown-it": "^10.0.0",
+    "node-fetch": "^2.6.0",
     "typescript": "^3.9.2"
-  }
+  },
+  "description": "Anime Character of the Day",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/spongechameleon/hibi.git"
+  },
+  "author": "spongechameleon",
+  "bugs": {
+    "url": "https://gitlab.com/spongechameleon/hibi/issues"
+  },
+  "homepage": "https://gitlab.com/spongechameleon/hibi#readme"
 }

@@ -95,13 +95,13 @@ section#charDay {
     column-gap: 2rem;
     justify-items: center;
     align-items: center;
-    grid-template-areas: "picture charName" "picture titles";
+    grid-template-areas: "picture names" "picture ." "picture titles";
 }
 
 div#photoGroup div#photo {
     grid-area: picture;
     margin: 0 auto;
-    min-height: 320px;
+    height: 320px;
     width: 218px;
     background-position: center;
     background-size: auto;
@@ -110,19 +110,29 @@ div#photoGroup div#photo {
     border-radius: 25px;
 }
 
-div#photoGroup h2 {
-    grid-area: charName;
-    text-transform: uppercase;
-    color: var(--accent);
+div#photoGroup ul#names {
+    grid-area: names;
+    list-style: none;
+    padding: 0;
 }
 
-div#photoGroup ul {
+div#photoGroup ul#names li {
+    text-transform: uppercase;
+    color: var(--accent);
+    font-size: 1.3rem;
+}
+
+div#photoGroup ul#names li:first-of-type {
+    font-size: 1.6rem;
+}
+
+div#photoGroup ul#titles {
     grid-area: titles;
     list-style: none;
     padding: 0;
 }
 
-div#photoGroup ul li {
+div#photoGroup ul#titles li {
     color: var(--white);
 }
 
