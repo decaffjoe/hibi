@@ -10,6 +10,6 @@
 
 `py update_static.py`
 
-## For an eternity
+### For an eternity
 
 Profit
