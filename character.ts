@@ -57,7 +57,7 @@ async function main() {
 // Get daily character
 async function getDailyCharacter(id: number): Promise<dailyCharacter> {
     try {
-        let res = await nodeFetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -96,7 +96,7 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
 // Get target show information
 async function getShowCharacters(id: number): Promise<showCharacters> {
     try {
-        let res = await nodeFetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -133,7 +133,7 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
 // Get most popular shows
 async function getPopularShows(): Promise<popularShows[]> {
     try {
-        let res = await nodeFetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
