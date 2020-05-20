@@ -33,10 +33,12 @@ section#header {
     margin: 0;
     padding-top: 2vh;
     padding-bottom: 2vh;
+    font-weight: normal;
 }
 
 #header h3 {
     margin: 0;
+    font-weight: normal;
 }
 
 .container {
@@ -85,7 +87,7 @@ section#charDay {
     column-gap: 2rem;
     justify-items: center;
     align-items: center;
-    grid-template-areas: "photoGroup description" "photoGroup description" ". description";
+    grid-template-areas: "photoGroup description" "photoGroup description" ". description" ". readMore";
 }
 
 #charDay div#photoGroup {
@@ -140,6 +142,28 @@ div#photoGroup ul#titles li {
 
 #charDay div#description {
     grid-area: description;
+    padding: 0 1rem;
+}
+
+.condensed {
+    max-height: 400px;
+    overflow-y: scroll;
+    scrollbar-color: var(--header) rgb(128, 128, 128);
+    scrollbar-width: thin;
+}
+
+.condensed::-webkit-scrollbar {
+    width: 7px;
+}
+
+.condensed::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 20px;
+}
+
+.condensed::-webkit-scrollbar-thumb {
+    background: var(--header);
+    border-radius: 10px;
 }
 
 #description p {
@@ -155,19 +179,22 @@ div#photoGroup ul#titles li {
     text-decoration: underline;
 }
 
+// Up to medium
 @media (max-width: 1400px) {
     section#charDay {
-        grid-template-areas: "photoGroup" "description";
+        grid-template-areas: "photoGroup" "description" "readMore";
         row-gap: 2vh;
     }
 }
 
+// Up to small
 @media (max-width: 900px) {
     section {
         --pad-width: 9vw;
     }
 }
 
+// Mobile
 @media (max-width: 600px) {
     section {
         --pad-width: 2vw;

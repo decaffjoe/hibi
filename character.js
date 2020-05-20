@@ -1,5 +1,7 @@
 "use strict";
 const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), nodeFetch = require('node-fetch');
+// WHAT DOES THIS FILE DO?
+// Gets daily show & character info from API and writes to 'public/data.json', that's it!
 main().then(data => {
     fs.writeFile('./public/data.json', JSON.stringify(data, null, 2), 'utf-8', (err) => {
         if (err) {

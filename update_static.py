@@ -6,13 +6,14 @@ with open('./public/data.json') as data, open('./public/indexNEW.html', 'w') as 
     for line in old:
         if not skip:
             new.write(line)
-        # Start of JSON
-        if '<script id="data" type="application/json">' in line:
+        # Start of JSON destination
+        if line.strip() == '<script id="data" type="application/json">':
             for json in data:
                 new.write(json)
             new.write('\n')
-            # Skip old JSON until end of JSON script tag
+            # Don't copy the old JSON!
             skip = True
+        # This is the end of the old JSON
         if line.strip() == '</script>':
             new.write(line)
             skip = False
