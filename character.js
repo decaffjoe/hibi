@@ -1,5 +1,5 @@
 "use strict";
-const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), nodeFetch = require('node-fetch');
+const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), MD5 = require('crypto-js/md5'), nodeFetch = require('node-fetch');
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
 main().then(data => {
@@ -170,15 +170,7 @@ function selectDateId(arr) {
 }
 // Try to get random index within length of array from the current date MMDDYYYY
 function dateAlgo(date, arrLen) {
-    let hash = 0;
-    if (date.length == 0) {
-        return hash;
-    }
-    for (let i = 0; i < date.length; i++) {
-        let char = date.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash; // Convert to 32bit integer
-    }
+    let hash = MD5(date).words[0];
     return Math.abs(hash) % arrLen;
 }
 // Avoid printing missing or duplicate show names
@@ -190,21 +182,23 @@ function showNameValidator(titles) {
             realTitles[key] = value;
         }
     }
-    // check if native is fully japanese
-    const alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const native = realTitles.native.split('');
-    let fulljapanese = true;
-    native.forEach(letter => {
-        if (alphabet.includes(letter)) {
-            fulljapanese = false;
-        }
-    });
     const japanese = [];
     const results = [];
-    // if native is japanese, only proceed with checks on english & romaji
-    if (fulljapanese) {
-        japanese.push(realTitles.native);
-        Object.keys(realTitles).filter(key => key !== 'native').forEach(key => results.push(realTitles[key]));
+    if (realTitles.native) {
+        // check if native is fully english (or !, ?)
+        let regex = /[a-z]|[A-Z]|\?|!/g;
+        // get rid of spaces
+        let native = realTitles.native.split(' ').join('');
+        // get regex match string
+        let english = native.match(regex);
+        // if native is full english, check alongside english & romaji
+        if (english && english.join('') === native) {
+            Object.keys(realTitles).forEach(key => results.push(realTitles[key]));
+        }
+        else {
+            japanese.push(realTitles.native);
+            Object.keys(realTitles).filter(key => key !== 'native').forEach(key => results.push(realTitles[key]));
+        }
     }
     else {
         Object.keys(realTitles).forEach(key => results.push(realTitles[key]));
