@@ -193,7 +193,7 @@ div#photoGroup ul#titles li {
   margin: 0 auto !important;
   padding: 0.3rem 0.5rem;
   color: var(--accent);
-  font-size: 1.0rem;
+  font-size: 1rem;
 }
 
 .condensed {
@@ -247,6 +247,18 @@ div#photoGroup ul#titles li {
 @media (max-width: 600px) {
   section {
     --pad-width: 2vw;
+  }
+  .wave {
+    height: 26px;
+  }
+  #charDay div#photoGroup {
+        grid-template-areas: "names" "picture" "titles";
+  }
+  div#photoGroup ul#names {
+    margin-top: 0;
+  }
+  div#photoGroup ul#titles {
+    margin-bottom: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
