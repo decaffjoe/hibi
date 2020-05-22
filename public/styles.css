@@ -262,10 +262,11 @@ div#photoGroup ul#titles li {
   }
   .wave {
     height: 26px;
+    top: 20vh;
   }
   section#charDay {
     position: absolute;
-    top: 22vh;
+    top: 30vh;
   }
   #charDay div#photoGroup {
         grid-template-areas: "names" "picture" "titles";
