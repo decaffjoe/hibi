@@ -224,9 +224,13 @@ div#photoGroup ul#titles li {
     section {
         --pad-width: 2vw;
     }
+    .container {
+        position: relative;
+        height: 25vh;
+    }
     #header h1 {
         font-size: 1.5rem;
-        padding: 1.0vh 0 0;
+        padding: 2vh 0 0;
     }
     #header h3 {
         font-size: 1.5rem;
