@@ -9,7 +9,10 @@ NOW:
 - Scale down for mobile
 - Daily pipeline to fetch API info and update public/
     cron jobs for CI/CD?
+- Light theme w/ switcher
 
 FUTURE:
 - Vote for character of the week?
 - Group characters together to form your own cast?
+- More elaborate randomizer algo?
+    Test with dates for the next year

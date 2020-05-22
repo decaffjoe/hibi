@@ -22,7 +22,7 @@ async function main() {
         // get top 100 shows - API FETCH
         const popShows = await getPopularShows();
         // pick a 'random' show according to today's date
-        const targetShowId = await selectDateId(popShows);
+        const targetShowId = selectDateId(popShows);
 
         // get list of characters from target show - API FETCH
         const targetShow = await getShowCharacters(targetShowId);
@@ -32,7 +32,7 @@ async function main() {
 
         const targetShowChars = targetShow.characters.nodes;
         // pick a 'random' character from target show according to today's date
-        const targetCharId = await selectDateId(targetShowChars);
+        const targetCharId = selectDateId(targetShowChars);
 
         // get character information - API FETCH
         const dailyChar = await getDailyCharacter(targetCharId);
@@ -41,7 +41,7 @@ async function main() {
         if (dailyChar.description) {
             dailyChar.description = md.render(dailyChar.description);
         } else {
-            dailyChar.description = '(This character is too cool to have a description!)';
+            dailyChar.description = '(Oops, I guess this character is too cool to have a description!)';
         }
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
