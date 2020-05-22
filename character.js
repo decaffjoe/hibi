@@ -182,45 +182,40 @@ function showNameValidator(titles) {
             realTitles[key] = value;
         }
     }
-    const japanese = [];
-    const results = [];
+    let japanese = "";
+    // check if native is fully english, if not, segregate and do not compare with others
+    // avoids deleting because of casing checks (japanese is one case)
     if (realTitles.native) {
-        // check if native is fully english (or !, ?)
-        let regex = /[a-z]|[A-Z]|\?|!/g;
-        // get rid of spaces
-        let native = realTitles.native.split(' ').join('');
-        // get regex match string
-        let english = native.match(regex);
-        // if native is full english, check alongside english & romaji
-        if (english && english.join('') === native) {
-            Object.keys(realTitles).forEach(key => results.push(realTitles[key]));
+        let onlyEnglish = true;
+        // check if each letter is non-english
+        for (let letter of realTitles.native) {
+            if (!isEnglish(letter)) {
+                onlyEnglish = false;
+            }
         }
-        else {
-            japanese.push(realTitles.native);
-            Object.keys(realTitles).filter(key => key !== 'native').forEach(key => results.push(realTitles[key]));
+        if (!onlyEnglish) {
+            japanese = realTitles.native;
+            delete realTitles.native;
         }
-    }
-    else {
-        Object.keys(realTitles).forEach(key => results.push(realTitles[key]));
     }
     // get rid of identical titles
     const deDuped = [];
-    results.forEach(x => {
+    Object.values(realTitles).forEach(x => {
         if (!deDuped.includes(x)) {
             deDuped.push(x);
         }
     });
-    // get rid of matching lowercase titles (if a non-lowercase title exists)
+    // get rid of equivalent titles in lowercase (if a non-lowercase title exists)
     const deLowered = deDuped.filter(x => x !== x.toLowerCase());
     if (deLowered.length > 0) {
-        // get rid of matching uppercase titles (if a non-uppercase title exists)
+        // get rid of equivalent titles in uppercase (if a non-uppercase title exists)
         const deCased = deLowered.filter(x => x !== x.toUpperCase());
         if (deCased.length > 0) {
-            return [...deCased, ...japanese];
+            return pushIfNonEmpty(deCased, japanese);
         }
-        return [...deLowered, ...japanese];
+        return pushIfNonEmpty(deLowered, japanese);
     }
-    return [...deDuped, ...japanese];
+    return pushIfNonEmpty(deDuped, japanese);
 }
 function charNameValidator(names) {
     // if native is null or is the same as full
@@ -228,4 +223,17 @@ function charNameValidator(names) {
         return [names.full];
     }
     return [names.full, names.native];
+}
+function isEnglish(char) {
+    let code = char.charCodeAt(0);
+    if (!(code > 31 && code < 128)) {
+        return false;
+    }
+    return true;
+}
+function pushIfNonEmpty(arr, str) {
+    if (str.length > 0) {
+        return arr.concat(str);
+    }
+    return arr;
 }
