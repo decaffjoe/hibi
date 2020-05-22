@@ -87,7 +87,7 @@ section#charDay {
     column-gap: 2rem;
     justify-items: center;
     align-items: center;
-    grid-template-areas: "photoGroup description" "photoGroup description" ". description" ". readMore";
+    grid-template-areas: "photoGroup description" "photoGroup description" ". description";
 }
 
 #charDay div#photoGroup {
@@ -145,6 +145,31 @@ div#photoGroup ul#titles li {
     padding: 0 1rem;
 }
 
+.spoiler {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0 0.3rem;
+    border-radius: 5px;
+    transition: color 700ms ease-in;
+}
+
+.show-spoiler {
+    color: var(--accent);
+    text-shadow: none;
+    background-color: inherit;
+}
+
+#spoiler-info {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    width: fit-content;
+    margin: 0 auto !important;
+    padding: 0.3rem 0.5rem;
+    color: var(--accent);
+    font-size: 1.0rem;
+}
+
 .condensed {
     max-height: 400px;
     overflow-y: scroll;
@@ -182,7 +207,7 @@ div#photoGroup ul#titles li {
 // Up to medium
 @media (max-width: 1400px) {
     section#charDay {
-        grid-template-areas: "photoGroup" "description" "readMore";
+        grid-template-areas: "photoGroup" "description";
         row-gap: 2vh;
     }
 }

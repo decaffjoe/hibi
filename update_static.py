@@ -1,5 +1,13 @@
 import os
 
+
+def tagSpoilers(line):
+    if '"description": "' in line:
+        line = line.replace(
+            "~!", "<span class='spoiler' title='live dangerously'>").replace("!~", "</span>")
+    return line
+
+
 # Update index.html with fresh data.json data
 with open('./public/data.json') as data, open('./public/indexNEW.html', 'w') as new, open('./public/index.html', 'r') as old:
     skip = False
@@ -9,7 +17,7 @@ with open('./public/data.json') as data, open('./public/indexNEW.html', 'w') as 
         # Start of JSON destination
         if line.strip() == '<script id="data" type="application/json">':
             for json in data:
-                new.write(json)
+                new.write(tagSpoilers(json))
             new.write('\n')
             # Don't copy the old JSON!
             skip = True

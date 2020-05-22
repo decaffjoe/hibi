@@ -25,9 +25,17 @@ for (let i = 0; i < 3; ++i) {
 }
 
 charImage.style.backgroundImage = `url("${DATA.character.image.large}")`;
-charDesc.innerHTML = DATA.character.description;
+charDesc.innerHTML = DATA.character.description + '<p id="spoiler-info">*click on spoilers to view*</p>';
 
 // Limit and add scrollbar for large descriptions >400px
 if (charDesc.clientHeight > 400) {
     charDesc.classList.add('condensed');
+}
+
+// Toggle spoilers
+const spoilers = document.querySelectorAll('span.spoiler');
+for (let i = 0; i < spoilers.length; ++i) {
+    spoilers[i].addEventListener('click', () => {
+        spoilers[i].classList.toggle('show-spoiler');
+    });
 }
