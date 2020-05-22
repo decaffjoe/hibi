@@ -1,0 +1,15 @@
+NOW:
+- Format description spoilers
+    Hide by default
+    Toggle on click
+- Display streaming service links for current show
+- Page for yesterday's character (or past week?)
+- Add voice actor information
+    Ideally their take on the character as well
+- Scale down for mobile
+- Daily pipeline to fetch API info and update public/
+    cron jobs for CI/CD?
+
+FUTURE:
+- Vote for character of the week?
+- Group characters together to form your own cast?
