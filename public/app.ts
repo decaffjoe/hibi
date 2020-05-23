@@ -25,7 +25,7 @@ for (let i = 0; i < 3; ++i) {
 }
 
 charImage.style.backgroundImage = `url("${DATA.character.image.large}")`;
-charDesc.innerHTML = DATA.character.description + '<p id="spoiler-info">*click on spoilers to view*</p>';
+charDesc.innerHTML = '<p id="spoiler-info">*click on spoilers to view*</p>' + DATA.character.description;
 
 // Limit and add scrollbar for large descriptions >400px
 if (charDesc.clientHeight > 400) {
