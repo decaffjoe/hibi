@@ -7,6 +7,7 @@ NOW:
 - Daily pipeline to fetch API info and update public/
     cron jobs for CI/CD?
 - Light theme w/ switcher
+- If no spoilers, don't show spoilers warning!
 
 FUTURE:
 - Vote for character of the week?

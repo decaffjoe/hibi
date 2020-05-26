@@ -7,6 +7,9 @@ getdata:
   - apk add nodejs
   - node character.js
   - python update_static.py
+  artifacts:
+    paths:
+    - public
 
 pages:
   stage: deploy
