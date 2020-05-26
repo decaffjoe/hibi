@@ -1,6 +1,10 @@
 image: alpine:latest
 
 pages:
+  stage: build
+  script:
+  - node character.js
+  - python update_static.py
   stage: deploy
   script:
   - echo 'Nothing to do...'
