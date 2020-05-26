@@ -5,8 +5,12 @@ getdata:
   script:
   - apk add python
   - apk add nodejs
-  - node pipetest.js
-  - python pypetest.py
+  - apk add npm
+  - npm install markdown-it
+  - npm install crypto-js
+  - npm install node-fetch
+  - node character.js
+  - python update_static.py
   artifacts:
     paths:
     - public
