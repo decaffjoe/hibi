@@ -5,8 +5,8 @@ getdata:
   script:
   - apk add python
   - apk add nodejs
-  - node character.js
-  - python update_static.py
+  - node pipetest.js
+  - python pypetest.py
   artifacts:
     paths:
     - public
