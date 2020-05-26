@@ -176,8 +176,8 @@ function selectDateId(arr: any[]): number {
     d = d.toLocaleDateString();
     d = d.split('/').join('');
 
-    // const index = Math.floor(Math.random() * len);
-    const index = dateAlgo(d, len);
+    const index = Math.floor(Math.random() * len);
+    // const index = dateAlgo(d, len);
 
     return arr[index].id;
 }
