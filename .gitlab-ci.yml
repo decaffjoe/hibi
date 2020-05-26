@@ -1,10 +1,14 @@
 image: alpine:latest
 
-pages:
+getdata:
   stage: build
   script:
+  - apk add python
+  - apk add nodejs
   - node character.js
   - python update_static.py
+
+pages:
   stage: deploy
   script:
   - echo 'Nothing to do...'
