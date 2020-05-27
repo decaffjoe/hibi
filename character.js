@@ -162,7 +162,7 @@ async function getPopularShows() {
 function selectDateId(arr) {
     const len = arr.length;
     let d = new Date();
-    d = d.toLocaleDateString();
+    d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
     // const index = Math.floor(Math.random() * len);
     const index = dateAlgo(d, len);

@@ -173,7 +173,7 @@ function selectDateId(arr: any[]): number {
     const len = arr.length;
 
     let d: any = new Date();
-    d = d.toLocaleDateString();
+    d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
 
     // const index = Math.floor(Math.random() * len);
