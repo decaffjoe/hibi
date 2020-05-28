@@ -14,6 +14,8 @@ getdata:
   artifacts:
     paths:
     - public
+  only:
+  - master
 
 pages:
   stage: deploy
