@@ -87,6 +87,7 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
         // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         res = res.data.Character;
+        console.log('Character ID: ' + id);
         return res;
     } catch (err) {
         console.log(err);
@@ -117,6 +118,17 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
                           id
                         }
                       }
+                      externalLinks {
+                        id
+                        url
+                        site
+                      }
+                      coverImage {
+                        extraLarge
+                        large
+                        medium
+                        color
+                      }
                     }
                   }
                 `,
@@ -124,6 +136,7 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
         });
         res = await res.json();
         res = res.data.Media;
+        console.log('Show ID: ' + id);
         return res;
     } catch (err) {
         console.log(err);

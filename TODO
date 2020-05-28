@@ -6,7 +6,6 @@ NOW:
 - Medium image for mobile
 - Light theme w/ switcher
 - If no spoilers, don't show spoilers warning!
-- Use testing branch, pipeline should be master only
 
 FUTURE:
 - Vote for character of the week?
