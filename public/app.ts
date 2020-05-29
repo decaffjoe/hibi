@@ -39,3 +39,17 @@ for (let i = 0; i < spoilers.length; ++i) {
         spoilers[i].classList.toggle('show-spoiler');
     });
 }
+
+// Show links
+const showSection = document.querySelector('section#showInfo'),
+    links = DATA.showLinks,
+    linkKeys = Object.keys(links),
+    showArt = DATA.showArt;
+
+let anchor, text;
+for (let link in links) {
+    anchor = document.createElement('a');
+    text = document.createTextNode(links[link]['site']);
+    anchor.appendChild(text);
+    showSection.appendChild(anchor);
+}
