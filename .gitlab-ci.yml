@@ -3,7 +3,6 @@ image: alpine:latest
 getdata:
   stage: build
   script:
-  - apk add python
   - apk add nodejs
   - apk add npm
   - npm install markdown-it
