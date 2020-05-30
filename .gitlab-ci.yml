@@ -9,7 +9,7 @@ getdata:
   - npm install crypto-js
   - npm install node-fetch
   - node character.js
-  - python3 update_static.py
+  - /usr/bin/python update_static.py
   artifacts:
     paths:
     - public
