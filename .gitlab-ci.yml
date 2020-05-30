@@ -4,6 +4,7 @@ getdata:
   stage: build
   script:
   - apk add nodejs
+  - apk add py3-setuptools
   - apk add npm
   - npm install markdown-it
   - npm install crypto-js
