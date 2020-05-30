@@ -3,11 +3,11 @@ image: ubuntu:latest
 getdata:
   stage: build
   script:
-  - apt-get update
-  - apt-get upgrade
-  - apt-get install nodejs
-  - apt-get install npm
-  - apt-get install python3
+  # - apt-get update
+  # - apt-get upgrade
+  # - apt-get install nodejs
+  # - apt-get install npm
+  # - apt-get install python3
   - npm install markdown-it
   - npm install crypto-js
   - npm install node-fetch
