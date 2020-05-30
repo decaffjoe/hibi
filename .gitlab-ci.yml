@@ -1,15 +1,16 @@
-image: alpine:latest
+image: ubuntu:latest
 
 getdata:
   stage: build
   script:
-  - apk add nodejs
-  - apk add npm
+  - apt-get install nodejs
+  - apt-get install npm
+  - apt-get install python3
   - npm install markdown-it
   - npm install crypto-js
   - npm install node-fetch
   - node character.js
-  - /usr/bin/python update_static.py
+  - python update_static.py
   artifacts:
     paths:
     - public
