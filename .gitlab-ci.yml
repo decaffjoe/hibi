@@ -4,13 +4,12 @@ getdata:
   stage: build
   script:
   - apk add nodejs
-  - apk add py3-setuptools
   - apk add npm
   - npm install markdown-it
   - npm install crypto-js
   - npm install node-fetch
   - node character.js
-  - python update_static.py
+  - python3 update_static.py
   artifacts:
     paths:
     - public
