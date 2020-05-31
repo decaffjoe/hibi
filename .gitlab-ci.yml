@@ -1,6 +1,7 @@
 image: node:latest
 
 stages:
+  - dependencies
   - build
   - deploy
 
@@ -8,15 +9,23 @@ cache:
   paths:
     - node_modules/
 
+install_deps:
+  stage: dependencies
+  script:
+  - npm install
+  artifacts:
+    paths:
+    - node_modules/
+  only:
+  - master
+
 getdata:
   stage: build
   script:
-  - npm install
   - node character.js
   - python update_static.py
   artifacts:
     paths:
-    - node_modules/
     - public
   only:
   - master
