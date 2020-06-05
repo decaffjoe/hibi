@@ -1,80 +1,72 @@
 {
-  "showTitles": [
-    "Death Note"
-  ],
   "showLinks": [
     {
-      "id": 545,
-      "url": "http://www.netflix.com/WiMovie/70204970?trkid=202653",
-      "site": "Netflix"
-    },
-    {
-      "id": 1964,
-      "url": "http://www.hulu.com/death-note",
-      "site": "Hulu"
-    },
-    {
-      "id": 3968,
-      "url": "http://www.ntv.co.jp/deathnote/",
+      "id": 3143,
+      "url": "http://jojo-animation.com/fb_bt/",
       "site": "Official Site"
     },
     {
-      "id": 7584,
-      "url": "https://www.animelab.com/shows/death-note",
+      "id": 3144,
+      "url": "https://twitter.com/anime_jojo",
+      "site": "Twitter"
+    },
+    {
+      "id": 8055,
+      "url": "https://www.animelab.com/shows/jojos-bizarre-adventure",
       "site": "AnimeLab"
     },
     {
-      "id": 16182,
-      "url": "https://www.crunchyroll.com/death-note",
-      "site": "Crunchyroll"
-    },
-    {
-      "id": 16183,
-      "url": "https://www.viz.com/watch/streaming/death-note",
-      "site": "Viz"
-    },
-    {
-      "id": 16659,
-      "url": "https://vrv.co/series/G6QWD3EE6/Death-Note",
-      "site": "VRV"
-    },
-    {
-      "id": 16660,
-      "url": "https://www.netflix.com/title/70204970",
+      "id": 16402,
+      "url": "https://www.netflix.com/title/80179831",
       "site": "Netflix"
     },
     {
-      "id": 16661,
-      "url": "https://tubitv.com/series/1630/death_note",
+      "id": 16662,
+      "url": "https://www.viz.com/watch/streaming/jojo-s-bizarre-adventure",
+      "site": "Viz"
+    },
+    {
+      "id": 16663,
+      "url": "https://vrv.co/series/GYP8DP1MY/JoJos-Bizarre-Adventure",
+      "site": "VRV"
+    },
+    {
+      "id": 16664,
+      "url": "https://tubitv.com/series/1823/jojos_bizarre_adventure",
       "site": "Tubi TV"
     },
     {
-      "id": 17996,
-      "url": "http://www.vap.co.jp/deathnote/",
-      "site": "Official Site"
+      "id": 16665,
+      "url": "https://www.crunchyroll.com/jojos-bizarre-adventure",
+      "site": "Crunchyroll"
     }
   ],
-  "showImgs": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx1535-0seL81FuzaJL.jpg",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx1535-0seL81FuzaJL.jpg",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx1535-0seL81FuzaJL.jpg",
-    "color": null
+  "showArt": {
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/n14719-EVJmyKNzcjet.jpg",
+    "color": "#e4a15d"
   },
+  "showTitles": [
+    "JoJo's Bizarre Adventure",
+    "JoJo no Kimyou na Bouken",
+    "ジョジョの奇妙な冒険"
+  ],
   "charNames": [
-    "Nate River",
-    "ネイト・リバー"
+    "ACDC",
+    "エシディシ"
   ],
   "character": {
     "name": {
-      "first": "Nate",
-      "last": "River",
-      "full": "Nate River",
-      "native": "ネイト・リバー"
+      "first": "ACDC",
+      "last": null,
+      "full": "ACDC",
+      "native": "エシディシ"
     },
-    "description": "<p><strong>Age:</strong> First appearance: 13 years old, Final chapter : 19 years old, Final appearance : 21 years old\n<strong>Gender:</strong> Male\n<strong>Species:</strong> Human\n<strong>Date of birth:</strong> 24 August 1991 (1994 in anime)\n<strong>Occupation:</strong> Head of SPK (Secret Provision for Kira), 3rd and final &quot;L&quot; in chapters 108 and aftermath\n<strong>Blood type:</strong> B\n<strong>Likes:</strong> toys and puzzles\n<strong>Dislikes:</strong> Kira</p>\n<p>In Death Note, Near is the younger of L's two successors raised in Wammy's House, Watari's orphanage for gifted children, in Winchester, England, United Kingdom. Of the successors, Near is the more level-headed, calmly assessing the situation, while the other, Mello, is more emotional and quick to act. Much like L, Near shows various odd behaviors during his normal life. He is usually seen hunched over rather than sitting. He also constantly plays with various toys, which he uses in his theories, as well as idly twiddling strands of his hair. He shows a great respect for L, basing much of how he solves crime on L's methods, even to the point where he only takes cases that he is interested with rather than trying to pursue justice. Near uses the Wedding Text font &quot;N&quot; and &quot;L&quot; to represent himself and the fake L, respectively. But later in the aftermath, he used Old English font &quot;L&quot; like the original L did. He is voiced by Noriko Hidaka in the Japanese anime, Cathy Weseluck in the English dub, and Bruno Coronel in the Latin Spanish version.   ~!Sometime after L's death, he works for the United States under the SPK (Special Provision for Kira) team that is established to investigate Kira without the help of &quot;L&quot;. He soon manages to deduce that Light Yagami, posing as L, is actually Kira. After he finds that Teru Mikami is Light's proxy and Mello kidnaps Kiyomi Takada, Near is able to switch Mikami's Death Note with a forged one, allowing him to set up a final confrontation that leaves Light exposed. Ryuk kills Light soon after. Near says that neither he nor Mello could surpass L alone, but have managed to do so by inadvertently working together. Near soon takes L's alias, and keeps on the surviving members of the SPK as his subordinates.!~   ~! It is speculated by Matsuda in Death Note: Oneshot that Near uses the Death Note to manipulate Mikami into failing Light in the final battle, which would shed light on some major plotholes. It's important to note that Tsugumi Ohba has said that he wanted it to be left up to the readers on if Matsuda is right or not.!~  Tsugumi Ohba, writer of Death Note, said that Near &quot;becomes less likeable&quot; as the story advances, citing Near's plan to take the notebook at a later point in the story. Ohba said that a negative reaction originated from &quot;the difference in their attitudes&quot; and that people may have viewed Near as &quot;a cheat.&quot; Ohba added that Near's &quot;cheeky behavior,&quot; intended to &quot;reinforce his childishness,&quot; had been construed as &quot;annoying.&quot;  In the final chapter Near brings finger puppets to the Yellow Box Warehouse. Takeshi Obata, artist of Death Note, said that Near first bought the Kira finger puppet and drew on it with a magic marker. Obata then said that Near must have created the other puppets afterwards. Obata views Near as not liking L much so Obata had Near depict L as &quot;ugly&quot;, and that Near &quot;worked hard&quot; on Mello's puppet as Near &quot;liked Mello.&quot;  Obata said he enjoyed drawing Near and that Near is also one of his favorite and his least favorite characters, considering him to be the smartest character in the manga &quot;because he cheats.&quot;  When asked about which character was most similar to himself, Ohba indicated Near and &quot;maybe Light.&quot; Regarding Near, Ohba said that he does not leave his house often.</p>\n",
+    "description": "<p>ACDC is one of the Pillar Men that were discovered by Nazis in Rome. Like Wham and Cars, ACDC is very confident in his powers and abilities and see humans as inferior. However, he has a more violent temper than the others to the point that he has to cry and sob to calm himself down.  He is named after Australian Hard rock band AC/DC.   ~!ACDC uses &quot;the skill of fire&quot;. He raises his body temperature in order to heat his blood to 500°C. He then extends his blood vessels out of his body and makes them into long, prehensile needles with which he injects his hot blood into enemies, dissolving them from within. Even if the blood isn't injected directly, it can still eat through flesh and metal alike if sprayed on a target from the outside. AC/DC has been shown to have an extremely erratic temper, sobbing at the sight of his own severed arm, only to calm himself near-instantly and replace it with the arm of Loggins. He himself stated that he has a more explosive temper than either of his brethren, and claims to openly express any rage or sorrow he feels so he doesn't lose his self-control.  ACDC had traveled to ancient China and knew Sun Tzu's theory that &quot;all warfare is based on deception&quot;. In his battle with Joseph Joestar, he tries to intimidate him by disabling Joseph's deceptive tactics.  ACDC cuts the hidden rope through which Joseph plans to send Ripple energy to hurt him. Nevertheless, he falls for Joseph's more sophisticated deception, for Joseph has predicted his action and employed the cut-and-restore rope trick on the rope.  His bones and muscles are destroyed, but his brain and blood vessels possess Suzi Q, who takes the Red Stone of Aja and sends it to Cars in Switzerland. ACDC then prepares to turn Suzi Q into a &quot;blood bomb&quot;, planning on pressurizing his boiling blood until her body bursts, killing himself and Joseph's group in the process. Joseph and Caesar attack Suzi Q at the same time. While their Ripples cancel each other out and keep Suzi Q unharmed, ACDC is destroyed.!~ (Source: Wikipedia)</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/n464-6KeJpU6g7Hwj.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n464-6KeJpU6g7Hwj.jpg"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/n21964-XBueaGTR94Y1.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n21964-XBueaGTR94Y1.png"
     }
   }
 }

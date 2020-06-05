@@ -21,6 +21,7 @@ async function main() {
     try {
         // get top 100 shows - API FETCH
         const popShows = await getPopularShows();
+
         // pick a 'random' show according to today's date
         const targetShowId = selectDateId(popShows);
 
@@ -29,6 +30,8 @@ async function main() {
 
         // handle show titles (null or repeats)
         const targetShowNames = showNameValidator(targetShow.title);
+        const targetShowLinks = targetShow.externalLinks;
+        const targetShowArt = targetShow.coverImage;
 
         const targetShowChars = targetShow.characters.nodes;
         // pick a 'random' character from target show according to today's date
@@ -46,9 +49,11 @@ async function main() {
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
         return {
+            showLinks: targetShowLinks,
+            showArt: targetShowArt,
             showTitles: targetShowNames,
             charNames: dailyCharNames,
-            character: dailyChar
+            character: dailyChar,
         };
     } catch (err) {
         console.log(err);
@@ -298,6 +303,17 @@ interface showCharacters {
                 id: number
             }
         ]
+    },
+    externalLinks: [{
+        id: number,
+        url: string,
+        site: string
+    }],
+    coverImage: {
+        extraLarge: string | null,
+        large: string | null,
+        medium: string | null,
+        color: string | null,
     }
 }
 
