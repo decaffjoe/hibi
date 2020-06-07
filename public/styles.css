@@ -231,7 +231,8 @@ div#photoGroup ul#titles li {
   text-decoration: underline;
 }
 
-section#showLinks {
+section#showLinks > div {
+  margin-top: 2rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 3fr 2fr;
@@ -240,17 +241,28 @@ section#showLinks {
           column-gap: 2vw;
 }
 
-section#showLinks div h1 {
-  margin-top: 0;
+section#showLinks > div > div {
+  background-color: #0c0c78;
+  border-radius: 65px;
+  padding: 0.5rem 0.6rem 0.9rem;
+}
+
+section#showLinks div div h1 {
+  margin: 0 0 0.3rem;
 }
 
 .link-icon {
   height: 50px;
   width: 50px;
+  border: 2px solid #0c0c78;
   border-radius: 12px;
   outline: none;
-  -webkit-box-shadow: 6px 6px 4px 0px black;
-          box-shadow: 6px 6px 4px 0px black;
+  -webkit-transition: border 100ms ease-out;
+  transition: border 100ms ease-out;
+}
+
+.link-icon:hover {
+  border: 2px solid var(--link);
 }
 
 .hidden {
@@ -303,7 +315,7 @@ section#showLinks div h1 {
   div#photoGroup ul#titles {
     margin-bottom: 0;
   }
-  section#showLinks {
+  section#showLinks > div {
     position: absolute;
     top: 162vh;
     width: 93vw;
