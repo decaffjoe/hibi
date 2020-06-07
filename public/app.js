@@ -45,7 +45,7 @@ const hidive = document.querySelector('#hidive-link');
 const vrv = document.querySelector('#vrv-link');
 const viz = document.querySelector('#viz-link');
 const twitter = document.querySelector('#twitter-link');
-const linkDirectory = {
+const allLinks = {
     'Twitter': twitter,
     'Netflix': netflix,
     'Crunchyroll': crunchyroll,
@@ -62,9 +62,10 @@ const linkDirectory = {
 };
 console.log(links);
 for (let link of links) {
-    if (linkDirectory[link['site']]) {
-        linkDirectory[link['site']].href = link['url'];
-        linkDirectory[link['site']].classList.remove('hidden');
+    if (allLinks[link['site']]) {
+        allLinks[link['site']].href = link['url'];
+        allLinks[link['site']].classList.remove('hidden');
+        allLinks[link['site']].title = link['site'];
     }
     else {
         console.log('ayyy lmao');

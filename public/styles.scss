@@ -204,9 +204,14 @@ div#photoGroup ul#titles li {
     text-decoration: underline;
 }
 
-.coverArt {
-    height: 200px;
-    width: 200px;
+section#showLinks {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 2vw;
+}
+
+section#showLinks div h1 {
+    margin-top: 0;
 }
 
 .link-icon {
@@ -214,6 +219,7 @@ div#photoGroup ul#titles li {
     width: 50px;
     border-radius: 12px;
     outline: none;
+    box-shadow: 6px 6px 4px 0px black;
 }
 
 .hidden {
@@ -268,5 +274,13 @@ div#photoGroup ul#titles li {
     }
     div#photoGroup ul#titles {
         margin-bottom: 0;
+    }
+    section#showLinks {
+        position: absolute;
+        top: 162vh;
+        width: 93vw;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
     }
 }
