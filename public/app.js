@@ -26,12 +26,47 @@ for (let i = 0; i < spoilers.length; ++i) {
         spoilers[i].classList.toggle('show-spoiler');
     });
 }
+// Show cover art on official site link
+const showArt = DATA.showArt;
+const officialImg = document.querySelector('#official-link img');
+officialImg.setAttribute('src', showArt['medium']);
 // Show links
-const showSection = document.querySelector('section#showInfo'), links = DATA.showLinks, linkKeys = Object.keys(links), showArt = DATA.showArt;
-let anchor, text;
-for (let link in links) {
-    anchor = document.createElement('a');
-    text = document.createTextNode(links[link]['site']);
-    anchor.appendChild(text);
-    showSection.appendChild(anchor);
+const links = DATA.showLinks;
+const official = document.querySelector('#official-link');
+const netflix = document.querySelector('#netflix-link');
+const crunchyroll = document.querySelector('#crunchyroll-link');
+const tubi = document.querySelector('#tubi-link');
+const funimation = document.querySelector('#funimation-link');
+const hulu = document.querySelector('#hulu-link');
+const amazon = document.querySelector('#amazon-link');
+const hbomax = document.querySelector('#hbomax-link');
+const animelab = document.querySelector('#animelab-link');
+const hidive = document.querySelector('#hidive-link');
+const vrv = document.querySelector('#vrv-link');
+const viz = document.querySelector('#viz-link');
+const twitter = document.querySelector('#twitter-link');
+const linkDirectory = {
+    'Twitter': twitter,
+    'Netflix': netflix,
+    'Crunchyroll': crunchyroll,
+    'Tubi TV': tubi,
+    'Funimation': funimation,
+    'Hulu': hulu,
+    'Amazon': amazon,
+    'HBO Max': hbomax,
+    'AnimeLab': animelab,
+    'Hidive': hidive,
+    'VRV': vrv,
+    'Viz': viz,
+    'Official Site': official,
+};
+console.log(links);
+for (let link of links) {
+    if (linkDirectory[link['site']]) {
+        linkDirectory[link['site']].href = link['url'];
+        linkDirectory[link['site']].classList.remove('hidden');
+    }
+    else {
+        console.log('ayyy lmao');
+    }
 }

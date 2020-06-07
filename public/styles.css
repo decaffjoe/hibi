@@ -231,6 +231,22 @@ div#photoGroup ul#titles li {
   text-decoration: underline;
 }
 
+.coverArt {
+  height: 200px;
+  width: 200px;
+}
+
+.link-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 12px;
+  outline: none;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 1400px) {
   section#charDay {
         grid-template-areas: "photoGroup" "description";

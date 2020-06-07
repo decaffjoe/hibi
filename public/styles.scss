@@ -204,7 +204,23 @@ div#photoGroup ul#titles li {
     text-decoration: underline;
 }
 
-// Up to medium
+.coverArt {
+    height: 200px;
+    width: 200px;
+}
+
+.link-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+    outline: none;
+}
+
+.hidden {
+    display: none;
+}
+
+// Up to medium screens
 @media (max-width: 1400px) {
     section#charDay {
         grid-template-areas: "photoGroup" "description";
@@ -212,7 +228,7 @@ div#photoGroup ul#titles li {
     }
 }
 
-// Up to small
+// Up to small screens
 @media (max-width: 900px) {
     section {
         --pad-width: 9vw;
