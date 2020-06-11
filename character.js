@@ -21,6 +21,8 @@ async function main() {
         const targetShow = await getShowCharacters(targetShowId);
         // handle show titles (null or repeats)
         const targetShowNames = showNameValidator(targetShow.title);
+        const targetShowLinks = targetShow.externalLinks;
+        const targetShowArt = targetShow.coverImage;
         const targetShowChars = targetShow.characters.nodes;
         // pick a 'random' character from target show according to today's date
         const targetCharId = selectDateId(targetShowChars);
@@ -36,9 +38,11 @@ async function main() {
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
         return {
+            showLinks: targetShowLinks,
+            showArt: targetShowArt,
             showTitles: targetShowNames,
             charNames: dailyCharNames,
-            character: dailyChar
+            character: dailyChar,
         };
     }
     catch (err) {
@@ -77,6 +81,7 @@ async function getDailyCharacter(id) {
         // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         res = res.data.Character;
+        console.log('Character ID: ' + id);
         return res;
     }
     catch (err) {
@@ -107,6 +112,17 @@ async function getShowCharacters(id) {
                           id
                         }
                       }
+                      externalLinks {
+                        id
+                        url
+                        site
+                      }
+                      coverImage {
+                        extraLarge
+                        large
+                        medium
+                        color
+                      }
                     }
                   }
                 `,
@@ -114,6 +130,7 @@ async function getShowCharacters(id) {
         });
         res = await res.json();
         res = res.data.Media;
+        console.log('Show ID: ' + id);
         return res;
     }
     catch (err) {

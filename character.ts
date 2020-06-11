@@ -21,6 +21,7 @@ async function main() {
     try {
         // get top 100 shows - API FETCH
         const popShows = await getPopularShows();
+
         // pick a 'random' show according to today's date
         const targetShowId = selectDateId(popShows);
 
@@ -29,6 +30,8 @@ async function main() {
 
         // handle show titles (null or repeats)
         const targetShowNames = showNameValidator(targetShow.title);
+        const targetShowLinks = targetShow.externalLinks;
+        const targetShowArt = targetShow.coverImage;
 
         const targetShowChars = targetShow.characters.nodes;
         // pick a 'random' character from target show according to today's date
@@ -46,9 +49,11 @@ async function main() {
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
         return {
+            showLinks: targetShowLinks,
+            showArt: targetShowArt,
             showTitles: targetShowNames,
             charNames: dailyCharNames,
-            character: dailyChar
+            character: dailyChar,
         };
     } catch (err) {
         console.log(err);
@@ -87,6 +92,7 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
         // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         res = res.data.Character;
+        console.log('Character ID: ' + id);
         return res;
     } catch (err) {
         console.log(err);
@@ -117,6 +123,17 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
                           id
                         }
                       }
+                      externalLinks {
+                        id
+                        url
+                        site
+                      }
+                      coverImage {
+                        extraLarge
+                        large
+                        medium
+                        color
+                      }
                     }
                   }
                 `,
@@ -124,6 +141,7 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
         });
         res = await res.json();
         res = res.data.Media;
+        console.log('Show ID: ' + id);
         return res;
     } catch (err) {
         console.log(err);
@@ -176,7 +194,11 @@ function selectDateId(arr: any[]): number {
     d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
 
+<<<<<<< HEAD
     const index = dateAlgo(d, len);
+=======
+    const index = Math.floor(Math.random() * len);
+>>>>>>> testing
 
     return arr[index].id;
 }
@@ -285,6 +307,17 @@ interface showCharacters {
                 id: number
             }
         ]
+    },
+    externalLinks: [{
+        id: number,
+        url: string,
+        site: string
+    }],
+    coverImage: {
+        extraLarge: string | null,
+        large: string | null,
+        medium: string | null,
+        color: string | null,
     }
 }
 

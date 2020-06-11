@@ -4,8 +4,6 @@ NOW:
 - Add voice actor information
     Ideally their take on the character as well
 - Medium image for mobile
-- Daily pipeline to fetch API info and update public/
-    cron jobs for CI/CD?
 - Light theme w/ switcher
 - If no spoilers, don't show spoilers warning!
 

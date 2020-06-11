@@ -204,7 +204,29 @@ div#photoGroup ul#titles li {
     text-decoration: underline;
 }
 
-// Up to medium
+section#showLinks {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    column-gap: 2vw;
+}
+
+section#showLinks div h1 {
+    margin-top: 0;
+}
+
+.link-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+    outline: none;
+    box-shadow: 6px 6px 4px 0px black;
+}
+
+.hidden {
+    display: none;
+}
+
+// Up to medium screens
 @media (max-width: 1400px) {
     section#charDay {
         grid-template-areas: "photoGroup" "description";
@@ -212,7 +234,7 @@ div#photoGroup ul#titles li {
     }
 }
 
-// Up to small
+// Up to small screens
 @media (max-width: 900px) {
     section {
         --pad-width: 9vw;
@@ -252,5 +274,13 @@ div#photoGroup ul#titles li {
     }
     div#photoGroup ul#titles {
         margin-bottom: 0;
+    }
+    section#showLinks {
+        position: absolute;
+        top: 162vh;
+        width: 93vw;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
     }
 }
