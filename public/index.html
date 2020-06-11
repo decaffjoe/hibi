@@ -1,158 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Anime</title>
-  </head>
 
-  <body>
-    <section id="header" class="container">
-      <h1>Anime Character of the Day</h1>
-      <h3></h3>
-      <div class="wave"></div>
-    </section>
-    <section id="charDay">
-      <div id="photoGroup">
-        <div id="photo"></div>
-        <ul id="names">
-          <li></li>
-          <li></li>
-        </ul>
-        <ul id="titles">
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-      <div id="description"></div>
-    </section>
-    <section id="showLinks">
-      <div>
-        <div id="watch-links">
-          <h1>watch</h1>
-          <a href="#" id="funimation-link" class="hidden"
-            ><img class="link-icon" src="./assets/funimation.jpg" alt=""
-          /></a>
-          <a href="#" id="crunchyroll-link" class="hidden"
-            ><img class="link-icon" src="./assets/crunchyroll.jpg" alt=""
-          /></a>
-          <a href="#" id="netflix-link" class="hidden"
-            ><img class="link-icon" src="./assets/netflix.jpg" alt=""
-          /></a>
-          <a href="#" id="amazon-link" class="hidden"
-            ><img class="link-icon" src="./assets/amazon.jpg" alt=""
-          /></a>
-          <a href="#" id="hulu-link" class="hidden"
-            ><img class="link-icon" src="./assets/hulu.jpg" alt=""
-          /></a>
-          <a href="#" id="hbomax-link" class="hidden"
-            ><img class="link-icon" src="./assets/hbomax.jpg" alt=""
-          /></a>
-          <a href="#" id="animelab-link" class="hidden"
-            ><img class="link-icon" src="./assets/animelab.jpg" alt=""
-          /></a>
-          <a href="#" id="tubi-link" class="hidden"
-            ><img class="link-icon" src="./assets/tubi.jpg" alt=""
-          /></a>
-          <a href="#" id="vrv-link" class="hidden"
-            ><img class="link-icon" src="./assets/vrv.jpg" alt=""
-          /></a>
-          <a href="#" id="viz-link" class="hidden"
-            ><img class="link-icon" src="./assets/viz.jpg" alt=""
-          /></a>
-          <a href="#" id="hidive-link" class="hidden"
-            ><img class="link-icon" src="./assets/hidive.jpg" alt=""
-          /></a>
-        </div>
-        <div id="connect-links">
-          <h1>connect</h1>
-          <a href="#" id="official-link" class="hidden"
-            ><img class="link-icon" src="" alt=""
-          /></a>
-          <a href="#" id="twitter-link" class="hidden"
-            ><img class="link-icon" src="./assets/twitter.jpg" alt=""
-          /></a>
-        </div>
-      </div>
-    </section>
-    <script id="data" type="application/json">
-      {
-        "showLinks": [
-          {
-            "id": 1144,
-            "url": "http://bokumachi-anime.com/",
-            "site": "Official Site"
-          },
-          {
-            "id": 3164,
-            "url": "https://twitter.com/bokumachi_anime",
-            "site": "Twitter"
-          },
-          {
-            "id": 3442,
-            "url": "http://www.crunchyroll.com/erased",
-            "site": "Crunchyroll"
-          },
-          {
-            "id": 9125,
-            "url": "https://www.hulu.com/series/erased-40cf1997-7291-4764-a80c-c264294fa691",
-            "site": "Hulu"
-          },
-          {
-            "id": 15521,
-            "url": "https://vrv.co/series/GYGG92K7Y",
-            "site": "VRV"
-          },
-          {
-            "id": 20444,
-            "url": "https://www.animelab.com/shows/erased",
-            "site": "AnimeLab"
-          },
-          {
-            "id": 21438,
-            "url": "https://www.funimation.com/shows/erased/",
-            "site": "Funimation"
-          },
-          {
-            "id": 22140,
-            "url": "https://www.netflix.com/title/80114225",
-            "site": "Netflix"
-          },
-          {
-            "id": 22345,
-            "url": "https://play.hbomax.com/series/urn:hbo:series:GXpiIvgu-rrEswgEAAAZY",
-            "site": "HBO Max"
-          }
-        ],
-        "showArt": {
-          "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21234-v2NMgPyoVRoM.jpg",
-          "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21234-v2NMgPyoVRoM.jpg",
-          "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx21234-v2NMgPyoVRoM.jpg",
-          "color": "#e4a150"
-        },
-        "showTitles": ["Boku Dake ga Inai Machi", "僕だけがいない街"],
-        "charNames": ["Kenya Kobayashi", "小林賢也"],
-        "character": {
-          "name": {
-            "first": "Kenya",
-            "last": "Kobayashi",
-            "full": "Kenya Kobayashi",
-            "native": "小林賢也"
-          },
-          "description": "<p>Kenya is one of Satoru's primary school classmates. He has a strong sense of justice and has a sharp eye for abnormalities.</p>\n",
-          "image": {
-            "large": "https://s4.anilist.co/file/anilistcdn/character/large/89357-Vqf2bWFftrWn.jpg",
-            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/89357-Vqf2bWFftrWn.jpg"
-          }
-        }
-      }
-    </script>
-    <script src="app.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <title>Anime</title>
+</head>
+
+<body>
+  <section id="header" class="container">
+    <h1>Anime Character of the Day</h1>
+    <h3></h3>
+    <div class="wave"></div>
+  </section>
+  <section id="charDay">
+    <div id="photoGroup">
+      <div id="photo"></div>
+      <ul id="names">
+        <li></li>
+        <li></li>
+      </ul>
+      <ul id="titles">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+    <div id="description"></div>
+  </section>
+  <section id="showLinks">
+    <div id="watch-links">
+      <h1>watch</h1>
+      <a href="#" id="funimation-link" class="hidden"><img class="link-icon" src="./assets/funimation.jpg" alt=""></a>
+      <a href="#" id="crunchyroll-link" class="hidden"><img class="link-icon" src="./assets/crunchyroll.jpg" alt=""></a>
+      <a href="#" id="netflix-link" class="hidden"><img class="link-icon" src="./assets/netflix.jpg" alt=""></a>
+      <a href="#" id="amazon-link" class="hidden"><img class="link-icon" src="./assets/amazon.jpg" alt=""></a>
+      <a href="#" id="hulu-link" class="hidden"><img class="link-icon" src="./assets/hulu.jpg" alt=""></a>
+      <a href="#" id="hbomax-link" class="hidden"><img class="link-icon" src="./assets/hbomax.jpg" alt=""></a>
+      <a href="#" id="animelab-link" class="hidden"><img class="link-icon" src="./assets/animelab.jpg" alt=""></a>
+      <a href="#" id="tubi-link" class="hidden"><img class="link-icon" src="./assets/tubi.jpg" alt=""></a>
+      <a href="#" id="vrv-link" class="hidden"><img class="link-icon" src="./assets/vrv.jpg" alt=""></a>
+      <a href="#" id="viz-link" class="hidden"><img class="link-icon" src="./assets/viz.jpg" alt=""></a>
+      <a href="#" id="hidive-link" class="hidden"><img class="link-icon" src="./assets/hidive.jpg" alt=""></a>
+    </div>
+    <div id="connect-links">
+      <h1>connect</h1>
+      <a href="#" id="official-link" class="hidden"><img class="link-icon" src="" alt=""></a>
+      <a href="#" id="twitter-link" class="hidden"><img class="link-icon" src="./assets/twitter.jpg" alt=""></a>
+    </div>
+  </section>
+  <script id="data" type="application/json">
+{
+  "showLinks": [
+    {
+      "id": 1144,
+      "url": "http://bokumachi-anime.com/",
+      "site": "Official Site"
+    },
+    {
+      "id": 3164,
+      "url": "https://twitter.com/bokumachi_anime",
+      "site": "Twitter"
+    },
+    {
+      "id": 3442,
+      "url": "http://www.crunchyroll.com/erased",
+      "site": "Crunchyroll"
+    },
+    {
+      "id": 9125,
+      "url": "https://www.hulu.com/series/erased-40cf1997-7291-4764-a80c-c264294fa691",
+      "site": "Hulu"
+    },
+    {
+      "id": 15521,
+      "url": "https://vrv.co/series/GYGG92K7Y",
+      "site": "VRV"
+    },
+    {
+      "id": 20444,
+      "url": "https://www.animelab.com/shows/erased",
+      "site": "AnimeLab"
+    },
+    {
+      "id": 21438,
+      "url": "https://www.funimation.com/shows/erased/",
+      "site": "Funimation"
+    },
+    {
+      "id": 22140,
+      "url": "https://www.netflix.com/title/80114225",
+      "site": "Netflix"
+    },
+    {
+      "id": 22345,
+      "url": "https://play.hbomax.com/series/urn:hbo:series:GXpiIvgu-rrEswgEAAAZY",
+      "site": "HBO Max"
+    }
+  ],
+  "showArt": {
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx21234-v2NMgPyoVRoM.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx21234-v2NMgPyoVRoM.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx21234-v2NMgPyoVRoM.jpg",
+    "color": "#e4a150"
+  },
+  "showTitles": [
+    "Boku Dake ga Inai Machi",
+    "僕だけがいない街"
+  ],
+  "charNames": [
+    "Kenya Kobayashi",
+    "小林賢也"
+  ],
+  "character": {
+    "name": {
+      "first": "Kenya",
+      "last": "Kobayashi",
+      "full": "Kenya Kobayashi",
+      "native": "小林賢也"
+    },
+    "description": "<p>Kenya is one of Satoru's primary school classmates. He has a strong sense of justice and has a sharp eye for abnormalities.</p>\n",
+    "image": {
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/89357-Vqf2bWFftrWn.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/89357-Vqf2bWFftrWn.jpg"
+    }
+  }
+}
+  </script>
+  <script src="app.js" type="module"></script>
+</body>
+
 </html>
