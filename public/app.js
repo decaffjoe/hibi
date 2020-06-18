@@ -45,8 +45,7 @@ const hidive = document.querySelector('#hidive-link');
 const vrv = document.querySelector('#vrv-link');
 const viz = document.querySelector('#viz-link');
 const twitter = document.querySelector('#twitter-link');
-const allLinks = {
-    'Twitter': twitter,
+const watchLinks = {
     'Netflix': netflix,
     'Crunchyroll': crunchyroll,
     'Tubi TV': tubi,
@@ -58,16 +57,28 @@ const allLinks = {
     'Hidive': hidive,
     'VRV': vrv,
     'Viz': viz,
+};
+const connectLinks = {
+    'Twitter': twitter,
     'Official Site': official,
 };
-console.log(links);
+const watchHeader = document.querySelector('#watch-links h1'), connectHeader = document.querySelector('#connect-links h1');
+// Iterate over all links returned from API
 for (let link of links) {
-    if (allLinks[link['site']]) {
-        allLinks[link['site']].href = link['url'];
-        allLinks[link['site']].classList.remove('hidden');
-        allLinks[link['site']].title = link['site'];
+    if (connectLinks[link['site']]) {
+        // show link and set attributes
+        connectLinks[link['site']].href = link['url'];
+        connectLinks[link['site']].classList.remove('hidden');
+        connectLinks[link['site']].title = link['site'];
+        // show section header (hidden if section is empty)
+        connectHeader.classList.remove('hidden');
     }
-    else {
-        console.log('ayyy lmao');
+    else if (watchLinks[link['site']]) {
+        // show link and set attributes
+        watchLinks[link['site']].href = link['url'];
+        watchLinks[link['site']].classList.remove('hidden');
+        watchLinks[link['site']].title = link['site'];
+        // show section header (hidden if section is empty)
+        watchHeader.classList.remove('hidden');
     }
 }
