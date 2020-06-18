@@ -197,11 +197,7 @@ function selectDateId(arr: any[]): number {
     d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
 
-<<<<<<< HEAD
     const index = dateAlgo(d, len);
-=======
-    const index = Math.floor(Math.random() * len);
->>>>>>> testing
 
     return arr[index].id;
 }
