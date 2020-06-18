@@ -70,6 +70,7 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
+                // GraphQL query
                 query: `
                 query getDailyCharacter {
                     Character(id: ${id}) {
@@ -110,6 +111,7 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
+                // GraphQL query
                 query: `
                 query getShowCharacters {
                     Media(id: ${id}) {
@@ -159,6 +161,7 @@ async function getPopularShows(): Promise<popularShows[]> {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
+                // GraphQL query
                 query: `
         query getPopularShows {
             firstSet: Page(page: 1, perPage: 50) {
