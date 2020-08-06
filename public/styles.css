@@ -27,13 +27,14 @@ section#header {
 
 #header h1 {
   margin: 0;
-  padding-top: 2vh;
-  padding-bottom: 2vh;
-  font-weight: normal; }
+  padding: 0.7em 0 0.1em;
+  font-weight: normal;
+  font-size: 1.7em; }
 
 #header h3 {
   margin: 0;
-  font-weight: normal; }
+  font-weight: normal;
+  font-size: 1.4em; }
 
 .container {
   position: relative;
@@ -208,14 +209,12 @@ section#showLinks div h1 {
   section {
     --pad-width: 2vw; }
   .container {
-    position: absolute;
-    width: 100vw;
     height: 20vh; }
   #header h1 {
-    font-size: 1.5rem;
-    padding: 2vh 0 0; }
+    font-size: 1.7rem;
+    padding: 1.5em 0 0; }
   #header h3 {
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
   .wave {
     height: 26px;
     top: 20vh; }
