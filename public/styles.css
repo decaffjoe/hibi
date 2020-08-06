@@ -206,18 +206,24 @@ section#showLinks div h1 {
     --pad-width: 9vw; } }
 
 @media (max-width: 600px) {
+  :root {
+    --header-height: 180px;
+    --wave-height: 26px; }
   section {
     --pad-width: 2vw; }
   .container {
-    height: 20vh; }
+    height: var(--header-height); }
   #header h1 {
-    font-size: 1.7rem;
-    padding: 1.5em 0 0; }
+    font-size: 1.6rem;
+    padding-top: calc(var(--header-height) / 3.5); }
   #header h3 {
-    font-size: 1.6rem; }
+    font-size: 1.5rem; }
   .wave {
-    height: 26px;
-    top: 20vh; }
+    height: var(--wave-height);
+    top: var(--header-height); }
+  #charDay {
+    position: absolute;
+    top: calc((2 * var(--wave-height)) + var(--header-height)); }
   #charDay div#photoGroup {
     grid-template-areas: "names" "picture" "titles"; }
   div#photoGroup ul#names {
@@ -225,6 +231,8 @@ section#showLinks div h1 {
   div#photoGroup ul#titles {
     margin-bottom: 0; }
   section#showLinks {
+    position: absolute;
+    top: 600px;
     padding: 0 15vw 2em;
     grid-template-columns: 1fr;
     gap: 0.5em;
