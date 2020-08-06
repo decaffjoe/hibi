@@ -13,7 +13,8 @@
   "description": "Anime Character of the Day",
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "browser-sync public/ -w && node-sass --watch . -o ./public"
   },
   "repository": {
     "type": "git",
