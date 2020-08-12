@@ -247,7 +247,7 @@ section#showLinks div h1 {
 // Mobile
 @media (max-width: 600px) {
     :root {
-        --header-height: 150px;
+        --header-height: 120px;
         --wave-height: 26px;
     }
     section {
@@ -257,11 +257,11 @@ section#showLinks div h1 {
         height: var(--header-height);
     }
     #header h1 {
-        font-size: 1.6rem;
-        padding-top: calc(var(--header-height) / 4);
+        font-size: 1.5rem;
+        padding-top: calc(var(--header-height) / 5);
     }
     #header h3 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
     .wave {
         height: var(--wave-height);
