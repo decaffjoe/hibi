@@ -105,6 +105,6 @@ if (window.screen.width <= 600) {
     const charDay = document.querySelector('#charDay'),
     showLinks = document.querySelector('#showLinks');
 
-    let charBoundary = charDay.getBoundingClientRect().bottom + 40;
+    let charBoundary = charDay.getBoundingClientRect().bottom + 25;
     showLinks.style.top = `${charBoundary}px`;
 }
