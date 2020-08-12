@@ -233,7 +233,6 @@ section#showLinks div h1 {
     margin-bottom: 0; }
   section#showLinks {
     position: absolute;
-    top: 600px;
     padding: 0 15vw 2em;
     grid-template-columns: 1fr;
     gap: 0.5em;

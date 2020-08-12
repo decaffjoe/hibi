@@ -1,72 +1,80 @@
 {
   "showLinks": [
     {
-      "id": 3143,
-      "url": "http://jojo-animation.com/fb_bt/",
+      "id": 1964,
+      "url": "http://www.hulu.com/death-note",
+      "site": "Hulu"
+    },
+    {
+      "id": 3968,
+      "url": "http://www.ntv.co.jp/deathnote/",
       "site": "Official Site"
     },
     {
-      "id": 3144,
-      "url": "https://twitter.com/anime_jojo",
-      "site": "Twitter"
-    },
-    {
-      "id": 8055,
-      "url": "https://www.animelab.com/shows/jojos-bizarre-adventure",
+      "id": 7584,
+      "url": "https://www.animelab.com/shows/death-note",
       "site": "AnimeLab"
     },
     {
-      "id": 16402,
-      "url": "https://www.netflix.com/title/80179831",
-      "site": "Netflix"
+      "id": 16182,
+      "url": "https://www.crunchyroll.com/death-note",
+      "site": "Crunchyroll"
     },
     {
-      "id": 16662,
-      "url": "https://www.viz.com/watch/streaming/jojo-s-bizarre-adventure",
+      "id": 16183,
+      "url": "https://www.viz.com/watch/streaming/death-note",
       "site": "Viz"
     },
     {
-      "id": 16663,
-      "url": "https://vrv.co/series/GYP8DP1MY/JoJos-Bizarre-Adventure",
+      "id": 16659,
+      "url": "https://vrv.co/series/G6QWD3EE6/Death-Note",
       "site": "VRV"
     },
     {
-      "id": 16664,
-      "url": "https://tubitv.com/series/1823/jojos_bizarre_adventure",
+      "id": 16660,
+      "url": "https://www.netflix.com/title/70204970",
+      "site": "Netflix"
+    },
+    {
+      "id": 16661,
+      "url": "https://tubitv.com/series/1630/death_note",
       "site": "Tubi TV"
     },
     {
-      "id": 16665,
-      "url": "https://www.crunchyroll.com/jojos-bizarre-adventure",
-      "site": "Crunchyroll"
+      "id": 17996,
+      "url": "http://www.vap.co.jp/deathnote/",
+      "site": "Official Site"
+    },
+    {
+      "id": 24484,
+      "url": "https://play.hbomax.com/series/urn:hbo:series:GXuFMfQuwD5uSkwEAAAth",
+      "site": "HBO Max"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/n14719-EVJmyKNzcjet.jpg",
-    "color": "#e4a15d"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1535-dHQBB5zeDphY.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-dHQBB5zeDphY.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1535-dHQBB5zeDphY.png",
+    "color": null
   },
   "showTitles": [
-    "JoJo's Bizarre Adventure",
-    "JoJo no Kimyou na Bouken",
-    "ジョジョの奇妙な冒険"
+    "Death Note"
   ],
   "charNames": [
-    "Will A. Zeppeli",
-    "ウィル・A・ツェペリ"
+    "Yuri",
+    "百合"
   ],
   "character": {
     "name": {
-      "first": "Will A.",
-      "last": "Zeppeli",
-      "full": "Will A. Zeppeli",
-      "native": "ウィル・A・ツェペリ"
+      "first": "Yuri",
+      "last": null,
+      "full": "Yuri",
+      "native": "百合"
     },
-    "description": "<p>Will A. Zeppeli was on a ship with a crew studying Aztec ruins when he was younger when his father put on the mask and killed everyone in the crew but his son. After this horrific event, Zeppeli travels the world in order to destroy the mask, and sees a man cure someone using the Ripple. Zeppeli is then directed to his master Tonpetty, who teaches him to use the Ripple. However, Tonpetty foresees Zeppeli's death during his training, warning him that should he complete his training he will surely die. Zeppeli doesn't share this fact until the fight with Tarkus, where he afterwards gives his power to Jonathan, whom he trained after the Joestar's house burns down. His grandson is Caesar Anthonio Zeppeli.</p>\n",
+    "description": "<p>Yuri is a young girl Light invites on a date to Space Land. He asks her out as part of his plan to help find out Ray Penber's name, so that he can write it in the Death Note. Light asks her out so that he won't arouse suspicion, since he is well aware of being followed by Penber.    ~!When the bus is hijacked by Kiichiro Osoreda, he writes a note to Yuri, telling her that he will try to attack the hijacker with a technique his father taught him.   Penber sees this, and warns Light that it's too risky and to let him handle it. Light replies that he doesn't know if he should trust Penber, since it is possible that he could be the hijacker's partner. Yuri nervously questions what Light is saying, and he replies that during hijacks, there are often two criminals working together: one doing the hijacking, and the other disguised as a bystander. To prove that he can be trusted, Penber shows Light his identification, certain that Light cannot be Kira.   Light, now having the information which he needs, drops a piece of paper from his Death Note onto the floor. Osoreda sees this and, as planned, picks it up and reads it, to discover that it is only date plans. When he looks up he sees Ryuk, and starts shooting him, using up all of his bullets. Osoreda then runs off of the bus and gets hits by a car, getting killed, just as Light had specified in his Death Note.   Despite all of this, Yuri seems to recover, and insists on going to Space Land. Apparently she has quite a crush on Light. !~</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/18062-FjIMwcBJra9L.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/18062-FjIMwcBJra9L.jpg"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/n53663-kcAGTU7RCaUG.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n53663-kcAGTU7RCaUG.png"
     }
   }
 }
