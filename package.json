@@ -14,9 +14,10 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "ts": "tsc",
     "sass": "node-sass --watch ./public/ -o ./public/",
     "serve": "browser-sync public/ -w",
-    "build": "npm run sass & npm run serve &"
+    "build": "npm run ts & npm run sass & npm run serve &"
   },
   "repository": {
     "type": "git",

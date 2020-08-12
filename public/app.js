@@ -82,3 +82,9 @@ for (let link of links) {
         watchHeader.classList.remove('hidden');
     }
 }
+// Mobile only: reposition #showLinks to be below description
+if (window.screen.width <= 600) {
+    const charDay = document.querySelector('#charDay'), showLinks = document.querySelector('#showLinks');
+    let charBoundary = charDay.getBoundingClientRect().bottom + 40;
+    showLinks.style.top = `${charBoundary}px`;
+}

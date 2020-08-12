@@ -207,17 +207,17 @@ section#showLinks div h1 {
 
 @media (max-width: 600px) {
   :root {
-    --header-height: 150px;
+    --header-height: 120px;
     --wave-height: 26px; }
   section {
     --pad-width: 2vw; }
   .container {
     height: var(--header-height); }
   #header h1 {
-    font-size: 1.6rem;
-    padding-top: calc(var(--header-height) / 4); }
+    font-size: 1.5rem;
+    padding-top: calc(var(--header-height) / 5); }
   #header h3 {
-    font-size: 1.5rem; }
+    font-size: 1.4rem; }
   .wave {
     height: var(--wave-height);
     top: var(--header-height); }
@@ -233,7 +233,6 @@ section#showLinks div h1 {
     margin-bottom: 0; }
   section#showLinks {
     position: absolute;
-    top: 600px;
     padding: 0 15vw 2em;
     grid-template-columns: 1fr;
     gap: 0.5em;
