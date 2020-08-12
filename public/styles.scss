@@ -247,7 +247,7 @@ section#showLinks div h1 {
 // Mobile
 @media (max-width: 600px) {
     :root {
-        --header-height: 180px;
+        --header-height: 150px;
         --wave-height: 26px;
     }
     section {
@@ -258,7 +258,7 @@ section#showLinks div h1 {
     }
     #header h1 {
         font-size: 1.6rem;
-        padding-top: calc(var(--header-height) / 3.5);
+        padding-top: calc(var(--header-height) / 4);
     }
     #header h3 {
         font-size: 1.5rem;
@@ -267,9 +267,10 @@ section#showLinks div h1 {
         height: var(--wave-height);
         top: var(--header-height);
     }
-    #charDay {
+    section#charDay {
         position: absolute;
         top: calc((2 * var(--wave-height)) + var(--header-height));
+        padding: 20px 0 0 0;
     }
     #charDay div#photoGroup {
         grid-template-areas: "names" "picture" "titles";
