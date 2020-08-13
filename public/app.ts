@@ -12,7 +12,7 @@ const DATA = JSON.parse(scriptData.textContent);
 
 // Fluff for the headers
 headerH1.title = tooltip;
-headerH3.textContent = new Date().toDateString();
+headerH3.textContent = DATA.date;
 
 // Populate character names
 for (let i = 0; i < 2; ++i) {

@@ -48,12 +48,16 @@ async function main() {
         }
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
+
+        // get date (set static)
+        const date = new Date().toDateString();
         return {
             showLinks: targetShowLinks,
             showArt: targetShowArt,
             showTitles: targetShowNames,
             charNames: dailyCharNames,
             character: dailyChar,
+            date
         };
     } catch (err) {
         console.log(err);
@@ -197,7 +201,7 @@ function selectDateId(arr: any[]): number {
     d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
 
-    const index = dateAlgo(d, len);
+    const index = Math.floor(Math.random() * len);
 
     return arr[index].id;
 }
