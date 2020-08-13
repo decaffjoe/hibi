@@ -37,12 +37,15 @@ async function main() {
         }
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
+        // get date (set static)
+        const date = new Date().toDateString();
         return {
             showLinks: targetShowLinks,
             showArt: targetShowArt,
             showTitles: targetShowNames,
             charNames: dailyCharNames,
             character: dailyChar,
+            date
         };
     }
     catch (err) {
