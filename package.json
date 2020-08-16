@@ -4,7 +4,7 @@
   "main": "character.js",
   "license": "MIT",
   "dependencies": {
-    "@types/node": "^14.0.4",
+    "@types/node": "^14.0.27",
     "crypto-js": "^4.0.0",
     "markdown-it": "^10.0.0",
     "node-fetch": "^2.6.0",
