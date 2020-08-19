@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - dependencies
   - build
+  - tweet
   - deploy
 
 cache:
@@ -13,6 +14,7 @@ install_deps:
   stage: dependencies
   script:
   - npm install
+  - pip install -r requirements.txt
   artifacts:
     paths:
     - node_modules/
@@ -27,6 +29,13 @@ getdata:
   artifacts:
     paths:
     - public
+  only:
+  - master
+
+tweet:
+  stage: tweet
+  script:
+  - python tweet.py
   only:
   - master
 
