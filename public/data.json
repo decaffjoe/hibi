@@ -1,52 +1,62 @@
 {
   "showLinks": [
     {
-      "id": 3967,
-      "url": "http://geass.jp/first/",
-      "site": "Official Site"
+      "id": 5,
+      "url": "http://www.crunchyroll.com/naruto-shippuden",
+      "site": "Crunchyroll"
     },
     {
-      "id": 7585,
-      "url": "https://www.animelab.com/shows/code-geass-lelouch-of-the-rebellion",
+      "id": 1226,
+      "url": "https://www.animelab.com/shows/naruto-shippuden",
       "site": "AnimeLab"
     },
     {
-      "id": 10982,
-      "url": "https://www.funimation.com/shows/code-geass/",
-      "site": "Funimation"
+      "id": 2288,
+      "url": "http://www.hulu.com/naruto-shippuden",
+      "site": "Hulu"
     },
     {
-      "id": 12521,
-      "url": "https://www.netflix.com/title/80065146",
-      "site": "Netflix"
+      "id": 16800,
+      "url": "https://vrv.co/series/GYQ4MW246/Naruto-Shippuden",
+      "site": "VRV"
+    },
+    {
+      "id": 16801,
+      "url": "https://www.viz.com/watch/streaming/naruto#naruto-shippuden",
+      "site": "Viz"
+    },
+    {
+      "id": 25853,
+      "url": "https://www.adultswim.com/videos/naruto-shippuden",
+      "site": "Adult Swim"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1575-ZJYlg8yjvMKI.jpg",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1575-ZJYlg8yjvMKI.jpg",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1575-ZJYlg8yjvMKI.jpg",
-    "color": "#7A18D0"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1735-80JNLAlnxrKj.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1735-80JNLAlnxrKj.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1735-80JNLAlnxrKj.png",
+    "color": "#e4865d"
   },
   "showTitles": [
-    "Code Geass: Lelouch of the Rebellion",
-    "Code Geass: Hangyaku no Lelouch",
-    "コードギアス 反逆のルルーシュ"
+    "Naruto: Shippuden",
+    "Naruto: Shippuuden",
+    "ナルト- 疾風伝"
   ],
   "charNames": [
-    "Nunnally Lamperouge",
-    "ナナリー・ランペルージ"
+    "Minato Namikaze",
+    "波風ミナト"
   ],
   "character": {
     "name": {
-      "first": "Nunnally",
-      "last": "Lamperouge",
-      "full": "Nunnally Lamperouge",
-      "native": "ナナリー・ランペルージ"
+      "first": "Minato",
+      "last": "Namikaze",
+      "full": "Minato Namikaze",
+      "native": "波風ミナト"
     },
-    "description": "<p><strong>Age:</strong> 14\n<strong>Birthday:</strong> October 25\n<strong>Zodiac Sign:</strong> Scorpio\n<strong>Blood Type:</strong> AB\n<strong>Height:</strong> 160 cm (5'3&quot;) - 164 cm (5'4&quot;)</p>\n<p>Nunnally vi Britannia is a royal princess born to the Emperor of Britannia, Charles Di Britannia, and Marianne Vi Britannia. She was 87th in line of succession to the Britannia Throne before she and her brother were exiled to Japan as political prisoners. She is Lelouch's younger sister who is wheelchair-bound due to old bullet wounds on her legs, and blind due to psychological trauma while witnessing the brutal murder of her mother, Marianne Vi Britannia. Lelouch believes that she may be able to see again someday. After the confrontation of Lelouch with the Emperor of Britannia about the murder of their mother, both Lelouch and Nunnally were sent to Japan as political trade. They then went on to live in Kururugi Residence where she first met Suzaku Kururugi.</p>\n<p>After Britannia invades Japan, Lelouch hides their identity in fear of their safety and changes their surname to Lamperouge. They then seek help from Marianne's old allies, the Ashford family, who kept their identity a secret and allows the two siblings to live in a building on campus to accommodate her disabilities. Nunnally attends Ashford Academy's middle school and is friends with Lelouch's classmates, particularly with Shirley. She is very kindhearted and calls the Elevens &quot;Japanese people&quot;.</p>\n<p>She is also the reason why Lelouch wants to revolt against Britannia. Lelouch wants to build a better world for Nunnally. In episode 24, despite the fact that the The Black Knights were on the verge of winning, Lelouch abandons them to rescue Nunnally after learning of her being kidnapped by V.V.</p>\n<p>~!In the beginning of R2, it seems that nobody at Ashford Academy remembers her existence; everyone apparently recognizes that Lelouch has a younger brother, Rolo, instead of Nunnally. After recovering his memory, Lelouch deduces that Nunnally is likely being held hostage by the Emperor, who would not hesitate to use his children to achieve his goals. As a result, Lelouch must try to maintain the masquerade that he has not regained his memories in order to protect her.!~</p>\n<p>~!Nunnally makes her first appearances in episode 5 of R2, revealing that she still recalls who Lelouch is, addressing him as her older brother, and shocks Lelouch with the revelation that she has been assigned to become the new Governor-General of Area 11.</p>\n<p>Nunnally discloses her own decision to become Governor of Area 11. Much to the shock of Lelouch, she decides to continue her late sister Princess Euphemia's will by reinstating the Special Administrative Region in Japan, sharing her and Suzaku's belief that the world can be changed in gentle ways. Currently, however, Nunnally has yet to know of the true identity of Zero and the existence of the Geass, but she heard Lelouch's voice when the ship exploded alluding to the possibility that she does. Her Imperial Name and status was also restored.!~</p>\n",
+    "description": "<p>Minato Namikaze was the Yondaime Hokage of Konohagakure and the man responsible for sealing the nine-tailed demon fox inside Naruto Uzumaki when he was born. Doing so cost him his life, and before dying he asked that the villagers not see Naruto as the monster within him, instead wanting him to be viewed as a hero, a request ignored by the villagers. &quot;Namikaze&quot; translates literally as &quot;Wave wind&quot;. &quot;Minato&quot; translates as &quot;Harbor&quot; or &quot;Port&quot;.    ~!Minato shares a number of traits with Naruto, namely in appearance and attitude. Such comparisons are common throughout the first part of the series, and in the second as well. The second part of the series reveals that Naruto is his son, hence the comparisons, born to Kushina Uzumaki. In his youth Minato, along with two other unknown Genin, was a student of Jiraiya. Prior to becoming Hokage, he was also the sensei of Kakashi Hatake, Obito Uchiha, and Rin. !~ Minato is said to be the greatest ninja Konoha had ever produced, with natural talent that had not been seen in many years. He created several distinctive techniques, including the Hiraishin no Jutsu, which essentially allowed him to teleport to any location with the use of a special seal. By attaching the seal to a kunai or an enemy, Minato could teleport to the location of the seal unnoticed, allowing him to wipe out nearby opponents almost instantly. This ability led to his title as &quot;Konoha's Yellow Flash&quot;, and it caused him to be seen as so dangerous that a flee-on-sight order was given in regards to him during the Third Ninja War. He also created the Rasengan, a technique that does not rely on hand seals but instead uses a concentration of spinning chakra in one's palm that causes immense damage to its victim on contact. Later in the series it is revealed that technique is actually incomplete. Minato had planned to add his own nature manipulation training to the Rasengan, making it even more powerful, but could not manage to prior to his death.   ~!Later during the war he is resurrected by Orochimaru with Edo Tensei alongside all the deceased Hokage on Sasuke's demand.!~</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b1110-TSlN2WkhDJ1T.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b1110-TSlN2WkhDJ1T.png"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2535-Xq9WKNPJQEt3.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b2535-Xq9WKNPJQEt3.png"
     }
   },
   "date": "Wed Aug 19 2020"
