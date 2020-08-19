@@ -1,0 +1,50 @@
+image: node:latest
+
+stages:
+  - dependencies
+  - build
+  - tweet
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+install_deps:
+  stage: dependencies
+  script:
+  - npm install
+  - pip install -r requirements.txt
+  artifacts:
+    paths:
+    - node_modules/
+  only:
+  - master
+
+getdata:
+  stage: build
+  script:
+  - node character.js
+  - python update_static.py
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+tweet:
+  stage: tweet
+  script:
+  - python tweet.py
+  only:
+  - master
+
+pages:
+  stage: deploy
+  script:
+  - echo 'Nothing to do...'
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
