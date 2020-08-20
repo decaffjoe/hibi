@@ -1,72 +1,83 @@
 {
   "showLinks": [
     {
-      "id": 3143,
-      "url": "http://jojo-animation.com/fb_bt/",
+      "id": 501,
+      "url": "http://ngnl.jp/",
       "site": "Official Site"
     },
     {
-      "id": 3144,
-      "url": "https://twitter.com/anime_jojo",
+      "id": 504,
+      "url": "http://www.crunchyroll.com/no-game-no-life",
+      "site": "Crunchyroll"
+    },
+    {
+      "id": 611,
+      "url": "http://www.hulu.com/no-game-no-life",
+      "site": "Hulu"
+    },
+    {
+      "id": 4182,
+      "url": "https://twitter.com/ngnl_anime",
       "site": "Twitter"
     },
     {
-      "id": 8055,
-      "url": "https://www.animelab.com/shows/jojos-bizarre-adventure",
+      "id": 7574,
+      "url": "https://www.animelab.com/shows/no-game-no-life",
       "site": "AnimeLab"
     },
     {
-      "id": 16402,
-      "url": "https://www.netflix.com/title/80179831",
+      "id": 10394,
+      "url": "https://www.hidive.com/tv/no-game-no-life",
+      "site": "Hidive"
+    },
+    {
+      "id": 17755,
+      "url": "https://www.netflix.com/title/80052669",
       "site": "Netflix"
     },
     {
-      "id": 16662,
-      "url": "https://www.viz.com/watch/streaming/jojo-s-bizarre-adventure",
-      "site": "Viz"
-    },
-    {
-      "id": 16663,
-      "url": "https://vrv.co/series/GYP8DP1MY/JoJos-Bizarre-Adventure",
+      "id": 17942,
+      "url": "https://vrv.co/series/G6ZJ48K4Y/No-Game-No-Life",
       "site": "VRV"
     },
     {
-      "id": 16664,
-      "url": "https://tubitv.com/series/1823/jojos_bizarre_adventure",
-      "site": "Tubi TV"
+      "id": 17943,
+      "url": "https://www.contv.com/details-movie/1323-19619-000/no-game-no-life",
+      "site": "CONtv"
     },
     {
-      "id": 16665,
-      "url": "https://www.crunchyroll.com/jojos-bizarre-adventure",
-      "site": "Crunchyroll"
+      "id": 22853,
+      "url": "https://www.youtube.com/playlist?list=PLxSscENEp7JglGq-5PMtbewK96Z_7Au8J",
+      "site": "Youtube"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/n14719-EVJmyKNzcjet.jpg",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/n14719-EVJmyKNzcjet.jpg",
-    "color": "#e4a15d"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/nx19815-bIo51RMWWhLv.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/nx19815-bIo51RMWWhLv.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/nx19815-bIo51RMWWhLv.jpg",
+    "color": "#EB7CED"
   },
   "showTitles": [
-    "JoJo's Bizarre Adventure",
-    "JoJo no Kimyou na Bouken",
-    "ジョジョの奇妙な冒険"
+    "No Game, No Life",
+    "No Game No Life",
+    "ノーゲーム・ノーライフ"
   ],
   "charNames": [
-    "Will A. Zeppeli",
-    "ウィル・A・ツェペリ"
+    "Jibril",
+    "ジブリール"
   ],
   "character": {
     "name": {
-      "first": "Will A.",
-      "last": "Zeppeli",
-      "full": "Will A. Zeppeli",
-      "native": "ウィル・A・ツェペリ"
+      "first": "",
+      "last": "Jibril",
+      "full": "Jibril",
+      "native": "ジブリール"
     },
-    "description": "<p>Will A. Zeppeli was on a ship with a crew studying Aztec ruins when he was younger when his father put on the mask and killed everyone in the crew but his son. After this horrific event, Zeppeli travels the world in order to destroy the mask, and sees a man cure someone using the Ripple. Zeppeli is then directed to his master Tonpetty, who teaches him to use the Ripple. However, Tonpetty foresees Zeppeli's death during his training, warning him that should he complete his training he will surely die. Zeppeli doesn't share this fact until the fight with Tarkus, where he afterwards gives his power to Jonathan, whom he trained after the Joestar's house burns down. His grandson is Caesar Anthonio Zeppeli.</p>\n",
+    "description": "<p><strong>Race:</strong> Flügel\n<strong>Gender:</strong> ♀ Female\n<strong>Age:</strong> 6407</p>\n<p>Jibril is the youngest and strongest of the Flügelrace. Her love toward knowledge starts even before the declaration of the Ten Oaths. She is against the book sharing law, and left her homeland to win the main library of the human world from the previous king in a game.\n~!Unlike Steph, Jibril is happy to become the siblings underling, and is shown growing feelings toward Sora.!~</p>\n<p>(Source: No Game No Life Wikia)</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/18062-FjIMwcBJra9L.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/18062-FjIMwcBJra9L.jpg"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/n87887-Qia1XfXbLP4u.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n87887-Qia1XfXbLP4u.jpg"
     }
-  }
+  },
+  "date": "Wed Aug 19 2020"
 }
