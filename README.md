@@ -1,15 +1,13 @@
-### Once, ever
+# Hibi 日々
 
-`git clone`
+[Live website](https://hibi.fun)
 
-`cd hibi`
+A website and twitter bot ([@hibianime](https://twitter.com/hibianime)) that post a pseudo-random anime character every day!
 
-### Once per day
+## Project direction
 
-`node character.js`
+No immediate work is being done on the project. 
 
-`py update_static.py`
+Right now: (a) I am content with the functionality of both the website and bot as they currently stand and (b) am not sure exactly what more functionality I would even want to add. 
 
-### For an eternity
-
-Profit
+I am open to ideas and of course welcome forks, though!
