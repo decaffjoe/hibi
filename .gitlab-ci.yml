@@ -1,10 +1,16 @@
 stages:
-  - build
+  - test
+  # - build
   - tweet
 
 image: ubuntu:latest
 
-include: '.build-template.yml'
+test:
+  stage: test
+  script:
+    - echo $MY_SECRET
+
+# include: '.build-template.yml'
 
 tweet:
   stage: tweet
