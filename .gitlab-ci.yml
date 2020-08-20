@@ -8,7 +8,9 @@ image: ubuntu:latest
 test:
   stage: test
   script:
-    - echo $MY_SECRET
+    - apt-get update -y
+    - apt-get install -qy python3
+    - python3 test.py
 
 # include: '.build-template.yml'
 
