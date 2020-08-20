@@ -1,4 +1,4 @@
-import requests, json, re
+import requests, json, re, os
 from TwitterAPI import TwitterAPI
 
 def regex_sub(pattern, new_text, body):
@@ -14,15 +14,14 @@ def send_tweet(tweet, img):
     r = api.request('statuses/update', { 'status': tweet, 'media_ids': img })
     return { 'status_code': r.status_code, 'json': r.json() }
 
-# Get credentials from aws lambda
-r = requests.get('https://hotwu4uar1.execute-api.us-east-2.amazonaws.com/default/hibi-twitter-bot-auth')
-if r.status_code != 200:
-    print('AWS error')
-    print(r.json())
-creds = r.json()
+# Get credentials from gitlab ci env variables
+creds = {}
+env_vars = ['CONSUMER_KEY', 'CONSUMER_SECRET', 'ACCESS_TOKEN_KEY', 'ACCESS_TOKEN_SECRET']
+for key in env_vars:
+    creds[key] = os.environ[key]
 
 # Authenticate to twitter as user
-api = TwitterAPI(creds['consumer_key'], creds['consumer_secret'], creds['access_token_key'], creds['access_token_secret'])
+api = TwitterAPI(creds['CONSUMER_KEY'], creds['CONSUMER_SECRET'], creds['ACCESS_TOKEN_KEY'], creds['ACCESS_TOKEN_SECRET'])
 
 # Retrieve character data (assume data.json up-to-date)
 data = json.load(open('./public/data.json', mode='r'))
