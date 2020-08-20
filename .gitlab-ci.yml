@@ -16,5 +16,5 @@ tweet:
     - echo 'Successfully tweeted from @hibianime!'
   only:
     - twitter-bot
-  # except:
-  #   - pushes
+  except:
+    - pushes
