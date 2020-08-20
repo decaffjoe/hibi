@@ -1,15 +1,3 @@
-### Once, ever
+# Hibi 日々 twitter bot
 
-`git clone`
-
-`cd hibi`
-
-### Once per day
-
-`node character.js`
-
-`py update_static.py`
-
-### For an eternity
-
-Profit
+This bot tweets once per day at 2:00PM CST from [@hibianime](https://twitter.com/hibianime)
