@@ -231,6 +231,11 @@ section#showLinks div h1 {
     margin-top: 0; }
   div#photoGroup ul#titles {
     margin-bottom: 0; }
+  #charDay div#description {
+    border: 2px solid var(--header);
+    border-radius: 10px;
+    margin: 0 1rem;
+    padding: 0.7rem; }
   section#showLinks {
     position: absolute;
     padding: 0 15vw 2em;
