@@ -1,50 +1,20 @@
-image: node:latest
-
 stages:
-  - dependencies
   - build
   - tweet
-  - deploy
 
-cache:
-  paths:
-    - node_modules/
+image: ubuntu:latest
 
-install_deps:
-  stage: dependencies
-  script:
-  - npm install
-  - pip install -r requirements.txt
-  artifacts:
-    paths:
-    - node_modules/
-  only:
-  - master
-
-getdata:
-  stage: build
-  script:
-  - node character.js
-  - python update_static.py
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+include: '.build-template.yml'
 
 tweet:
   stage: tweet
   script:
-  - python tweet.py
+    - apt-get update -y
+    - apt-get install -qy python3 python3-pip
+    - pip3 install -r requirements.txt
+    - python3 tweet.py
+    - echo 'Successfully tweeted from @hibianime!'
   only:
-  - master
-
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+    - twitter-bot
+  except:
+    - pushes

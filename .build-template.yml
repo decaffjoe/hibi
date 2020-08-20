@@ -1,0 +1,21 @@
+stages:
+  - build
+
+image: ubuntu:latest
+
+build:
+  stage: build
+  script:
+    - apt-get update -y
+    - apt-get install -qy curl
+    - curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
+    - bash nodesource_setup.sh
+    - apt-get install -qy nodejs python3
+    - npm install
+    - node character.js
+    - python3 update_static.py
+    - echo 'Updated public/'
+  artifacts:
+    paths:
+      - node_modules/
+      - public

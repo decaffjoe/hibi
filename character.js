@@ -1,5 +1,5 @@
 "use strict";
-const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), MD5 = require('crypto-js/md5'), fetch = require('node-fetch');
+const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), MD5 = require('crypto-js/md5'), nodeFetch = require('node-fetch');
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
 main().then(data => {
@@ -55,7 +55,7 @@ async function main() {
 // Get daily character
 async function getDailyCharacter(id) {
     try {
-        let res = await fetch(url, {
+        let res = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -96,7 +96,7 @@ async function getDailyCharacter(id) {
 // Get target show information
 async function getShowCharacters(id) {
     try {
-        let res = await fetch(url, {
+        let res = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -146,7 +146,7 @@ async function getShowCharacters(id) {
 // Get most popular shows
 async function getPopularShows() {
     try {
-        let res = await fetch(url, {
+        let res = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -187,7 +187,7 @@ function selectDateId(arr) {
     let d = new Date();
     d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
-    const index = Math.floor(Math.random() * len);
+    const index = dateAlgo(d, len);
     return arr[index].id;
 }
 // Try to get random index within length of array from the current date MMDDYYYY

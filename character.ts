@@ -2,7 +2,7 @@ const url = "https://graphql.anilist.co",
     fs = require('fs'),
     md = require('markdown-it')({ html: true, linkify: true }),
     MD5 = require('crypto-js/md5'),
-    fetch = require('node-fetch');
+    nodeFetch = require('node-fetch');
 
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
@@ -67,7 +67,7 @@ async function main() {
 // Get daily character
 async function getDailyCharacter(id: number): Promise<dailyCharacter> {
     try {
-        let res: any = await fetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -108,7 +108,7 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
 // Get target show information
 async function getShowCharacters(id: number): Promise<showCharacters> {
     try {
-        let res: any = await fetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -158,7 +158,7 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
 // Get most popular shows
 async function getPopularShows(): Promise<popularShows[]> {
     try {
-        let res: any = await fetch(url, {
+        let res: any = await nodeFetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": 'application/json',
@@ -201,7 +201,7 @@ function selectDateId(arr: any[]): number {
     d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
     d = d.split('/').join('');
 
-    const index = Math.floor(Math.random() * len);
+    const index = dateAlgo(d, len);
 
     return arr[index].id;
 }
