@@ -30,7 +30,8 @@ section#header {
 }
 
 #header h1 {
-    margin: 0;
+    margin: 0 auto;
+    text-align: center;
     padding: 0.7em 0 0.1em;
     font-weight: normal;
     font-size: 1.7em;
@@ -215,6 +216,21 @@ section#showLinks div h1 {
     margin: 0 auto 0.2em;
 }
 
+#hibianime {
+    margin-top: 1em;
+    font-size: 1.7em;
+    color: grey;
+}
+
+#hibianime a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+#hibianime a:hover {
+    cursor: pointer;
+}
+
 .link-icon {
     height: 60px;
     width: 60px;
@@ -289,10 +305,16 @@ section#showLinks div h1 {
     }
     section#showLinks {
         position: absolute;
-        padding: 0 15vw 2em;
+        padding: 0 15vw 1.3em;
         grid-template-columns: 1fr;
         gap: 0.5em;
         justify-items: center;
         align-items: center;
+    }
+    #hibianime {
+        position: absolute;
+        margin: 0 auto;
+        padding: 0 15vw 1em;
+        text-align: center;
     }
 }

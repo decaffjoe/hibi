@@ -100,11 +100,14 @@ for (let link of links) {
     }
 }
 
-// Mobile only: reposition #showLinks to be below description
+// Mobile only: reposition #showLinks and #hibianime to be below description
 if (window.screen.width <= 600) {
     const charDay = document.querySelector('#charDay'),
-    showLinks = document.querySelector('#showLinks');
+    showLinks = document.querySelector('#showLinks'),
+    hibianime = document.querySelector('#hibianime');
 
     let charBoundary = charDay.getBoundingClientRect().bottom + 25;
     showLinks.style.top = `${charBoundary}px`;
+    charBoundary = showLinks?.getBoundingClientRect().bottom + 5;
+    hibianime.style.top = `${charBoundary}px`;
 }
