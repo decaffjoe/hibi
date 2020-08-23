@@ -1,8 +1,8 @@
 const url = "https://graphql.anilist.co",
-    fs = require('fs'),
-    md = require('markdown-it')({ html: true, linkify: true }),
-    MD5 = require('crypto-js/md5'),
-    nodeFetch = require('node-fetch');
+fs = require('fs'),
+md = require('markdown-it')({ html: true, linkify: true }),
+MD5 = require('crypto-js/md5'),
+nodeFetch = require('node-fetch');
 
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
@@ -78,17 +78,17 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
                 query: `
                 query getDailyCharacter {
                     Character(id: ${id}) {
-                      name {
-                        first
-                        last
-                        full
-                        native
-                      }
-                      description
-                      image {
-                        large
-                        medium
-                      }
+                        name {
+                            first
+                            last
+                            full
+                            native
+                        }
+                        description
+                        image {
+                            large
+                            medium
+                        }
                     }
                 }
                 `,
@@ -119,29 +119,29 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
                 query: `
                 query getShowCharacters {
                     Media(id: ${id}) {
-                      title {
-                        english
-                        romaji
-                        native
-                      }
-                      characters(sort: FAVOURITES_DESC) {
-                        nodes {
-                          id
+                        title {
+                            english
+                            romaji
+                            native
                         }
-                      }
-                      externalLinks {
-                        id
-                        url
-                        site
-                      }
-                      coverImage {
-                        extraLarge
-                        large
-                        medium
-                        color
-                      }
+                        characters(sort: FAVOURITES_DESC) {
+                            nodes {
+                                id
+                            }
+                        }
+                        externalLinks {
+                            id
+                            url
+                            site
+                        }
+                        coverImage {
+                            extraLarge
+                            large
+                            medium
+                            color
+                        }
                     }
-                  }
+                }
                 `,
             })
         });
@@ -167,19 +167,19 @@ async function getPopularShows(): Promise<popularShows[]> {
             body: JSON.stringify({
                 // GraphQL query
                 query: `
-        query getPopularShows {
-            firstSet: Page(page: 1, perPage: 50) {
-              media(sort: POPULARITY_DESC) {
-                id
-              }
-            }
-            secondSet: Page(page: 2, perPage: 50) {
-              media(sort: POPULARITY_DESC) {
-                  id
-              }
-            }
-          }
-        `,
+                query getPopularShows {
+                    firstSet: Page(page: 1, perPage: 50) {
+                        media(sort: POPULARITY_DESC) {
+                            id
+                        }
+                    }
+                    secondSet: Page(page: 2, perPage: 50) {
+                        media(sort: POPULARITY_DESC) {
+                            id
+                        }
+                    }
+                }
+                `,
             })
         });
         // await res.headers.forEach(header => console.log(header));
