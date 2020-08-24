@@ -1,2 +1,3 @@
 requests==2.24.0
 TwitterAPI==2.5.13
+Mastodon.py==1.5.1
