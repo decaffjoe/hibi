@@ -1,6 +1,6 @@
-# Hibi 日々 twitter bot
+# Hibi 日々 social media bots
 
-This bot tweets once per day at 2:00PM CST from [@hibianime](https://twitter.com/hibianime)
+Bots post once per day at 2:00PM CST from twitter ([@hibianime](https://twitter.com/hibianime)) and mastodon ([@hibianime@botsin.space](https://botsin.space/web/accounts/250525))
 
 All bot logic is in the [bots/](https://gitlab.com/spongechameleon/hibi/-/tree/twitter-bot/bots) folder
 
