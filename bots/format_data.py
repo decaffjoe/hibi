@@ -39,6 +39,9 @@ def main(service):
     else:
         char_image_link = char['image']['small']
 
+    # Save image mime type
+    image_mime_type = 'image/' + char_image_link.split('.')[-1]
+
     # Download image binary to buffer
     r = requests.get(char_image_link)
     if r.status_code != 200:
@@ -61,7 +64,8 @@ def main(service):
 
     # Mastodon:
     else:
-        limit = 300
+        # 500 character limit per toot & emoji counts as 2 chars (already have a smiley)
+        limit = 498
 
     # Put together status
     smiley = u'\U0001f604'
@@ -69,5 +73,5 @@ def main(service):
     ending = "..."
     status = shorten_status(status, ending, limit)
 
-    return { 'image': image, 'status': status, 'ending': ending, 'limit': limit }
+    return { 'image': image, 'image_mime_type': image_mime_type, 'status': status, 'ending': ending, 'limit': limit }
 
