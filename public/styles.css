@@ -185,17 +185,23 @@ section#showLinks {
 section#showLinks div h1 {
   margin: 0 auto 0.2em; }
 
-#hibianime {
-  margin-top: 1em;
+#social-bots {
+  margin: 1em auto;
+  width: fit-content;
   font-size: 1.7em;
-  color: grey; }
+  color: grey;
+  padding: 0;
+  list-style: none; }
 
-#hibianime a {
+#social-bots a {
   color: var(--link);
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 200ms;
+  border-bottom: 2px dotted var(--charDay); }
 
-#hibianime a:hover {
-  cursor: pointer; }
+#social-bots a:hover {
+  cursor: pointer;
+  border-color: var(--link); }
 
 .link-icon {
   height: 60px;
@@ -204,7 +210,11 @@ section#showLinks div h1 {
   margin: 0.3em 0.2em;
   border-radius: 12px;
   outline: none;
-  box-shadow: 6px 6px 4px 0px black; }
+  box-shadow: 5px 5px 4px 0px #111;
+  transition: 200ms; }
+
+.link-icon:hover {
+  box-shadow: 5px 5px 4px 0px black; }
 
 .hidden {
   display: none; }
@@ -256,7 +266,7 @@ section#showLinks div h1 {
     gap: 0.5em;
     justify-items: center;
     align-items: center; }
-  #hibianime {
+  #social-bots {
     position: absolute;
     margin: 0 auto;
     padding: 0 15vw 1em;

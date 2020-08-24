@@ -2,7 +2,7 @@
 
 [Live website](https://hibi.fun)
 
-A website, twitter bot ([@hibianime](https://twitter.com/hibianime)) and mastodon bot ([@hibianime@botsin.space](https://botsin.space/web/accounts/250525)) that post a pseudo-random anime character every day!
+A website, twitter bot ([@hibianime](https://twitter.com/hibianime)) and mastodon bot ([@hibianime@botsin.space](https://botsin.space/@hibianime)) that post a pseudo-random anime character every day!
 
 Note: the social media bot files are in the [social-bots branch](https://gitlab.com/spongechameleon/hibi/-/tree/social-bots)
 

@@ -66,17 +66,17 @@ async function getDailyCharacter(id) {
                 query: `
                 query getDailyCharacter {
                     Character(id: ${id}) {
-                      name {
-                        first
-                        last
-                        full
-                        native
-                      }
-                      description
-                      image {
-                        large
-                        medium
-                      }
+                        name {
+                            first
+                            last
+                            full
+                            native
+                        }
+                        description
+                        image {
+                            large
+                            medium
+                        }
                     }
                 }
                 `,
@@ -107,29 +107,29 @@ async function getShowCharacters(id) {
                 query: `
                 query getShowCharacters {
                     Media(id: ${id}) {
-                      title {
-                        english
-                        romaji
-                        native
-                      }
-                      characters(sort: FAVOURITES_DESC) {
-                        nodes {
-                          id
+                        title {
+                            english
+                            romaji
+                            native
                         }
-                      }
-                      externalLinks {
-                        id
-                        url
-                        site
-                      }
-                      coverImage {
-                        extraLarge
-                        large
-                        medium
-                        color
-                      }
+                        characters(sort: FAVOURITES_DESC) {
+                            nodes {
+                                id
+                            }
+                        }
+                        externalLinks {
+                            id
+                            url
+                            site
+                        }
+                        coverImage {
+                            extraLarge
+                            large
+                            medium
+                            color
+                        }
                     }
-                  }
+                }
                 `,
             })
         });
@@ -155,19 +155,19 @@ async function getPopularShows() {
             body: JSON.stringify({
                 // GraphQL query
                 query: `
-        query getPopularShows {
-            firstSet: Page(page: 1, perPage: 50) {
-              media(sort: POPULARITY_DESC) {
-                id
-              }
-            }
-            secondSet: Page(page: 2, perPage: 50) {
-              media(sort: POPULARITY_DESC) {
-                  id
-              }
-            }
-          }
-        `,
+                query getPopularShows {
+                    firstSet: Page(page: 1, perPage: 50) {
+                        media(sort: POPULARITY_DESC) {
+                            id
+                        }
+                    }
+                    secondSet: Page(page: 2, perPage: 50) {
+                        media(sort: POPULARITY_DESC) {
+                            id
+                        }
+                    }
+                }
+                `,
             })
         });
         // await res.headers.forEach(header => console.log(header));
