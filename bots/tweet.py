@@ -1,6 +1,6 @@
 import os
 from TwitterAPI import TwitterAPI
-from format_data import main, shorten_status
+from format_post import main, shorten_status
 
 def send_tweet(tweet, img):
     r = api.request('statuses/update', { 'status': tweet, 'media_ids': img })

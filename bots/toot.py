@@ -1,6 +1,6 @@
 import os
 from mastodon import Mastodon, MastodonAPIError
-from format_data import main, shorten_status
+from format_post import main, shorten_status
 
 # Import formatted data
 data = main('mastodon')
