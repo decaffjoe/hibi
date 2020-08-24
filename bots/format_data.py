@@ -69,7 +69,7 @@ def main(service):
 
     # Put together status
     smiley = u'\U0001f604'
-    status = f"The character of the day is {char_name} from {show} {smiley}\n{char_desc}"
+    status = f"The #anime character of the day is {char_name} from {show} {smiley}\n{char_desc}"
     ending = "..."
     status = shorten_status(status, ending, limit)
 
