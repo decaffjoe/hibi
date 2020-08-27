@@ -40,7 +40,10 @@ def main(service):
         char_image_link = char['image']['small']
 
     # Save image mime type
-    image_mime_type = 'image/' + char_image_link.split('.')[-1]
+    image_ext = char_image_link.split('.')[-1]
+    if image_ext == 'jpg':
+        image_ext = 'jpeg'
+    image_mime_type = 'image/' + image_ext
 
     # Download image binary to buffer
     r = requests.get(char_image_link)

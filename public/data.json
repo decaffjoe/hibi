@@ -1,63 +1,57 @@
 {
   "showLinks": [
     {
-      "id": 5,
-      "url": "http://www.crunchyroll.com/naruto-shippuden",
+      "id": 212,
+      "url": "http://www.crunchyroll.com/durarara",
       "site": "Crunchyroll"
     },
     {
-      "id": 1226,
-      "url": "https://www.animelab.com/shows/naruto-shippuden",
-      "site": "AnimeLab"
-    },
-    {
-      "id": 2288,
-      "url": "http://www.hulu.com/naruto-shippuden",
+      "id": 1994,
+      "url": "http://www.hulu.com/durarara",
       "site": "Hulu"
     },
     {
-      "id": 16800,
-      "url": "https://vrv.co/series/GYQ4MW246/Naruto-Shippuden",
-      "site": "VRV"
+      "id": 3241,
+      "url": "http://www.durarara.com/1st/",
+      "site": "Official Site"
     },
     {
-      "id": 16801,
-      "url": "https://www.viz.com/watch/streaming/naruto#naruto-shippuden",
-      "site": "Viz"
+      "id": 10257,
+      "url": "http://www.netflix.com/title/80040119",
+      "site": "Netflix"
     },
     {
-      "id": 25853,
-      "url": "https://www.adultswim.com/videos/naruto-shippuden",
-      "site": "Adult Swim"
+      "id": 18265,
+      "url": "https://www.funimation.com/shows/durarara/",
+      "site": "Funimation"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx1735-80JNLAlnxrKj.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1735-80JNLAlnxrKj.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx1735-80JNLAlnxrKj.png",
-    "color": "#e4865d"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6746-Q4EmstN2fy0R.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6746-Q4EmstN2fy0R.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx6746-Q4EmstN2fy0R.png",
+    "color": "#f1e4bb"
   },
   "showTitles": [
-    "Naruto: Shippuden",
-    "Naruto: Shippuuden",
-    "ナルト- 疾風伝"
+    "Durarara!!",
+    "デュラララ!!"
   ],
   "charNames": [
-    "Minato Namikaze",
-    "波風ミナト"
+    "Shingen Kishitani",
+    "岸谷森厳"
   ],
   "character": {
     "name": {
-      "first": "Minato",
-      "last": "Namikaze",
-      "full": "Minato Namikaze",
-      "native": "波風ミナト"
+      "first": "Shingen",
+      "last": "Kishitani",
+      "full": "Shingen Kishitani",
+      "native": "岸谷森厳"
     },
-    "description": "<p>Minato Namikaze was the Yondaime Hokage of Konohagakure and the man responsible for sealing the nine-tailed demon fox inside Naruto Uzumaki when he was born. Doing so cost him his life, and before dying he asked that the villagers not see Naruto as the monster within him, instead wanting him to be viewed as a hero, a request ignored by the villagers. &quot;Namikaze&quot; translates literally as &quot;Wave wind&quot;. &quot;Minato&quot; translates as &quot;Harbor&quot; or &quot;Port&quot;.    ~!Minato shares a number of traits with Naruto, namely in appearance and attitude. Such comparisons are common throughout the first part of the series, and in the second as well. The second part of the series reveals that Naruto is his son, hence the comparisons, born to Kushina Uzumaki. In his youth Minato, along with two other unknown Genin, was a student of Jiraiya. Prior to becoming Hokage, he was also the sensei of Kakashi Hatake, Obito Uchiha, and Rin. !~ Minato is said to be the greatest ninja Konoha had ever produced, with natural talent that had not been seen in many years. He created several distinctive techniques, including the Hiraishin no Jutsu, which essentially allowed him to teleport to any location with the use of a special seal. By attaching the seal to a kunai or an enemy, Minato could teleport to the location of the seal unnoticed, allowing him to wipe out nearby opponents almost instantly. This ability led to his title as &quot;Konoha's Yellow Flash&quot;, and it caused him to be seen as so dangerous that a flee-on-sight order was given in regards to him during the Third Ninja War. He also created the Rasengan, a technique that does not rely on hand seals but instead uses a concentration of spinning chakra in one's palm that causes immense damage to its victim on contact. Later in the series it is revealed that technique is actually incomplete. Minato had planned to add his own nature manipulation training to the Rasengan, making it even more powerful, but could not manage to prior to his death.   ~!Later during the war he is resurrected by Orochimaru with Edo Tensei alongside all the deceased Hokage on Sasuke's demand.!~</p>\n",
+    "description": "<p>A man with an eccentric personality who is Shinra's father. His behaviour is odd to the point that he wears a Gas Mask, he says: &quot;Tokyo air is very filthy.&quot; and that's the reason why he wears it. He has also a habit of spinning a pen in his right hand.    While his personality ranges from childish for comic relief up to a somewhat intimidating one(especially around Izaya and Namie), he is the one who offered Celty a home to stay, in exchange for performing surgery on her, to which she agreed. He is in fact the one who made Shinra participate in multiple dissections, which he believes are the reason why Shinra is so twisted now.      ~!It is revealed that he is the one who stole Celty's head using the cursed blade Saika to cut the soul that binds together head and body. After that he sold the sword to an acquaintance while handing over Celty's head to Namie's father. !~    He claims his company,Nebula executives are interested in Celty and that is why he returned to Japan from America.</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b2535-Xq9WKNPJQEt3.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b2535-Xq9WKNPJQEt3.png"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/29428.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/29428.jpg"
     }
   },
-  "date": "Wed Aug 19 2020"
+  "date": "Wed Aug 26 2020"
 }
