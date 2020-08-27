@@ -92,9 +92,12 @@ def main(service):
         limit = 278
 
     # Mastodon:
-    else:
+    elif service == 'mastodon':
         # 500 character limit per toot & emoji counts as 2 chars (already have a smiley)
         limit = 498
+    else:
+        raise ValueError("Please specify 'twitter' or 'mastodon'")
+
 
     # Put together status
     smiley = u'\U0001f604'
