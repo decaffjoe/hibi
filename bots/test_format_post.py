@@ -32,9 +32,9 @@ class TestFormatPost(unittest.TestCase):
             'image/webp': ['.webp'],
             'image/jpeg': ['.jpg', '.jpeg']
         }
+        # All img extensions are supported
         for mime in mimes:
             for ext in mimes[mime]:
-                # All img extensions are supported
                 self.assertTrue(format_post.image_mime(ext) == mime)
 
         # Incorrect img extensions are NOT supported

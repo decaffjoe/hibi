@@ -50,7 +50,10 @@ def main(service):
     data = json.load(open('../public/data.json', mode='r'))
     char = data['character']
     char_name = char['name']['full']
-    char_desc = char['description']
+    if char['description']:
+        char_desc = char['description']
+    else:
+        char_desc = f"({char['name']['first']} doesn't have a description. That's ok, we'll celebrate them anyways!)"
 
     # Get rid of html tags, spoilers and weird spacing
     char_desc = clean_description(char_desc)
@@ -60,8 +63,10 @@ def main(service):
         char_image_link = char['image']['large']
     elif char['image']['medium']:
         char_image_link = char['image']['medium']
-    else:
+    elif char['image']['small']:
         char_image_link = char['image']['small']
+    else:
+        raise KeyError("char['image'] contains no links")
 
     # Save image mime type
     image_mime_type = image_mime('.' + char_image_link.split('.')[-1])
@@ -70,10 +75,10 @@ def main(service):
     r = requests.get(char_image_link)
     if r.status_code != 200:
         print('Image download error')
-        print(r.json())
+        raise Exception(r.json())
     image = r.content
 
-    # Get show name in english
+    # Get show name in english (first title listed)
     show = data['showTitles'][0]
 
     # Twitter:
