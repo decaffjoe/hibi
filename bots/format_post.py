@@ -1,25 +1,49 @@
 import re, json, requests
 
-def regex_sub(pattern, new_text, body):
+def regex_sub(pattern, new_text, string):
     regex = re.compile(pattern)
-    return re.sub(regex, new_text, body)
+    return re.sub(regex, new_text, string)
 
 def clean_description(desc):
-    # Replace (a) line breaks with end of sentence
-    desc = regex_sub('(\r\n)+|\r+|\n+|\t+|\\n+', '.', desc)
     # Remove (a) html tags/codes e.g. '<p>' or '&quot;' and (b) spoilers e.g. '~!she dies in an avalance!~'
-    desc = regex_sub('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});|~!.*?!~', '', desc)
-    # Replace all periods with a period and space
-    desc = regex_sub('(\r\n)+|\r+|\n+|\t+|\\n+', '. ', desc)
+    def remove_html_spoilers(string):
+        return regex_sub('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});|~!.*?!~', '', string)
+
+    # Replace all line breaks & end-of-sentences with a period and space
+    def replace_with_sentence(string):
+        return regex_sub('(\r\n)+|\r+|\n+|\t+|\\n+|\.', '. ', string)
+
     # Make all spacing one-space-wide
-    desc = regex_sub(' +', ' ', desc)
+    def normalize_spacing(string):
+        return regex_sub(' +', ' ', string)
+
     # Get rid of any ' . ' remnants
-    return regex_sub(' \. ', '', desc)
+    def remove_stragglers(string):
+        return regex_sub(' \. ', '', string)
+
+    return remove_stragglers(normalize_spacing(replace_with_sentence(remove_html_spoilers(desc))))
 
 def shorten_status(status, status_closing, status_limit):
     if len(status) > status_limit:
         status = status[:(status_limit - len(status_closing))] + status_closing
     return status
+
+def image_mime(extension):
+    mimes = {
+        'image/bmp': ['.bmp'],
+        'image/gif': ['.gif'],
+        'image/png': ['.png'],
+        'image/svg+xml': ['.svg'],
+        'image/vnd.microsoft.icon': ['.ico'],
+        'image/tiff': ['.tif', '.tiff'],
+        'image/webp': ['.webp'],
+        'image/jpeg': ['.jpg', '.jpeg']
+    }
+    for mime in mimes:
+        for ext in mimes[mime]:
+            if ext == extension:
+                return mime
+    raise ValueError('Unsupported image type')
 
 def main(service):
     # Retrieve character data (assume data.json up-to-date)
@@ -40,10 +64,7 @@ def main(service):
         char_image_link = char['image']['small']
 
     # Save image mime type
-    image_ext = char_image_link.split('.')[-1]
-    if image_ext == 'jpg':
-        image_ext = 'jpeg'
-    image_mime_type = 'image/' + image_ext
+    image_mime_type = image_mime('.' + char_image_link.split('.')[-1])
 
     # Download image binary to buffer
     r = requests.get(char_image_link)
