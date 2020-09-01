@@ -1,14 +1,14 @@
 "use strict";
-const url = "https://graphql.anilist.co", fs = require('fs'), md = require('markdown-it')({ html: true, linkify: true }), MD5 = require('crypto-js/md5'), nodeFetch = require('node-fetch');
+const url = "https://graphql.anilist.co", fs = require("fs"), md = require("markdown-it")({ html: true, linkify: true }), MD5 = require("crypto-js/md5"), nodeFetch = require("node-fetch");
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
 main().then(data => {
-    fs.writeFile('./public/data.json', JSON.stringify(data, null, 2), 'utf-8', (err) => {
+    fs.writeFile("./public/data.json", JSON.stringify(data, null, 2), "utf-8", (err) => {
         if (err) {
             console.log(err);
             throw err;
         }
-        console.log('success');
+        console.log("success");
     });
 });
 async function main() {
@@ -33,7 +33,8 @@ async function main() {
             dailyChar.description = md.render(dailyChar.description);
         }
         else {
-            dailyChar.description = '(Oops, I guess this character is too cool to have a description!)';
+            dailyChar.description =
+                "(Oops, I guess this character is too cool to have a description!)";
         }
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
@@ -45,7 +46,7 @@ async function main() {
             showTitles: targetShowNames,
             charNames: dailyCharNames,
             character: dailyChar,
-            date
+            date,
         };
     }
     catch (err) {
@@ -58,8 +59,8 @@ async function getDailyCharacter(id) {
         let res = await nodeFetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": 'application/json',
-                'Accept': 'application/json'
+                "Content-Type": "application/json",
+                Accept: "application/json",
             },
             body: JSON.stringify({
                 // GraphQL query
@@ -80,12 +81,12 @@ async function getDailyCharacter(id) {
                     }
                 }
                 `,
-            })
+            }),
         });
         // await res.headers.forEach(header => console.log(header));
         res = await res.json();
         res = res.data.Character;
-        console.log('Character ID: ' + id);
+        console.log("Character ID: " + id);
         return res;
     }
     catch (err) {
@@ -99,8 +100,8 @@ async function getShowCharacters(id) {
         let res = await nodeFetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": 'application/json',
-                'Accept': 'application/json'
+                "Content-Type": "application/json",
+                Accept: "application/json",
             },
             body: JSON.stringify({
                 // GraphQL query
@@ -131,11 +132,11 @@ async function getShowCharacters(id) {
                     }
                   }
                 `,
-            })
+            }),
         });
         res = await res.json();
         res = res.data.Media;
-        console.log('Show ID: ' + id);
+        console.log("Show ID: " + id);
         return res;
     }
     catch (err) {
@@ -149,8 +150,8 @@ async function getPopularShows() {
         let res = await nodeFetch(url, {
             method: "POST",
             headers: {
-                "Content-Type": 'application/json',
-                'Accept': 'application/json'
+                "Content-Type": "application/json",
+                Accept: "application/json",
             },
             body: JSON.stringify({
                 // GraphQL query
@@ -168,7 +169,7 @@ async function getPopularShows() {
             }
           }
         `,
-            })
+            }),
         });
         // await res.headers.forEach(header => console.log(header));
         res = await res.json();
@@ -185,8 +186,8 @@ async function getPopularShows() {
 function selectDateId(arr) {
     const len = arr.length;
     let d = new Date();
-    d = d.toLocaleDateString('en-US', { timeZone: "America/Chicago" });
-    d = d.split('/').join('');
+    d = d.toLocaleDateString("en-US", { timeZone: "America/Chicago" });
+    d = d.split("/").join("");
     const index = dateAlgo(d, len);
     return arr[index].id;
 }
@@ -241,7 +242,10 @@ function showNameValidator(titles) {
 }
 function charNameValidator(names) {
     // if native is null or is the same as full
-    if (!names.native || names.full === names.native || names.full.toLowerCase() === names.native || names.full.toUpperCase() === names.native) {
+    if (!names.native ||
+        names.full === names.native ||
+        names.full.toLowerCase() === names.native ||
+        names.full.toUpperCase() === names.native) {
         return [names.full];
     }
     return [names.full, names.native];

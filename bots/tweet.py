@@ -2,9 +2,11 @@ import os
 from TwitterAPI import TwitterAPI
 from format_post import main, shorten_status
 
+
 def send_tweet(tweet, img):
-    r = api.request('statuses/update', { 'status': tweet, 'media_ids': img })
-    return { 'status_code': r.status_code, 'json': r.json() }
+    r = api.request('statuses/update', {'status': tweet, 'media_ids': img})
+    return {'status_code': r.status_code, 'json': r.json()}
+
 
 # Import formatted data
 data = main('twitter')
@@ -15,15 +17,17 @@ limit = data['limit']
 
 # Get credentials from gitlab ci env variables ('T_...' for Twitter)
 creds = {}
-env_vars = ['T_CONSUMER_KEY', 'T_CONSUMER_SECRET', 'T_ACCESS_TOKEN_KEY', 'T_ACCESS_TOKEN_SECRET']
+env_vars = ['T_CONSUMER_KEY', 'T_CONSUMER_SECRET',
+            'T_ACCESS_TOKEN_KEY', 'T_ACCESS_TOKEN_SECRET']
 for key in env_vars:
     creds[key] = os.environ[key]
 
 # Authenticate to twitter as user
-api = TwitterAPI(creds['T_CONSUMER_KEY'], creds['T_CONSUMER_SECRET'], creds['T_ACCESS_TOKEN_KEY'], creds['T_ACCESS_TOKEN_SECRET'])
+api = TwitterAPI(creds['T_CONSUMER_KEY'], creds['T_CONSUMER_SECRET'],
+                 creds['T_ACCESS_TOKEN_KEY'], creds['T_ACCESS_TOKEN_SECRET'])
 
 # Upload media and get media_id
-r = api.request('media/upload', None, { 'media': image })
+r = api.request('media/upload', None, {'media': image})
 if r.status_code != 200:
     print('Media upload error')
 media_id = r.json()['media_id']

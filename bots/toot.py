@@ -13,8 +13,8 @@ limit = data['limit']
 # Authenticate to mastodon
 mastodon = Mastodon(
     # Get credential from gitlab ci env var ('M_...' for Mastodon)
-    access_token = os.environ['M_ACCESS_TOKEN'],
-    api_base_url = 'https://botsin.space'
+    access_token=os.environ['M_ACCESS_TOKEN'],
+    api_base_url='https://botsin.space'
 )
 
 # Upload media and get media_id

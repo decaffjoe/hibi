@@ -1,117 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="./assets/mikasa_smiling.webp" />
+    <title>Hibi (日々) - Anime Character of the Day</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="./assets/mikasa_smiling.webp" />
-  <title>Hibi (日々) - Anime Character of the Day</title>
-</head>
-
-<body>
-  <section id="header" class="container">
-    <h1>Anime Character of the Day</h1>
-    <h3></h3>
-    <div class="wave"></div>
-  </section>
-  <section id="charDay">
-    <div id="photoGroup">
-      <div id="photo"></div>
-      <ul id="names">
-        <li></li>
-        <li></li>
-      </ul>
-      <ul id="titles">
-        <li></li>
-        <li></li>
-        <li></li>
-      </ul>
-    </div>
-    <div id="description"></div>
-  </section>
-  <section id="showLinks">
-    <div id="watch-links">
-      <h1 class="hidden">watch</h1>
-      <a href="#" id="funimation-link" class="hidden"><img class="link-icon" src="./assets/funimation.jpg" alt=""></a>
-      <a href="#" id="crunchyroll-link" class="hidden"><img class="link-icon" src="./assets/crunchyroll.jpg" alt=""></a>
-      <a href="#" id="netflix-link" class="hidden"><img class="link-icon" src="./assets/netflix.jpg" alt=""></a>
-      <a href="#" id="amazon-link" class="hidden"><img class="link-icon" src="./assets/amazon.jpg" alt=""></a>
-      <a href="#" id="hulu-link" class="hidden"><img class="link-icon" src="./assets/hulu.jpg" alt=""></a>
-      <a href="#" id="hbomax-link" class="hidden"><img class="link-icon" src="./assets/hbomax.jpg" alt=""></a>
-      <a href="#" id="animelab-link" class="hidden"><img class="link-icon" src="./assets/animelab.jpg" alt=""></a>
-      <a href="#" id="tubi-link" class="hidden"><img class="link-icon" src="./assets/tubi.jpg" alt=""></a>
-      <a href="#" id="vrv-link" class="hidden"><img class="link-icon" src="./assets/vrv.jpg" alt=""></a>
-      <a href="#" id="viz-link" class="hidden"><img class="link-icon" src="./assets/viz.jpg" alt=""></a>
-      <a href="#" id="hidive-link" class="hidden"><img class="link-icon" src="./assets/hidive.jpg" alt=""></a>
-    </div>
-    <div id="connect-links">
+  <body>
+    <section id="header" class="container">
+      <h1>Anime Character of the Day</h1>
+      <h3></h3>
+      <div class="wave"></div>
+    </section>
+    <section id="charDay">
+      <div id="photoGroup">
+        <div id="photo"></div>
+        <ul id="names">
+          <li></li>
+          <li></li>
+        </ul>
+        <ul id="titles">
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+      <div id="description"></div>
+    </section>
+    <section id="showLinks">
+      <div id="watch-links">
+        <h1 class="hidden">watch</h1>
+        <a href="#" id="funimation-link" class="hidden"
+          ><img class="link-icon" src="./assets/funimation.jpg" alt=""
+        /></a>
+        <a href="#" id="crunchyroll-link" class="hidden"
+          ><img class="link-icon" src="./assets/crunchyroll.jpg" alt=""
+        /></a>
+        <a href="#" id="netflix-link" class="hidden"
+          ><img class="link-icon" src="./assets/netflix.jpg" alt=""
+        /></a>
+        <a href="#" id="amazon-link" class="hidden"
+          ><img class="link-icon" src="./assets/amazon.jpg" alt=""
+        /></a>
+        <a href="#" id="hulu-link" class="hidden"
+          ><img class="link-icon" src="./assets/hulu.jpg" alt=""
+        /></a>
+        <a href="#" id="hbomax-link" class="hidden"
+          ><img class="link-icon" src="./assets/hbomax.jpg" alt=""
+        /></a>
+        <a href="#" id="animelab-link" class="hidden"
+          ><img class="link-icon" src="./assets/animelab.jpg" alt=""
+        /></a>
+        <a href="#" id="tubi-link" class="hidden"
+          ><img class="link-icon" src="./assets/tubi.jpg" alt=""
+        /></a>
+        <a href="#" id="vrv-link" class="hidden"
+          ><img class="link-icon" src="./assets/vrv.jpg" alt=""
+        /></a>
+        <a href="#" id="viz-link" class="hidden"
+          ><img class="link-icon" src="./assets/viz.jpg" alt=""
+        /></a>
+        <a href="#" id="hidive-link" class="hidden"
+          ><img class="link-icon" src="./assets/hidive.jpg" alt=""
+        /></a>
+      </div>
+      <div id="connect-links">
         <h1 class="hidden">connect</h1>
-        <a href="#" id="official-link" class="hidden"><img class="link-icon" src="" alt=""></a>
-        <a href="#" id="twitter-link" class="hidden"><img class="link-icon" src="./assets/twitter.jpg" alt=""></a>
-    </div>
-  </section>
-  <script id="data" type="application/json">
-{
-  "showLinks": [
-    {
-      "id": 212,
-      "url": "http://www.crunchyroll.com/durarara",
-      "site": "Crunchyroll"
-    },
-    {
-      "id": 1994,
-      "url": "http://www.hulu.com/durarara",
-      "site": "Hulu"
-    },
-    {
-      "id": 3241,
-      "url": "http://www.durarara.com/1st/",
-      "site": "Official Site"
-    },
-    {
-      "id": 10257,
-      "url": "http://www.netflix.com/title/80040119",
-      "site": "Netflix"
-    },
-    {
-      "id": 18265,
-      "url": "https://www.funimation.com/shows/durarara/",
-      "site": "Funimation"
-    }
-  ],
-  "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6746-Q4EmstN2fy0R.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6746-Q4EmstN2fy0R.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx6746-Q4EmstN2fy0R.png",
-    "color": "#f1e4bb"
-  },
-  "showTitles": [
-    "Durarara!!",
-    "デュラララ!!"
-  ],
-  "charNames": [
-    "Shingen Kishitani",
-    "岸谷森厳"
-  ],
-  "character": {
-    "name": {
-      "first": "Shingen",
-      "last": "Kishitani",
-      "full": "Shingen Kishitani",
-      "native": "岸谷森厳"
-    },
-    "description": "<p>A man with an eccentric personality who is Shinra's father. His behaviour is odd to the point that he wears a Gas Mask, he says: &quot;Tokyo air is very filthy.&quot; and that's the reason why he wears it. He has also a habit of spinning a pen in his right hand.    While his personality ranges from childish for comic relief up to a somewhat intimidating one(especially around Izaya and Namie), he is the one who offered Celty a home to stay, in exchange for performing surgery on her, to which she agreed. He is in fact the one who made Shinra participate in multiple dissections, which he believes are the reason why Shinra is so twisted now.      <span class='spoiler' title='live dangerously'>It is revealed that he is the one who stole Celty's head using the cursed blade Saika to cut the soul that binds together head and body. After that he sold the sword to an acquaintance while handing over Celty's head to Namie's father. </span>    He claims his company,Nebula executives are interested in Celty and that is why he returned to Japan from America.</p>\n",
-    "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/29428.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/29428.jpg"
-    }
-  },
-  "date": "Wed Aug 26 2020"
-}
-  </script>
-  <script src="app.js" type="module"></script>
-</body>
-
+        <a href="#" id="official-link" class="hidden"
+          ><img class="link-icon" src="" alt=""
+        /></a>
+        <a href="#" id="twitter-link" class="hidden"
+          ><img class="link-icon" src="./assets/twitter.jpg" alt=""
+        /></a>
+      </div>
+    </section>
+    <script id="data" type="application/json">
+      {
+        "showLinks": [
+          {
+            "id": 212,
+            "url": "http://www.crunchyroll.com/durarara",
+            "site": "Crunchyroll"
+          },
+          {
+            "id": 1994,
+            "url": "http://www.hulu.com/durarara",
+            "site": "Hulu"
+          },
+          {
+            "id": 3241,
+            "url": "http://www.durarara.com/1st/",
+            "site": "Official Site"
+          },
+          {
+            "id": 10257,
+            "url": "http://www.netflix.com/title/80040119",
+            "site": "Netflix"
+          },
+          {
+            "id": 18265,
+            "url": "https://www.funimation.com/shows/durarara/",
+            "site": "Funimation"
+          }
+        ],
+        "showArt": {
+          "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx6746-Q4EmstN2fy0R.png",
+          "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx6746-Q4EmstN2fy0R.png",
+          "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx6746-Q4EmstN2fy0R.png",
+          "color": "#f1e4bb"
+        },
+        "showTitles": ["Durarara!!", "デュラララ!!"],
+        "charNames": ["Shingen Kishitani", "岸谷森厳"],
+        "character": {
+          "name": {
+            "first": "Shingen",
+            "last": "Kishitani",
+            "full": "Shingen Kishitani",
+            "native": "岸谷森厳"
+          },
+          "description": "<p>A man with an eccentric personality who is Shinra's father. His behaviour is odd to the point that he wears a Gas Mask, he says: &quot;Tokyo air is very filthy.&quot; and that's the reason why he wears it. He has also a habit of spinning a pen in his right hand.    While his personality ranges from childish for comic relief up to a somewhat intimidating one(especially around Izaya and Namie), he is the one who offered Celty a home to stay, in exchange for performing surgery on her, to which she agreed. He is in fact the one who made Shinra participate in multiple dissections, which he believes are the reason why Shinra is so twisted now.      <span class='spoiler' title='live dangerously'>It is revealed that he is the one who stole Celty's head using the cursed blade Saika to cut the soul that binds together head and body. After that he sold the sword to an acquaintance while handing over Celty's head to Namie's father. </span>    He claims his company,Nebula executives are interested in Celty and that is why he returned to Japan from America.</p>\n",
+          "image": {
+            "large": "https://s4.anilist.co/file/anilistcdn/character/large/29428.jpg",
+            "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/29428.jpg"
+          }
+        },
+        "date": "Wed Aug 26 2020"
+      }
+    </script>
+    <script src="app.js" type="module"></script>
+  </body>
 </html>

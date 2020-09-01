@@ -1,8 +1,12 @@
-import re, json, requests
+import re
+import json
+import requests
+
 
 def regex_sub(pattern, new_text, string):
     regex = re.compile(pattern)
     return re.sub(regex, new_text, string)
+
 
 def clean_description(desc):
     # Remove (a) html tags/codes e.g. '<p>' or '&quot;' and (b) spoilers e.g. '~!she dies in an avalance!~'
@@ -23,10 +27,12 @@ def clean_description(desc):
 
     return remove_stragglers(normalize_spacing(replace_with_sentence(remove_html_spoilers(desc))))
 
+
 def shorten_status(status, status_closing, status_limit):
     if len(status) > status_limit:
         status = status[:(status_limit - len(status_closing))] + status_closing
     return status
+
 
 def image_mime(extension):
     mimes = {
@@ -44,6 +50,7 @@ def image_mime(extension):
             if ext == extension:
                 return mime
     raise ValueError('Unsupported image type')
+
 
 def main(service):
     # Retrieve character data (assume data.json up-to-date)
@@ -98,12 +105,10 @@ def main(service):
     else:
         raise ValueError("Please specify 'twitter' or 'mastodon'")
 
-
     # Put together status
     smiley = u'\U0001f604'
     status = f"The #anime character of the day is {char_name} from {show} {smiley}\n{char_desc}"
     ending = "..."
     status = shorten_status(status, ending, limit)
 
-    return { 'image': image, 'image_mime_type': image_mime_type, 'status': status, 'ending': ending, 'limit': limit }
-
+    return {'image': image, 'image_mime_type': image_mime_type, 'status': status, 'ending': ending, 'limit': limit}
