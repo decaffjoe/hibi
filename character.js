@@ -2,7 +2,8 @@
 const url = "https://graphql.anilist.co", fs = require("fs"), md = require("markdown-it")({ html: true, linkify: true }), MD5 = require("crypto-js/md5"), nodeFetch = require("node-fetch");
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
-main().then(data => {
+main()
+    .then(data => {
     fs.writeFile("./public/data.json", JSON.stringify(data, null, 2), "utf-8", (err) => {
         if (err) {
             console.log(err);
@@ -10,7 +11,8 @@ main().then(data => {
         }
         console.log("success");
     });
-});
+})
+    .catch(err => console.log(err));
 async function main() {
     try {
         // get top 100 shows - API FETCH
@@ -84,10 +86,10 @@ async function getDailyCharacter(id) {
             }),
         });
         // await res.headers.forEach(header => console.log(header));
-        res = await res.json();
-        res = res.data.Character;
+        let res_json = await res.json();
+        let data = res_json.data.Character;
         console.log("Character ID: " + id);
-        return res;
+        return data;
     }
     catch (err) {
         console.log(err);
@@ -134,10 +136,10 @@ async function getShowCharacters(id) {
                 `,
             }),
         });
-        res = await res.json();
-        res = res.data.Media;
+        let res_json = await res.json();
+        let data = res_json.data.Media;
         console.log("Show ID: " + id);
-        return res;
+        return data;
     }
     catch (err) {
         console.log(err);
@@ -172,10 +174,10 @@ async function getPopularShows() {
             }),
         });
         // await res.headers.forEach(header => console.log(header));
-        res = await res.json();
+        let res_json = await res.json();
         // join the first and second query alias results
-        res = [...res.data.firstSet.media, ...res.data.secondSet.media];
-        return res;
+        let data = [...res_json.data.firstSet.media, ...res_json.data.secondSet.media];
+        return data;
     }
     catch (err) {
         console.log(err);

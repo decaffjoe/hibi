@@ -7,20 +7,22 @@ const url = "https://graphql.anilist.co",
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
 
-main().then(data => {
-  fs.writeFile(
-    "./public/data.json",
-    JSON.stringify(data, null, 2),
-    "utf-8",
-    (err: any) => {
-      if (err) {
-        console.log(err);
-        throw err;
-      }
-      console.log("success");
-    },
-  );
-});
+main()
+  .then(data => {
+    fs.writeFile(
+      "./public/data.json",
+      JSON.stringify(data, null, 2),
+      "utf-8",
+      (err: any) => {
+        if (err) {
+          console.log(err);
+          throw err;
+        }
+        console.log("success");
+      },
+    );
+  })
+  .catch(err => console.log(err));
 
 async function main() {
   try {
@@ -71,9 +73,9 @@ async function main() {
 }
 
 // Get daily character
-async function getDailyCharacter(id: number): Promise<dailyCharacter> {
+async function getDailyCharacter(id: number): Promise<DailyCharacter> {
   try {
-    let res: any = await nodeFetch(url, {
+    let res: Response = await nodeFetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -101,10 +103,10 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
       }),
     });
     // await res.headers.forEach(header => console.log(header));
-    res = await res.json();
-    res = res.data.Character;
+    let res_json = await res.json();
+    let data: DailyCharacter = res_json.data.Character;
     console.log("Character ID: " + id);
-    return res;
+    return data;
   } catch (err) {
     console.log(err);
     return err;
@@ -112,9 +114,9 @@ async function getDailyCharacter(id: number): Promise<dailyCharacter> {
 }
 
 // Get target show information
-async function getShowCharacters(id: number): Promise<showCharacters> {
+async function getShowCharacters(id: number): Promise<ShowCharacters> {
   try {
-    let res: any = await nodeFetch(url, {
+    let res: Response = await nodeFetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -151,10 +153,10 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
                 `,
       }),
     });
-    res = await res.json();
-    res = res.data.Media;
+    let res_json = await res.json();
+    let data: ShowCharacters = res_json.data.Media;
     console.log("Show ID: " + id);
-    return res;
+    return data;
   } catch (err) {
     console.log(err);
     return err;
@@ -162,9 +164,9 @@ async function getShowCharacters(id: number): Promise<showCharacters> {
 }
 
 // Get most popular shows
-async function getPopularShows(): Promise<popularShows[]> {
+async function getPopularShows(): Promise<PopularShows[]> {
   try {
-    let res: any = await nodeFetch(url, {
+    let res: Response = await nodeFetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -189,10 +191,10 @@ async function getPopularShows(): Promise<popularShows[]> {
       }),
     });
     // await res.headers.forEach(header => console.log(header));
-    res = await res.json();
+    let res_json = await res.json();
     // join the first and second query alias results
-    res = [...res.data.firstSet.media, ...res.data.secondSet.media];
-    return res;
+    let data: Array<PopularShows> = [...res_json.data.firstSet.media, ...res_json.data.secondSet.media];
+    return data;
   } catch (err) {
     console.log(err);
     return [];
@@ -219,7 +221,7 @@ function dateAlgo(date: string, arrLen: number): number {
 }
 
 // Avoid printing missing or duplicate show names
-function showNameValidator(titles: showTitles): string[] {
+function showNameValidator(titles: ShowTitles): string[] {
   // get rid of titles that are null or undefined
   let realTitles: { [key: string]: string } = {};
   for (let [key, value] of Object.entries(titles)) {
@@ -269,7 +271,7 @@ function showNameValidator(titles: showTitles): string[] {
   return pushIfNonEmpty(deDuped, japanese);
 }
 
-function charNameValidator(names: any): string[] {
+function charNameValidator(names: DailyCharacter["name"]): Array<string> {
   // if native is null or is the same as full
   if (
     !names.native ||
@@ -298,17 +300,17 @@ function pushIfNonEmpty(arr: any[], str: string): any[] {
 }
 
 // match getShowNames fetch query
-interface popularShows {
+interface PopularShows {
   id: number;
 }
 
-interface showTitles {
+interface ShowTitles {
   english: string | null;
   romaji: string | null;
   native: string | null;
 }
 
-interface showCharacters {
+interface ShowCharacters {
   title: {
     english: string | null;
     romaji: string | null;
@@ -336,11 +338,11 @@ interface showCharacters {
   };
 }
 
-interface dailyCharacter {
+interface DailyCharacter {
   name: {
     first: string | null;
     last: string | null;
-    full: string | null;
+    full: string;
     native: string | null;
   };
   description: string | null;
