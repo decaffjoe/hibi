@@ -221,7 +221,7 @@ function dateAlgo(date: string, arrLen: number): number {
 }
 
 // Avoid printing missing or duplicate show names
-function showNameValidator(titles: ShowTitles): string[] {
+function showNameValidator(titles: ShowCharacters["title"]): string[] {
   // get rid of titles that are null or undefined
   let realTitles: { [key: string]: string } = {};
   for (let [key, value] of Object.entries(titles)) {
@@ -302,12 +302,6 @@ function pushIfNonEmpty(arr: any[], str: string): any[] {
 // match getShowNames fetch query
 interface PopularShows {
   id: number;
-}
-
-interface ShowTitles {
-  english: string | null;
-  romaji: string | null;
-  native: string | null;
 }
 
 interface ShowCharacters {
