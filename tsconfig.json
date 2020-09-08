@@ -1,9 +1,15 @@
 {
     "compilerOptions": {
         "target": "esnext",
-        "strict":true,
+        "module": "CommonJS",
+        "strict": true,
         "watch": true,
         "lib": ["dom", "es2017"],
-        "checkJs": false
+        "checkJs": true,
+        "allowJs": true,
+        "rootDir": "src",
+        "outDir": "lib",
+        "esModuleInterop": true,
+        "resolveJsonModule": true
     }
 }

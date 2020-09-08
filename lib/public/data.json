@@ -1,0 +1,62 @@
+{
+  "showLinks": [
+    {
+      "id": 6830,
+      "url": "http://mobpsycho100.com/#",
+      "site": "Official Site"
+    },
+    {
+      "id": 6835,
+      "url": "https://twitter.com/mobpsycho_anime",
+      "site": "Twitter"
+    },
+    {
+      "id": 9670,
+      "url": "https://www.crunchyroll.com/mob-psycho-100",
+      "site": "Crunchyroll"
+    },
+    {
+      "id": 11636,
+      "url": "https://www.funimation.com/shows/mob-psycho-100",
+      "site": "Funimation"
+    },
+    {
+      "id": 13350,
+      "url": "https://www.animelab.com/shows/mob-psycho-100",
+      "site": "AnimeLab"
+    },
+    {
+      "id": 23408,
+      "url": "https://www.netflix.com/title/80179798",
+      "site": "Netflix"
+    }
+  ],
+  "showArt": {
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx101338-7qOfIaEKSjgl.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx101338-7qOfIaEKSjgl.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx101338-7qOfIaEKSjgl.jpg",
+    "color": "#50e4f1"
+  },
+  "showTitles": [
+    "Mob Psycho 100 II",
+    "モブサイコ100 II"
+  ],
+  "charNames": [
+    "Mob's Father Kageyama",
+    "影山"
+  ],
+  "character": {
+    "name": {
+      "first": "Mob's Father",
+      "last": "Kageyama",
+      "full": "Mob's Father Kageyama",
+      "native": "影山"
+    },
+    "description": "<p>Mob's Father.</p>\n",
+    "image": {
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/n133210-Q5R7HEABrcYO.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/n133210-Q5R7HEABrcYO.jpg"
+    }
+  },
+  "date": "Mon Sep 07 2020"
+}

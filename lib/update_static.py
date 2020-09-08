@@ -1,3 +1,6 @@
+# What does this file do?
+# Takes the data from data.json, sanitizes it & injects it into index.html
+
 import os
 
 

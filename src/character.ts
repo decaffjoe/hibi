@@ -1,11 +1,11 @@
+// WHAT DOES THIS FILE DO?
+// Gets daily show & character info from API and writes to 'public/data.json', that's it!
+
 const url = "https://graphql.anilist.co",
   fs = require("fs"),
   md = require("markdown-it")({ html: true, linkify: true }),
   MD5 = require("crypto-js/md5"),
   nodeFetch = require("node-fetch");
-
-// WHAT DOES THIS FILE DO?
-// Gets daily show & character info from API and writes to 'public/data.json', that's it!
 
 main()
   .then(data => {
@@ -193,7 +193,10 @@ async function getPopularShows(): Promise<PopularShows[]> {
     // await res.headers.forEach(header => console.log(header));
     let res_json = await res.json();
     // join the first and second query alias results
-    let data: Array<PopularShows> = [...res_json.data.firstSet.media, ...res_json.data.secondSet.media];
+    let data: Array<PopularShows> = [
+      ...res_json.data.firstSet.media,
+      ...res_json.data.secondSet.media,
+    ];
     return data;
   } catch (err) {
     console.log(err);
