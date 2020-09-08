@@ -5,10 +5,10 @@
         "strict": true,
         "watch": true,
         "lib": ["dom", "es2017"],
-        "checkJs": true,
-        "allowJs": true,
-        "rootDir": "src",
-        "outDir": "lib",
+        "checkJs": false,
+        "allowJs": false,
+        "rootDir": "./src",
+        "outDir": "./public",
         "esModuleInterop": true,
         "resolveJsonModule": true
     }

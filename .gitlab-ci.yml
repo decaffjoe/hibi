@@ -10,8 +10,6 @@ pages:
   stage: deploy
   script:
     - echo 'Nothing to do...'
-    - mkdir public
-    - cp lib/public/* public
   artifacts:
     paths:
       - public

@@ -10,7 +10,7 @@ const url = "https://graphql.anilist.co",
 main()
   .then(data => {
     fs.writeFile(
-      "./public/data.json",
+      "../data.json",
       JSON.stringify(data, null, 2),
       "utf-8",
       (err: any) => {

@@ -1,4 +1,4 @@
 #!/usr/bin/bash
-cd lib
+cd public/lib/
 node character.js
 python update_static.py

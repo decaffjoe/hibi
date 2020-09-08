@@ -4,7 +4,7 @@
 const url = "https://graphql.anilist.co", fs = require("fs"), md = require("markdown-it")({ html: true, linkify: true }), MD5 = require("crypto-js/md5"), nodeFetch = require("node-fetch");
 main()
     .then(data => {
-    fs.writeFile("./public/data.json", JSON.stringify(data, null, 2), "utf-8", (err) => {
+    fs.writeFile("../data.json", JSON.stringify(data, null, 2), "utf-8", (err) => {
         if (err) {
             console.log(err);
             throw err;

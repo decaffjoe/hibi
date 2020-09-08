@@ -12,11 +12,11 @@ build:
     - bash nodesource_setup.sh
     - apt-get install -qy nodejs python3
     - npm install
-    - cd lib
+    - cd public/lib
     - node character.js
     - python3 update_static.py
-    - echo 'Updated lib/public/'
+    - echo 'Updated public'
   artifacts:
     paths:
       - node_modules/
-      - lib/public
+      - public
