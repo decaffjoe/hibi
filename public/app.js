@@ -84,9 +84,11 @@ for (let link of links) {
         watchHeader.classList.remove("hidden");
     }
 }
-// Mobile only: reposition #showLinks to be below description
+// Mobile only: reposition #showLinks and #hibianime to be below description
 if (window.screen.width <= 600) {
-    const charDay = document.querySelector("#charDay"), showLinks = document.querySelector("#showLinks");
+    const charDay = document.querySelector("#charDay"), showLinks = document.querySelector("#showLinks"), socialBots = document.querySelector("#social-bots");
     let charBoundary = charDay.getBoundingClientRect().bottom + 25;
     showLinks.style.top = `${charBoundary}px`;
+    charBoundary = showLinks?.getBoundingClientRect().bottom + 5;
+    socialBots.style.top = `${charBoundary}px`;
 }
