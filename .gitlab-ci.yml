@@ -2,10 +2,11 @@ stages:
   - build
   - test
   - post
+  - deploy
 
 image: ubuntu:latest
 
-include: '.build-template.yml'
+include: ".build-template.yml"
 
 test:
   stage: test
@@ -16,7 +17,7 @@ test:
     - pip3 install -r requirements.txt
     - python3 test_format_post.py
   only:
-    - social-bots
+    - master
 
 post:
   stage: post
@@ -30,6 +31,16 @@ post:
     - python3 toot.py
     - echo 'Successfully tooted from @hibianime@botsin.space!'
   only:
-    - social-bots
+    - master
   except:
     - pushes
+
+pages:
+  stage: deploy
+  script:
+    - echo 'Deploying to hibi.fun'
+  artifacts:
+    paths:
+      - public
+  only:
+    - master

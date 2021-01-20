@@ -16,38 +16,38 @@ main()
 async function main() {
     try {
         // get top 100 shows - API FETCH
-        const popShows = await getPopularShows();
+        const popularShows = await getPopularShows();
         // pick a 'random' show according to today's date
-        const targetShowId = selectDateId(popShows);
+        const showId = selectRandomId(popularShows);
         // get list of characters from target show - API FETCH
-        const targetShow = await getShowCharacters(targetShowId);
+        const showCharacters = await getShowCharacters(showId);
         // handle show titles (null or repeats)
-        const targetShowNames = showNameValidator(targetShow.title);
-        const targetShowLinks = targetShow.externalLinks;
-        const targetShowArt = targetShow.coverImage;
-        const targetShowChars = targetShow.characters.nodes;
+        const showNames = showNameValidator(showCharacters.title);
+        const showLinks = showCharacters.externalLinks;
+        const showArt = showCharacters.coverImage;
+        const showCharacterIds = showCharacters.characters.nodes;
         // pick a 'random' character from target show according to today's date
-        const targetCharId = selectDateId(targetShowChars);
+        const characterId = selectRandomId(showCharacterIds);
         // get character information - API FETCH
-        const dailyChar = await getDailyCharacter(targetCharId);
+        const dailyCharacter = await getDailyCharacter(characterId);
         // handle character description (markdown or null)
-        if (dailyChar.description) {
-            dailyChar.description = md.render(dailyChar.description);
+        if (dailyCharacter.description) {
+            dailyCharacter.description = md.render(dailyCharacter.description);
         }
         else {
-            dailyChar.description =
+            dailyCharacter.description =
                 "(Oops, I guess this character is too cool to have a description!)";
         }
         // hande character names (null or repeats)
-        const dailyCharNames = charNameValidator(dailyChar.name);
+        const dailyCharacterNames = characterNameValidator(dailyCharacter.name);
         // get date (set static)
         const date = new Date().toDateString();
         return {
-            showLinks: targetShowLinks,
-            showArt: targetShowArt,
-            showTitles: targetShowNames,
-            charNames: dailyCharNames,
-            character: dailyChar,
+            showLinks: showLinks,
+            showArt: showArt,
+            showTitles: showNames,
+            charNames: dailyCharacterNames,
+            character: dailyCharacter,
             date,
         };
     }
@@ -187,6 +187,9 @@ async function getPopularShows() {
         return [];
     }
 }
+function selectRandomId(arr) {
+    return Math.floor(Math.random() * arr.length);
+}
 // Pick date-dependent value from array of objects w/ id
 function selectDateId(arr) {
     const len = arr.length;
@@ -245,7 +248,7 @@ function showNameValidator(titles) {
     }
     return pushIfNonEmpty(deDuped, japanese);
 }
-function charNameValidator(names) {
+function characterNameValidator(names) {
     // if native is null or is the same as full
     if (!names.native ||
         names.full === names.native ||
