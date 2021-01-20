@@ -40,7 +40,6 @@ async function main() {
         }
         // hande character names (null or repeats)
         const dailyCharNames = charNameValidator(dailyChar.name);
-        // get date (set static)
         const date = new Date().toDateString();
         return {
             showLinks: targetShowLinks,
@@ -187,7 +186,6 @@ async function getPopularShows() {
         return [];
     }
 }
-// Pick date-dependent value from array of objects w/ id
 function selectDateId(arr) {
     const len = arr.length;
     let d = new Date();
@@ -246,7 +244,6 @@ function showNameValidator(titles) {
     return pushIfNonEmpty(deDuped, japanese);
 }
 function charNameValidator(names) {
-    // if native is null or is the same as full
     if (!names.native ||
         names.full === names.native ||
         names.full.toLowerCase() === names.native ||
