@@ -1,61 +1,58 @@
 {
   "showLinks": [
     {
-      "id": 1500,
-      "url": "http://www.hulu.com/full-metal-panic",
-      "site": "Hulu"
-    },
-    {
-      "id": 6201,
-      "url": "http://www.crunchyroll.com/full-metal-panic",
+      "id": 377,
+      "url": "http://www.crunchyroll.com/gurren-lagann",
       "site": "Crunchyroll"
     },
     {
-      "id": 14014,
-      "url": "https://www.funimation.com/shows/full-metal-panic/#videos",
+      "id": 1537,
+      "url": "http://www.hulu.com/gurren-lagann",
+      "site": "Hulu"
+    },
+    {
+      "id": 5239,
+      "url": "https://www.netflix.com/title/70213196",
+      "site": "Netflix"
+    },
+    {
+      "id": 15617,
+      "url": "https://www.funimation.com/shows/gurren-lagann/",
       "site": "Funimation"
     },
     {
-      "id": 14015,
-      "url": "https://tubitv.com/series/2372/full_metal_panic",
-      "site": "Tubi TV"
-    },
-    {
-      "id": 14016,
-      "url": "https://vrv.co/series/GR2PQ9K0R/Full-Metal-Panic",
+      "id": 17578,
+      "url": "https://vrv.co/series/GR097JN7R/Gurren-Lagann",
       "site": "VRV"
-    },
-    {
-      "id": 15196,
-      "url": "https://www.youtube.com/playlist?list=ELCnc3okkYrN0",
-      "site": "YouTube"
-    },
-    {
-      "id": 34640,
-      "url": "http://www.gonzo.co.jp/works/full-metal-panic/",
-      "site": "Official Site"
-    },
-    {
-      "id": 34641,
-      "url": "https://www.amazon.com/dp/B01MZEDIEI",
-      "site": "Amazon"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx71-Fi08vs7xNBMW.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx71-Fi08vs7xNBMW.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx71-Fi08vs7xNBMW.png",
-    "color": "#2893a1"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2001-7cvz7Jf8viMT.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2001-7cvz7Jf8viMT.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx2001-7cvz7Jf8viMT.png",
+    "color": "#f15d35"
   },
   "showTitles": [
-    "Full Metal Panic!",
-    "フルメタル・パニック！"
+    "Gurren Lagann",
+    "Tengen Toppa Gurren Lagann",
+    "天元突破グレンラガン"
   ],
   "charNames": [
-    null
+    "Darry Adai",
+    "ダリー・アダイ"
   ],
   "character": {
-    "description": "(Oops, I guess this character is too cool to have a description!)"
+    "name": {
+      "first": "Darry",
+      "last": "Adai",
+      "full": "Darry Adai",
+      "native": "ダリー・アダイ"
+    },
+    "description": "<p>Darry is a girl from Adai Village, who used to be cared for by Rossiu. She is Gimmy's twin sister and has a good bond with him. As a young girl, she was shy and quiet and used to cling to a plush doll, which she carried with her at all times. After the timeskip, however, she is much more confident and has left her old personality behind. As a Grapearl pilot, she is careful, calm and perceptive, and puts more thought and planning into her actions than Gimmy.  (Source: Wikipedia)</p>\n",
+    "image": {
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/3433.jpg",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/3433.jpg"
+    }
   },
   "date": "Sun Sep 18 2022"
 }

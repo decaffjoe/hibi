@@ -30,7 +30,7 @@ async function main() {
     const popularShows = await getPopularShows();
 
     // pick a 'random' show according to today's date
-    const showId = selectRandomId(popularShows);
+    const showId = selectRandomArrayItem(popularShows).id;
 
     // get list of characters from target show - API FETCH
     const showCharacters = await getShowCharacters(showId);
@@ -42,7 +42,7 @@ async function main() {
 
     const showCharacterIds = showCharacters.characters.nodes;
     // pick a 'random' character from target show according to today's date
-    const characterId = selectRandomId(showCharacterIds);
+    const characterId = selectRandomArrayItem(showCharacterIds).id;
 
     // get character information - API FETCH
     const dailyCharacter = await getDailyCharacter(characterId);
@@ -114,7 +114,7 @@ async function getDailyCharacter(id: number): Promise<DailyCharacter> {
 }
 
 // Get target show information
-async function getShowCharacters(id: number): Promise<ShowCharacters> {
+async function getShowCharacters(showId: number): Promise<ShowCharacters> {
   try {
     let res: Response = await nodeFetch(url, {
       method: "POST",
@@ -126,7 +126,7 @@ async function getShowCharacters(id: number): Promise<ShowCharacters> {
         // GraphQL query
         query: `
                 query getShowCharacters {
-                    Media(id: ${id}) {
+                    Media(id: ${showId}) {
                         title {
                             english
                             romaji
@@ -155,7 +155,7 @@ async function getShowCharacters(id: number): Promise<ShowCharacters> {
     });
     let res_json = await res.json();
     let data: ShowCharacters = res_json.data.Media;
-    console.log(`Show id ${id}, ${data?.title?.english}`);
+    console.log(`Show id ${showId}, ${data?.title?.english}`);
     return data;
   } catch (err) {
     console.log(err);
@@ -204,8 +204,8 @@ async function getPopularShows(): Promise<PopularShows[]> {
   }
 }
 
-function selectRandomId(arr: Array<any>): number {
-  return Math.floor(Math.random() * arr.length);
+function selectRandomArrayItem<T>(arr: Array<T>): T {
+  return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // Pick date-dependent value from array of objects w/ id
