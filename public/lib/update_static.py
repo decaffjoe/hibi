@@ -12,7 +12,7 @@ def tagSpoilers(line):
 
 
 # Update index.html with fresh data.json data
-with open('../data.json') as data, open('../indexNEW.html', 'w') as new, open('../index.html', 'r') as old:
+with open(os.environ.get('DATA_FILEPATH')) as data, open(os.environ.get('NEWINDEX_FILEPATH'), 'w') as new, open(os.environ.get('INDEX_FILEPATH'), 'r') as old:
     skip = False
     for line in old:
         if not skip:
@@ -29,5 +29,5 @@ with open('../data.json') as data, open('../indexNEW.html', 'w') as new, open('.
             new.write(line)
             skip = False
 
-os.remove('../index.html')
-os.rename('../indexNEW.html', '../index.html')
+os.remove(os.environ.get('INDEX_FILEPATH'))
+os.rename(os.environ.get('NEWINDEX_FILEPATH'), os.environ.get('INDEX_FILEPATH'))

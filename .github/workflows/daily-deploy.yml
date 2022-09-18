@@ -13,6 +13,11 @@ permissions:
   pages: write
   id-token: write
 
+env:
+  DATA_FILEPATH: '/home/runner/work/hibi/hibi/public/data.json'
+  NEWINDEX_FILEPATH: '/home/runner/work/hibi/hibi/public/indexNEW.html'
+  INDEX_FILEPATH: '/home/runner/work/hibi/hibi/public/index.html'
+
 jobs:
   shipIt:
     name: shipIt
