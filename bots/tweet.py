@@ -17,14 +17,12 @@ limit = data['limit']
 
 # Get credentials from gitlab ci env variables ('T_...' for Twitter)
 creds = {}
-env_vars = ['T_CONSUMER_KEY', 'T_CONSUMER_SECRET',
-            'T_ACCESS_TOKEN_KEY', 'T_ACCESS_TOKEN_SECRET']
+env_vars = ['T_CONSUMER_KEY', 'T_CONSUMER_SECRET', 'T_ACCESS_TOKEN_KEY', 'T_ACCESS_TOKEN_SECRET']
 for key in env_vars:
     creds[key] = os.environ.get(key)
 
 # Authenticate to twitter as user
-api = TwitterAPI(creds['T_CONSUMER_KEY'], creds['T_CONSUMER_SECRET'],
-                 creds['T_ACCESS_TOKEN_KEY'], creds['T_ACCESS_TOKEN_SECRET'])
+api = TwitterAPI(creds['T_CONSUMER_KEY'], creds['T_CONSUMER_SECRET'], creds['T_ACCESS_TOKEN_KEY'], creds['T_ACCESS_TOKEN_SECRET'])
 
 # Upload media and get media_id
 r = api.request('media/upload', None, {'media': image})
