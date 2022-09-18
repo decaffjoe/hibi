@@ -80,13 +80,13 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
 
-        # Posts
-      - run: echo 'Test post format'
-      - run: pwd && ls -l
-      - run: python3 ./bots/test_format_post.py
+        # # Posts
+      # - run: echo 'Test post format'
+      # - run: pwd && ls -l
+      # - run: python3 ./bots/test_format_post.py
 
-      - run: echo 'Post to socials'
-      - run: pwd && ls -l
-      - run: python3 ./bots/tweet.py
-      - run: python3 ./bots/toot.py
+      # - run: echo 'Post to socials'
+      # - run: pwd && ls -l
+      # - run: python3 ./bots/tweet.py
+      # - run: python3 ./bots/toot.py
 
