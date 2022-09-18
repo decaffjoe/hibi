@@ -13,7 +13,7 @@ limit = data['limit']
 # Authenticate to mastodon
 mastodon = Mastodon(
     # Get credential from gitlab ci env var ('M_...' for Mastodon)
-    access_token=os.environ['M_ACCESS_TOKEN'],
+    access_token=os.environ.get('M_ACCESS_TOKEN'),
     api_base_url='https://botsin.space'
 )
 

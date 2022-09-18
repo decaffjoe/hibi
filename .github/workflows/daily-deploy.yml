@@ -17,6 +17,12 @@ env:
   DATA_FILEPATH: '/home/runner/work/hibi/hibi/public/data.json'
   NEWINDEX_FILEPATH: '/home/runner/work/hibi/hibi/public/indexNEW.html'
   INDEX_FILEPATH: '/home/runner/work/hibi/hibi/public/index.html'
+  M_ACCESS_TOKEN: ${{ secrets.M_ACCESS_TOKEN }}
+  T_ACCESS_TOKEN_KEY: ${{ secrets.M_ACCESS_TOKEN_KEY }}
+  T_ACCESS_TOKEN_SECRET: ${{ secrets.M_ACCESS_TOKEN_SECRET }}
+  T_BEARER_TOKEN: ${{ secrets.T_BEARER_TOKEN }}
+  T_CONSUMER_KEY: ${{ secrets.T_CONSUMER_KEY }}
+  T_CONSUMER_SECRET: ${{ secrets.T_CONSUMER_SECRET }}
 
 jobs:
   shipIt:
