@@ -105,7 +105,7 @@ async function getDailyCharacter(id: number): Promise<DailyCharacter> {
     // await res.headers.forEach(header => console.log(header));
     let res_json = await res.json();
     let data: DailyCharacter = res_json.data.Character;
-    console.log(`Character id ${id}, ${data.name}`);
+    console.log(`Character id ${id}, ${data?.name?.full}`);
     return data;
   } catch (err) {
     console.log(err);
@@ -155,7 +155,7 @@ async function getShowCharacters(id: number): Promise<ShowCharacters> {
     });
     let res_json = await res.json();
     let data: ShowCharacters = res_json.data.Media;
-    console.log(`Show id ${id}, ${data.title}`);
+    console.log(`Show id ${id}, ${data?.title?.english}`);
     return data;
   } catch (err) {
     console.log(err);

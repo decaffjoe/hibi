@@ -87,7 +87,7 @@ async function getDailyCharacter(id) {
         // await res.headers.forEach(header => console.log(header));
         let res_json = await res.json();
         let data = res_json.data.Character;
-        console.log("Character ID: " + id);
+        console.log(`Character id ${id}, ${data?.name?.full}`);
         return data;
     }
     catch (err) {
@@ -137,7 +137,7 @@ async function getShowCharacters(id) {
         });
         let res_json = await res.json();
         let data = res_json.data.Media;
-        console.log("Show ID: " + id);
+        console.log(`Show id ${id}, ${data?.title?.english}`);
         return data;
     }
     catch (err) {
