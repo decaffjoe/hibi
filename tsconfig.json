@@ -2,8 +2,8 @@
     "compilerOptions": {
         "target": "esnext",
         "module": "CommonJS",
-        "strict": true,
-        "watch": true,
+        "strict": false,
+        "watch": false,
         "lib": ["dom", "es2017"],
         "checkJs": false,
         "allowJs": false,

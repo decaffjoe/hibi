@@ -1,4 +1,3 @@
-"use strict";
 const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), headerH1 = document.querySelector("#header h1"), headerH3 = document.querySelector("#header h3"), charImage = document.querySelector("#charDay div#photo"), charDesc = document.querySelector("#charDay div#description"), charNames = document.querySelector("#charDay ul#names"), charTitles = document.querySelector("#charDay ul#titles"), scriptData = document.querySelector("script#data");
 // Parse JSON in script tag
 const DATA = JSON.parse(scriptData.textContent);

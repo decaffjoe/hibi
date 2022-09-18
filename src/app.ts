@@ -11,7 +11,7 @@ const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(),
 const DATA = JSON.parse(scriptData.textContent);
 
 // Fluff for the headers
-headerH1.title = tooltip;
+(headerH1 as unknown as any).title = tooltip;
 headerH3.textContent = DATA.date;
 
 // Populate character names
@@ -24,7 +24,7 @@ for (let i = 0; i < 3; ++i) {
   charTitles.children[i].textContent = DATA.showTitles[i];
 }
 
-charImage.style.backgroundImage = `url("${DATA.character.image.large}")`;
+(charImage as unknown as any).style.backgroundImage = `url("${DATA.character.image.large}")`;
 charDesc.innerHTML =
   '<p id="spoiler-info">*click on spoilers to view*</p>' +
   DATA.character.description;
@@ -109,7 +109,7 @@ if (window.screen.width <= 600) {
     socialBots = document.querySelector("#social-bots");
 
   let charBoundary = charDay.getBoundingClientRect().bottom + 25;
-  showLinks.style.top = `${charBoundary}px`;
+  (showLinks as unknown as any).style.top = `${charBoundary}px`;
   charBoundary = showLinks?.getBoundingClientRect().bottom + 5;
-  socialBots.style.top = `${charBoundary}px`;
+  (socialBots as unknown as any).style.top = `${charBoundary}px`;
 }
