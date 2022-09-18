@@ -44,7 +44,7 @@ jobs:
       - run: sudo apt-get update -y
       - run: sudo apt-get install -qy curl
       - run: curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.sh
-      - run: bash nodesource_setup.sh
+      - run: sudo bash nodesource_setup.sh
       - run: sudo apt-get install -qy nodejs python3 python3-pip
       - run: npm install
       - run: cd public/lib
