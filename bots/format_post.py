@@ -55,7 +55,7 @@ def image_mime(extension):
 
 def main(service):
     # Retrieve character data (assume data.json up-to-date)
-    data = json.load(open(os.environ.get('DATA_FILEPATH'), mode='r'))
+    data = json.load(open(os.environ['HIBI_DATA_FILEPATH'], mode='r'))
     char = data['character']
     char_name = char['name']['full']
     if char['description']:

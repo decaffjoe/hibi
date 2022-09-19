@@ -19,7 +19,7 @@ limit = data['limit']
 creds = {}
 env_vars = ['T_CONSUMER_KEY', 'T_CONSUMER_SECRET', 'T_ACCESS_TOKEN_KEY', 'T_ACCESS_TOKEN_SECRET']
 for key in env_vars:
-    creds[key] = os.environ.get(key)
+    creds[key] = os.environ[key]
 
 # Authenticate to twitter as user
 api = TwitterAPI(creds['T_CONSUMER_KEY'], creds['T_CONSUMER_SECRET'], creds['T_ACCESS_TOKEN_KEY'], creds['T_ACCESS_TOKEN_SECRET'])
