@@ -8,7 +8,7 @@ A website, twitter bot ([@hibianime](https://twitter.com/hibianime)) and mastodo
 
 Bots post once per day at 1:00AM CST from twitter ([@hibianime](https://twitter.com/hibianime)) and mastodon ([@hibianime@botsin.space](https://botsin.space/@hibianime))
 
-All bot logic is in the [bots/](https://gitlab.com/spongechameleon/hibi/-/tree/twitter-bot/bots) folder
+All bot logic is in the [bots/](https://github.com/decaffjoe/hibi/tree/main/bots) folder
 
 tweet -> Twitter
 

@@ -27,11 +27,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/spongechameleon/hibi.git"
+    "url": "git+ssh://git@github.com/decaffjoe/hibi.git"
   },
-  "author": "spongechameleon",
+  "author": "decaffjoe",
   "bugs": {
-    "url": "https://gitlab.com/spongechameleon/hibi/issues"
+    "url": "https://github.com/decaffjoe/hibi/issues"
   },
-  "homepage": "https://gitlab.com/spongechameleon/hibi#readme"
+  "homepage": "https://decaffjoe.github.io/hibi/"
 }
