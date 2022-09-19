@@ -1,57 +1,82 @@
 {
   "showLinks": [
     {
-      "id": 377,
-      "url": "http://www.crunchyroll.com/gurren-lagann",
+      "id": 2133,
+      "url": "http://www.crunchyroll.com/haikyu",
       "site": "Crunchyroll"
     },
     {
-      "id": 1537,
-      "url": "http://www.hulu.com/gurren-lagann",
-      "site": "Hulu"
+      "id": 2134,
+      "url": "http://www.j-haikyu.com/anime_s2/",
+      "site": "Official Site"
     },
     {
-      "id": 5239,
-      "url": "https://www.netflix.com/title/70213196",
+      "id": 2137,
+      "url": "https://twitter.com/animehaikyu_com",
+      "site": "Twitter"
+    },
+    {
+      "id": 8517,
+      "url": "https://www.hidive.com/tv/haikyu-2nd-season",
+      "site": "HIDIVE"
+    },
+    {
+      "id": 12766,
+      "url": "https://www.amazon.com/gp/video/detail/B07X2V2QDS/",
+      "site": "Amazon"
+    },
+    {
+      "id": 13708,
+      "url": "https://www.netflix.com/title/80090673",
       "site": "Netflix"
     },
     {
-      "id": 15617,
-      "url": "https://www.funimation.com/shows/gurren-lagann/",
-      "site": "Funimation"
+      "id": 31105,
+      "url": "https://www.hulu.com/series/haikyu-c085d06a-48b3-4456-955e-480aef4d8442",
+      "site": "Hulu"
     },
     {
-      "id": 17578,
-      "url": "https://vrv.co/series/GR097JN7R/Gurren-Lagann",
+      "id": 31224,
+      "url": "https://vrv.co/series/GY8VM8MWY/Haikyu",
       "site": "VRV"
+    },
+    {
+      "id": 35625,
+      "url": "https://www.iq.com/album/haikyu!!-second-season-1yycejbuv4p",
+      "site": "iQIYI"
+    },
+    {
+      "id": 35626,
+      "url": "https://www.iq.com/album/1yycejbuv4p",
+      "site": "iQIYI"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx2001-7cvz7Jf8viMT.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx2001-7cvz7Jf8viMT.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx2001-7cvz7Jf8viMT.png",
-    "color": "#f15d35"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20992-aHgNbcalVEqk.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20992-aHgNbcalVEqk.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20992-aHgNbcalVEqk.png",
+    "color": "#f1860d"
   },
   "showTitles": [
-    "Gurren Lagann",
-    "Tengen Toppa Gurren Lagann",
-    "天元突破グレンラガン"
+    "HAIKYU!! 2nd Season",
+    "Haikyuu!! 2nd Season",
+    "ハイキュー!! セカンドシーズン"
   ],
   "charNames": [
-    "Darry Adai",
-    "ダリー・アダイ"
+    "Lev Haiba",
+    "灰羽 リエーフ"
   ],
   "character": {
     "name": {
-      "first": "Darry",
-      "last": "Adai",
-      "full": "Darry Adai",
-      "native": "ダリー・アダイ"
+      "first": "Lev",
+      "last": "Haiba",
+      "full": "Lev Haiba",
+      "native": "灰羽 リエーフ"
     },
-    "description": "<p>Darry is a girl from Adai Village, who used to be cared for by Rossiu. She is Gimmy's twin sister and has a good bond with him. As a young girl, she was shy and quiet and used to cling to a plush doll, which she carried with her at all times. After the timeskip, however, she is much more confident and has left her old personality behind. As a Grapearl pilot, she is careful, calm and perceptive, and puts more thought and planning into her actions than Gimmy.  (Source: Wikipedia)</p>\n",
+    "description": "<p><strong>Team:</strong> Nekoma High School\n<strong>Height:</strong> 194 cm\n<strong>Weight:</strong> 79,7 kg\n<strong>Year:</strong> 1st Year\n<strong>Position:</strong> Middle Blocker</p>\n<p>Lev is a half Russian, half Japanese. However he says he doesn't speak Russian because he was born and raised in Japan. His name in Russian means lion. Lev wasn't around when Karasuno and Nekoma had their first match together. He started playing volleyball in high school, that's why he was still a novice and spent whole time on bench at that time so he didn't come. Lev is blessed with natural physical ability, intuition and height. He declares that he's an ace even though he's a middle blocker. Kenma states that Lev is a good and honest guy.</p>\n<p>Lev is quite childish and cheerful, shown when he was making fun of Hinata's height. Lev's appearance, as well as his piercing eyes, causes people to believe he is much more intimidating and serious than he actually is. Though he can be blunt, he never seems to mean any harm and adopts a playful attitude towards most things.\nHe is also shown to be enthusiastic about spiking as he gets excited about it very easily, and can be competitive with people he is interested in.</p>\n<p>(Source: Haikyuu!! Wikia)</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/3433.jpg",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/3433.jpg"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89517-qVTrohFmBcSM.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b89517-qVTrohFmBcSM.png"
     }
   },
   "date": "Sun Sep 18 2022"

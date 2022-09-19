@@ -29,8 +29,3 @@ with open(os.environ['DATA_FILEPATH']) as data, open(os.environ['NEWINDEX_FILEPA
             new.write(line)
             skip = False
 
-os.remove(os.environ['INDEX_FILEPATH'])
-os.rename(os.environ['NEWINDEX_FILEPATH'], os.environ['INDEX_FILEPATH'])
-
-with open(os.environ['INDEX_FILEPATH'], 'r') as f:
-    print(f.read())
