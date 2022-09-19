@@ -1,12 +1,10 @@
 #!/usr/bin/bash
+export HIBI_DATA_FILEPATH='/home/sponge/code/hibi/public/data.json'
+export HIBI_NEWINDEX_FILEPATH='/home/sponge/code/hibi/public/indexNEW.html'
+export HIBI_INDEX_FILEPATH='/home/sponge/code/hibi/public/index.html'
+
 cd public/lib/
 node character.js
-
-export DATA_FILEPATH='/home/sponge/code/hibi/public/data.json'
-export NEWINDEX_FILEPATH='/home/sponge/code/hibi/public/indexNEW.html'
-export INDEX_FILEPATH='/home/sponge/code/hibi/public/index.html'
 python update_static.py
 
-cat $NEWINDEX_FILEPATH
 mv $NEWINDEX_FILEPATH $INDEX_FILEPATH
-cat $INDEX_FILEPATH

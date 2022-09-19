@@ -3,15 +3,15 @@
 const url = "https://graphql.anilist.co", fs = require("fs"), md = require("markdown-it")({ html: true, linkify: true }), MD5 = require("crypto-js/md5"), nodeFetch = require("node-fetch");
 main()
     .then(data => {
-    fs.writeFile("../data.json", JSON.stringify(data, null, 2), "utf-8", (err) => {
+    fs.writeFile(process.env.HIBI_DATA_FILEPATH, JSON.stringify(data, null, 2), "utf-8", (err) => {
         if (err) {
-            console.log(err);
+            console.error(err);
             throw err;
         }
         console.log("success");
     });
 })
-    .catch(err => console.log(err));
+    .catch(err => console.error(err));
 async function main() {
     try {
         // get top 100 shows - API FETCH
@@ -51,7 +51,7 @@ async function main() {
         };
     }
     catch (err) {
-        console.log(err);
+        console.error(err);
     }
 }
 // Get daily character

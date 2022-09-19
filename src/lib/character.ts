@@ -10,19 +10,19 @@ const url = "https://graphql.anilist.co",
 main()
   .then(data => {
     fs.writeFile(
-      "../data.json",
+      process.env.HIBI_DATA_FILEPATH,
       JSON.stringify(data, null, 2),
       "utf-8",
       (err: any) => {
         if (err) {
-          console.log(err);
+          console.error(err);
           throw err;
         }
         console.log("success");
       },
     );
   })
-  .catch(err => console.log(err));
+  .catch(err => console.error(err));
 
 async function main() {
   try {
@@ -68,7 +68,7 @@ async function main() {
       date,
     };
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 

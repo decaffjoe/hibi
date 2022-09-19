@@ -1,82 +1,46 @@
 {
   "showLinks": [
     {
-      "id": 2133,
-      "url": "http://www.crunchyroll.com/haikyu",
+      "id": 339,
+      "url": "http://www.crunchyroll.com/another",
       "site": "Crunchyroll"
     },
     {
-      "id": 2134,
-      "url": "http://www.j-haikyu.com/anime_s2/",
-      "site": "Official Site"
-    },
-    {
-      "id": 2137,
-      "url": "https://twitter.com/animehaikyu_com",
-      "site": "Twitter"
-    },
-    {
-      "id": 8517,
-      "url": "https://www.hidive.com/tv/haikyu-2nd-season",
-      "site": "HIDIVE"
-    },
-    {
-      "id": 12766,
-      "url": "https://www.amazon.com/gp/video/detail/B07X2V2QDS/",
-      "site": "Amazon"
-    },
-    {
-      "id": 13708,
-      "url": "https://www.netflix.com/title/80090673",
+      "id": 25343,
+      "url": "https://www.netflix.com/title/80241072",
       "site": "Netflix"
     },
     {
-      "id": 31105,
-      "url": "https://www.hulu.com/series/haikyu-c085d06a-48b3-4456-955e-480aef4d8442",
-      "site": "Hulu"
-    },
-    {
-      "id": 31224,
-      "url": "https://vrv.co/series/GY8VM8MWY/Haikyu",
+      "id": 32116,
+      "url": "https://vrv.co/series/GR09X52WR/Another",
       "site": "VRV"
-    },
-    {
-      "id": 35625,
-      "url": "https://www.iq.com/album/haikyu!!-second-season-1yycejbuv4p",
-      "site": "iQIYI"
-    },
-    {
-      "id": 35626,
-      "url": "https://www.iq.com/album/1yycejbuv4p",
-      "site": "iQIYI"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20992-aHgNbcalVEqk.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20992-aHgNbcalVEqk.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20992-aHgNbcalVEqk.png",
-    "color": "#f1860d"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11111-Y4QgkX8gJQCa.png",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11111-Y4QgkX8gJQCa.png",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx11111-Y4QgkX8gJQCa.png",
+    "color": "#e47850"
   },
   "showTitles": [
-    "HAIKYU!! 2nd Season",
-    "Haikyuu!! 2nd Season",
-    "ハイキュー!! セカンドシーズン"
+    "Another",
+    "アナザー"
   ],
   "charNames": [
-    "Lev Haiba",
-    "灰羽 リエーフ"
+    "Tomohiko Kazami",
+    "風見智彦"
   ],
   "character": {
     "name": {
-      "first": "Lev",
-      "last": "Haiba",
-      "full": "Lev Haiba",
-      "native": "灰羽 リエーフ"
+      "first": "Tomohiko",
+      "last": "Kazami",
+      "full": "Tomohiko Kazami",
+      "native": "風見智彦"
     },
-    "description": "<p><strong>Team:</strong> Nekoma High School\n<strong>Height:</strong> 194 cm\n<strong>Weight:</strong> 79,7 kg\n<strong>Year:</strong> 1st Year\n<strong>Position:</strong> Middle Blocker</p>\n<p>Lev is a half Russian, half Japanese. However he says he doesn't speak Russian because he was born and raised in Japan. His name in Russian means lion. Lev wasn't around when Karasuno and Nekoma had their first match together. He started playing volleyball in high school, that's why he was still a novice and spent whole time on bench at that time so he didn't come. Lev is blessed with natural physical ability, intuition and height. He declares that he's an ace even though he's a middle blocker. Kenma states that Lev is a good and honest guy.</p>\n<p>Lev is quite childish and cheerful, shown when he was making fun of Hinata's height. Lev's appearance, as well as his piercing eyes, causes people to believe he is much more intimidating and serious than he actually is. Though he can be blunt, he never seems to mean any harm and adopts a playful attitude towards most things.\nHe is also shown to be enthusiastic about spiking as he gets excited about it very easily, and can be competitive with people he is interested in.</p>\n<p>(Source: Haikyuu!! Wikia)</p>\n",
+    "description": "<p>He is 3-3 class officer,along with Yukari(and later Akazawa Izumi).Teshigawara is his childhood friend.   ~! Teshigawara thinks he is the dead person and got into fight with him at the balcony. Suddenly he fell from the balcony but he doesn't die. In the manga, he broke his leg but in the anime, he went to Mochizuki room with an angry expression, but after that he went missing. Kazami believed that Kouichi is the dead one and goes insane, killing Anzu and Aki from behind.  Later, when he tries to kill Kouichi saying that because of him Yukari is dead, Izumi knocked him out with an iron rod. She says he doesn't deserve to live as he killed two classmates, and when she's about to kill him saying that now he can follow Yukari in death, Izumi is stopped by Chibiki. However, Tomohiko dies later because of his injuries and Naoya seemed very affected by his death.!~  Source: Another Wiki</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b89517-qVTrohFmBcSM.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b89517-qVTrohFmBcSM.png"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b53225-SxEKv3jPnsrS.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b53225-SxEKv3jPnsrS.png"
     }
   },
   "date": "Sun Sep 18 2022"
