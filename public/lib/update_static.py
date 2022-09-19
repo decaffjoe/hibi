@@ -22,6 +22,7 @@ with open(os.environ['DATA_FILEPATH']) as data, open(os.environ['NEWINDEX_FILEPA
             for json in data:
                 new.write(tagSpoilers(json))
             new.write('\n')
+            print(json)
             # Don't copy the old JSON!
             skip = True
         # This is the end of the old JSON

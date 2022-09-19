@@ -67,10 +67,9 @@ jobs:
       - run: echo 'Update character data'
       - run: pwd && ls -l
       - run: node ./public/lib/character.js
+      - run: cat ./public/data.json
       - run: python3 ./public/lib/update_static.py
-      - run: cat ./public/indexNEW.html
       - run: mv ./public/indexNEW.html ./public/index.html
-      - run: cat ./public/index.html
 
         # Pages
       - name: Setup Pages
