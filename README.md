@@ -2,7 +2,7 @@
 
 [Live website](https://decaffjoe.github.io/hibi/)
 
-A website, twitter bot ([@hibianime](https://twitter.com/hibianime)) and mastodon bot ([@hibianime@botsin.space](https://botsin.space/@hibianime)) that post a random anime character every day at 9AM US Central Time!
+A website, twitter bot ([@hibianime](https://twitter.com/hibianime)) and mastodon bot ([@hibianime@botsin.space](https://botsin.space/@hibianime)) that post a random anime character every day!
 
 ## Social media bots
 

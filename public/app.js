@@ -1,8 +1,15 @@
-const tooltip = "UwwwuuUu it's " + new Date().toLocaleTimeString(), headerH1 = document.querySelector("#header h1"), headerH3 = document.querySelector("#header h3"), charImage = document.querySelector("#charDay div#photo"), charDesc = document.querySelector("#charDay div#description"), charNames = document.querySelector("#charDay ul#names"), charTitles = document.querySelector("#charDay ul#titles"), scriptData = document.querySelector("script#data");
+const headerH1 = document.querySelector("#header h1");
+const headerH3 = document.querySelector("#header h3");
+const charImage = document.querySelector("#charDay div#photo");
+const charDesc = document.querySelector("#charDay div#description");
+const charNames = document.querySelector("#charDay ul#names");
+const charTitles = document.querySelector("#charDay ul#titles");
+const scriptData = document.querySelector("script#data");
 // Parse JSON in script tag
 const DATA = JSON.parse(scriptData.textContent);
 // Fluff for the headers
-headerH1.title = tooltip;
+headerH1.title =
+    "UwwwuuUu it's a beautiful day for a new character!!";
 headerH3.textContent = DATA.date;
 // Populate character names
 for (let i = 0; i < 2; ++i) {
@@ -13,9 +20,7 @@ for (let i = 0; i < 3; ++i) {
     charTitles.children[i].textContent = DATA.showTitles[i];
 }
 charImage.style.backgroundImage = `url("${DATA.character.image.large}")`;
-charDesc.innerHTML =
-    '<p id="spoiler-info">*click on spoilers to view*</p>' +
-        DATA.character.description;
+charDesc.innerHTML = `<p id="spoiler-info">*click on spoilers to view*</p>${DATA.character.description}`;
 // Limit and add scrollbar for large descriptions >400px
 if (charDesc.clientHeight > 400) {
     charDesc.classList.add("condensed");
@@ -63,7 +68,8 @@ const connectLinks = {
     Twitter: twitter,
     "Official Site": official,
 };
-const watchHeader = document.querySelector("#watch-links h1"), connectHeader = document.querySelector("#connect-links h1");
+const watchHeader = document.querySelector("#watch-links h1");
+const connectHeader = document.querySelector("#connect-links h1");
 // Iterate over all links returned from API
 for (let link of links) {
     if (connectLinks[link["site"]]) {
@@ -85,7 +91,9 @@ for (let link of links) {
 }
 // Mobile only: reposition #showLinks and #hibianime to be below description
 if (window.screen.width <= 600) {
-    const charDay = document.querySelector("#charDay"), showLinks = document.querySelector("#showLinks"), socialBots = document.querySelector("#social-bots");
+    const charDay = document.querySelector("#charDay");
+    const showLinks = document.querySelector("#showLinks");
+    const socialBots = document.querySelector("#social-bots");
     let charBoundary = charDay.getBoundingClientRect().bottom + 25;
     showLinks.style.top = `${charBoundary}px`;
     charBoundary = showLinks?.getBoundingClientRect().bottom + 5;

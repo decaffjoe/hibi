@@ -1,47 +1,61 @@
 {
   "showLinks": [
     {
-      "id": 560,
-      "url": "http://www.7-taizai.net/",
+      "id": 6,
+      "url": "http://www.funimation.com/shows/noragami",
+      "site": "Funimation"
+    },
+    {
+      "id": 867,
+      "url": "http://noragami-anime.net/1/",
       "site": "Official Site"
     },
     {
-      "id": 2057,
-      "url": "https://twitter.com/7_taizai",
-      "site": "Twitter"
+      "id": 1703,
+      "url": "http://www.hulu.com/noragami",
+      "site": "Hulu"
     },
     {
-      "id": 5220,
-      "url": "https://www.netflix.com/title/80050063",
+      "id": 15571,
+      "url": "https://www.netflix.com/title/80005821",
       "site": "Netflix"
+    },
+    {
+      "id": 31121,
+      "url": "https://www.amazon.com/Bidden-Calamity-English-Subtitled/dp/B00KTQI9OE/ref=sr_1_1?dchild=1&keywords=noragami&qid=1617827212&s=instant-video&sr=1-1&tag=techblast0f-20",
+      "site": "Amazon"
+    },
+    {
+      "id": 44625,
+      "url": "https://www.crunchyroll.com/noragami",
+      "site": "Crunchyroll"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20789-SsAI4pvvI9EU.jpg",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20789-SsAI4pvvI9EU.jpg",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20789-SsAI4pvvI9EU.jpg",
-    "color": "#e46b0d"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20447-EoQXeygHaVCK.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20447-EoQXeygHaVCK.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20447-EoQXeygHaVCK.jpg",
+    "color": "#bbe4f1"
   },
   "showTitles": [
-    "The Seven Deadly Sins",
-    "Nanatsu no Taizai",
-    "七つの大罪"
+    "Noragami",
+    "ノラガミ"
   ],
   "charNames": [
-    "Veronica Liones",
-    "ベロニカ・リオネス"
+    "Yato",
+    "夜ト"
   ],
   "character": {
     "name": {
-      "first": "Veronica",
-      "last": "Liones",
-      "full": "Veronica Liones",
-      "native": "ベロニカ・リオネス"
+      "first": "Yato",
+      "last": null,
+      "full": "Yato",
+      "native": "夜ト"
     },
-    "description": "<p>Veronica is the second princess of Britannia. The younger sibling of the first princess, Margaret, and elder to her adopted sister; the third princess, Elizabeth. She has a tomboyish appearance, short light colored hair and a slim build. She wears a stylish fur coat, a knight-styled attire, a belt and a pair of long boots.   She is described to be a tomboy, who, as a child, liked to and often used to play with swords with the boys, and would be scolded by her father for doing so. Sharing the Holy Knights' attitude about enslaving the citizens, she also cares about her younger sister, Elizabeth.</p>\n",
+    "description": "<p><strong>Race:</strong> God\n<strong>Height:</strong> 174 cm (5’8”)\n<strong>Occupation:</strong> God of War, Delivery God, God of Calamity (previously)</p>\n<p>Yato is one of the three main protagonists of Noragami. An obscure god who considers himself a God of Fortune / Happiness and War, he has been labeled a God of Calamity and Depression in the past. Yato's dream is to become a famous god, whom everyone worships.</p>\n<p>Yato appears to be an extremely handsome young man in his late teens to early twenties with a height of 174cm (5’8”). He has messy, dark violet hair and light blue eyes with small, round pupils that become narrow when he is serious or angry, resembling that of a cat.</p>\n<p>Yato can be mischievous, crude, and unpredictable in his behavior. He often has a low tolerance for something he wants, usually causing those around him to become upset. Furthermore, he is rather childish and gullible at times. Yato will often indulge in fantasies of being a very successful God with more followers than any other deity; shrines full of luxury and shrine maiden at his fingertips. As his existence would end if he were to be forgotten, he has developed Athazagoraphobia.</p>\n<p>~!It is revealed that Yato's real name is Yaboku (夜卜) Yaboku contains the kanji ya (夜 night) and boku (卜 divination). <a href=\"https://anilist.co/character/189754/Sakura\">Sakura</a> mistakenly read 卜 as the katakana ト to because of the similarities, thus giving the well-known alias name Yato.!~</p>\n<p>(Source: Noragami wiki)</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/86691-juwtWAV3MumS.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/86691-juwtWAV3MumS.png"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b84677-Vgd7MBg6EAzK.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b84677-Vgd7MBg6EAzK.png"
     }
   },
   "date": "Wed Sep 28 2022"

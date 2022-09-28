@@ -1,8 +1,12 @@
 // WHAT DOES THIS FILE DO?
 // Gets daily show & character info from API and writes to 'public/data.json', that's it!
-const url = "https://graphql.anilist.co", fs = require("fs"), md = require("markdown-it")({ html: true, linkify: true }), MD5 = require("crypto-js/md5"), nodeFetch = require("node-fetch");
+const url = "https://graphql.anilist.co";
+const fs = require("fs");
+const md = require("markdown-it")({ html: true, linkify: true });
+const nodeFetch = require("node-fetch");
+// const MD5 = require("crypto-js/md5");
 main()
-    .then(data => {
+    .then((data) => {
     fs.writeFile(process.env.HIBI_DATA_FILEPATH, JSON.stringify(data, null, 2), "utf-8", (err) => {
         if (err) {
             console.error(err);
@@ -11,7 +15,7 @@ main()
         console.log("success");
     });
 })
-    .catch(err => console.error(err));
+    .catch((err) => console.error(err));
 async function main() {
     try {
         // get top 100 shows - API FETCH
@@ -192,20 +196,20 @@ async function getPopularShows() {
 function selectRandomArrayItem(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
-// Pick date-dependent value from array of objects w/ id
-function selectDateId(arr) {
-    const len = arr.length;
-    let d = new Date();
-    d = d.toLocaleDateString("en-US", { timeZone: "America/Chicago" });
-    d = d.split("/").join("");
-    const index = dateAlgo(d, len);
-    return arr[index].id;
-}
-// Try to get random index within length of array from the current date MMDDYYYY
-function dateAlgo(date, arrLen) {
-    let hash = MD5(date).words[0];
-    return Math.abs(hash) % arrLen;
-}
+// // Pick date-dependent value from array of objects w/ id
+// function selectDateId(arr: any[]): number {
+//   const len = arr.length;
+//   let d: any = new Date();
+//   d = d.toLocaleDateString("en-US", { timeZone: "America/Chicago" });
+//   d = d.split("/").join("");
+//   const index = dateAlgo(d, len);
+//   return arr[index].id;
+// }
+// // Try to get random index within length of array from the current date MMDDYYYY
+// function dateAlgo(date: string, arrLen: number): number {
+//   let hash = MD5(date).words[0];
+//   return Math.abs(hash) % arrLen;
+// }
 // Avoid printing missing or duplicate show names
 function showNameValidator(titles) {
     // get rid of titles that are null or undefined
@@ -228,21 +232,22 @@ function showNameValidator(titles) {
         }
         if (!onlyEnglish) {
             japanese = realTitles.native;
+            // rome-ignore lint: delete works, undefined doesn't
             delete realTitles.native;
         }
     }
     // get rid of identical titles
     const deDuped = [];
-    Object.values(realTitles).forEach(x => {
+    Object.values(realTitles).forEach((x) => {
         if (!deDuped.includes(x)) {
             deDuped.push(x);
         }
     });
     // get rid of equivalent titles in lowercase (if a non-lowercase title exists)
-    const deLowered = deDuped.filter(x => x !== x.toLowerCase());
+    const deLowered = deDuped.filter((x) => x !== x.toLowerCase());
     if (deLowered.length > 0) {
         // get rid of equivalent titles in uppercase (if a non-uppercase title exists)
-        const deCased = deLowered.filter(x => x !== x.toUpperCase());
+        const deCased = deLowered.filter((x) => x !== x.toUpperCase());
         if (deCased.length > 0) {
             return pushIfNonEmpty(deCased, japanese);
         }
