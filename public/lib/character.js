@@ -34,8 +34,7 @@ async function main() {
             dailyCharacter.description = md.render(dailyCharacter.description);
         }
         else {
-            dailyCharacter.description =
-                "(Oops, I guess this character is too cool to have a description!)";
+            dailyCharacter.description = `(oops, this character is too ${getNoDescriptionMessage()} to have a description!)`;
         }
         // hande character names (null or repeats)
         const dailyCharacterNames = characterNameValidator(dailyCharacter.name);
@@ -53,6 +52,10 @@ async function main() {
     catch (err) {
         console.error(err);
     }
+}
+function getNoDescriptionMessage() {
+    const adjectives = ["cool", "dope", "swaggin'", "legendary", "OP"];
+    return selectRandomArrayItem(adjectives);
 }
 // Get daily character
 async function getDailyCharacter(id) {

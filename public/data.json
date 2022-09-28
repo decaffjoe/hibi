@@ -1,47 +1,48 @@
 {
   "showLinks": [
     {
-      "id": 339,
-      "url": "http://www.crunchyroll.com/another",
-      "site": "Crunchyroll"
+      "id": 560,
+      "url": "http://www.7-taizai.net/",
+      "site": "Official Site"
     },
     {
-      "id": 25343,
-      "url": "https://www.netflix.com/title/80241072",
+      "id": 2057,
+      "url": "https://twitter.com/7_taizai",
+      "site": "Twitter"
+    },
+    {
+      "id": 5220,
+      "url": "https://www.netflix.com/title/80050063",
       "site": "Netflix"
-    },
-    {
-      "id": 32116,
-      "url": "https://vrv.co/series/GR09X52WR/Another",
-      "site": "VRV"
     }
   ],
   "showArt": {
-    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx11111-Y4QgkX8gJQCa.png",
-    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx11111-Y4QgkX8gJQCa.png",
-    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx11111-Y4QgkX8gJQCa.png",
-    "color": "#e47850"
+    "extraLarge": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/large/bx20789-SsAI4pvvI9EU.jpg",
+    "large": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx20789-SsAI4pvvI9EU.jpg",
+    "medium": "https://s4.anilist.co/file/anilistcdn/media/anime/cover/small/bx20789-SsAI4pvvI9EU.jpg",
+    "color": "#e46b0d"
   },
   "showTitles": [
-    "Another",
-    "アナザー"
+    "The Seven Deadly Sins",
+    "Nanatsu no Taizai",
+    "七つの大罪"
   ],
   "charNames": [
-    "Tomohiko Kazami",
-    "風見智彦"
+    "Veronica Liones",
+    "ベロニカ・リオネス"
   ],
   "character": {
     "name": {
-      "first": "Tomohiko",
-      "last": "Kazami",
-      "full": "Tomohiko Kazami",
-      "native": "風見智彦"
+      "first": "Veronica",
+      "last": "Liones",
+      "full": "Veronica Liones",
+      "native": "ベロニカ・リオネス"
     },
-    "description": "<p>He is 3-3 class officer,along with Yukari(and later Akazawa Izumi).Teshigawara is his childhood friend.   ~! Teshigawara thinks he is the dead person and got into fight with him at the balcony. Suddenly he fell from the balcony but he doesn't die. In the manga, he broke his leg but in the anime, he went to Mochizuki room with an angry expression, but after that he went missing. Kazami believed that Kouichi is the dead one and goes insane, killing Anzu and Aki from behind.  Later, when he tries to kill Kouichi saying that because of him Yukari is dead, Izumi knocked him out with an iron rod. She says he doesn't deserve to live as he killed two classmates, and when she's about to kill him saying that now he can follow Yukari in death, Izumi is stopped by Chibiki. However, Tomohiko dies later because of his injuries and Naoya seemed very affected by his death.!~  Source: Another Wiki</p>\n",
+    "description": "<p>Veronica is the second princess of Britannia. The younger sibling of the first princess, Margaret, and elder to her adopted sister; the third princess, Elizabeth. She has a tomboyish appearance, short light colored hair and a slim build. She wears a stylish fur coat, a knight-styled attire, a belt and a pair of long boots.   She is described to be a tomboy, who, as a child, liked to and often used to play with swords with the boys, and would be scolded by her father for doing so. Sharing the Holy Knights' attitude about enslaving the citizens, she also cares about her younger sister, Elizabeth.</p>\n",
     "image": {
-      "large": "https://s4.anilist.co/file/anilistcdn/character/large/b53225-SxEKv3jPnsrS.png",
-      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/b53225-SxEKv3jPnsrS.png"
+      "large": "https://s4.anilist.co/file/anilistcdn/character/large/86691-juwtWAV3MumS.png",
+      "medium": "https://s4.anilist.co/file/anilistcdn/character/medium/86691-juwtWAV3MumS.png"
     }
   },
-  "date": "Sun Sep 18 2022"
+  "date": "Wed Sep 28 2022"
 }
