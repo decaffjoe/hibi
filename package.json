@@ -20,7 +20,7 @@
     "typescript": "^4.0.2"
   },
   "scripts": {
-    "format": "rome format ./src",
+    "format": "rome format --write ./src",
     "lint": "rome check ./src",
     "fl": "yarn format && yarn lint",
     "build": "tsc -p .",
