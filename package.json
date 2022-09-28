@@ -22,6 +22,7 @@
   "scripts": {
     "format": "rome format ./src",
     "lint": "rome check ./src",
+    "fl": "yarn format && yarn lint",
     "build": "tsc -p .",
     "sass": "node-sass --watch src/ -o public/",
     "browser": "browser-sync public/ -w",

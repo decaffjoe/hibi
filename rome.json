@@ -1,8 +1,8 @@
 {
-  "formatter": {
+  "format": {
     "enabled": true
   },
-  "linter": {
+  "lint": {
     "enabled": true
   }
 }
